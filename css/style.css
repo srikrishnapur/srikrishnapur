@@ -1859,3 +1859,147 @@ footer{
     }
 
 }
+
+/* ================= CONTACT PAGE ================= */
+
+.contact-grid {
+    max-width: 1000px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.contact-card {
+    padding: 25px 18px;
+    background: #fff;
+    border-radius: 18px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    transition: .2s;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+}
+
+.contact-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.contact-card h3 {
+    margin-bottom: 5px;
+}
+
+.contact-card p {
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.contact-card small {
+    opacity: .65;
+}
+
+
+/* Contact Form */
+
+.contact-form-wrapper {
+    max-width: 750px;
+    margin: auto;
+    background: #fff;
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.06);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 15px;
+    background: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0f766e;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* Address */
+
+.address-card {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    padding: 30px;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 7px 25px rgba(0,0,0,.06);
+}
+
+.address-icon {
+    font-size: 35px;
+}
+
+.address-card h2 {
+    margin: 5px 0 8px;
+}
+
+.address-card p {
+    margin-bottom: 20px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .address-card {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px 18px;
+    }
+
+    .address-card {
+        padding: 25px 18px;
+    }
+
+}
