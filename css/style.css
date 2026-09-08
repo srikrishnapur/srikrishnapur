@@ -2074,3 +2074,305 @@ footer{
     }
 
 }
+
+/* =========================================
+   APP MENU / DISCOVER
+========================================= */
+
+.app-section {
+    padding: 55px 0 65px;
+    background: #ffffff;
+}
+
+.app-section-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.app-section-header span {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.app-section-header h2 {
+    font-size: 27px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+}
+
+.app-section-header p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* App Grid */
+
+.app-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(10, 1fr);
+
+    gap: 24px 12px;
+
+    max-width: 1050px;
+
+    margin: auto;
+}
+
+
+/* App Item */
+
+.app-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+    color: #27332f;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    transition:
+        transform .2s ease;
+}
+
+.app-item:hover {
+    transform: translateY(-4px);
+}
+
+
+/* Icon */
+
+.app-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    margin-bottom: 8px;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 7px 18px
+        rgba(0,0,0,.08);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.app-item:hover .app-icon {
+
+    transform:
+        scale(1.08);
+
+    box-shadow:
+        0 12px 25px
+        rgba(0,0,0,.13);
+}
+
+
+/* Icon backgrounds */
+
+.village-icon {
+    background: #e8f7ef;
+    color: #087f5b;
+}
+
+.doctor-icon {
+    background: #fff0f0;
+    color: #e53935;
+}
+
+.teacher-icon {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.student-icon {
+    background: #fff7df;
+    color: #d99000;
+}
+
+.auto-icon {
+    background: #edf7ff;
+    color: #1683c7;
+}
+
+.shop-icon {
+    background: #fff0e8;
+    color: #e66b24;
+}
+
+.influencer-icon {
+    background: #f8edff;
+    color: #9b45c6;
+}
+
+.gamer-icon {
+    background: #edf0ff;
+    color: #5364d8;
+}
+
+.gallery-icon {
+    background: #eaf8ff;
+    color: #138bb5;
+}
+
+.story-icon {
+    background: #fff5e8;
+    color: #c47a20;
+}
+
+.blog-icon {
+    background: #edf8f2;
+    color: #087f5b;
+}
+
+.job-icon {
+    background: #eef3f7;
+    color: #425466;
+}
+
+.skills-icon {
+    background: #eaf7ff;
+    color: #1681bd;
+}
+
+.refer-icon {
+    background: #fff0f5;
+    color: #d23c72;
+}
+
+.emergency-icon {
+    background: #fff0ed;
+    color: #dc382c;
+}
+
+.service-icon {
+    background: #ebf8f2;
+    color: #15915c;
+}
+
+.social-icon {
+    background: #f1efff;
+    color: #6654c9;
+}
+
+.news-icon {
+    background: #eef7ff;
+    color: #2478b8;
+}
+
+.notice-icon {
+    background: #fff8df;
+    color: #c48b00;
+}
+
+.event-icon {
+    background: #fff0f5;
+    color: #d24b79;
+}
+
+
+/* App name */
+
+.app-item > span {
+    display: block;
+
+    max-width: 75px;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .app-grid {
+        grid-template-columns:
+            repeat(8, 1fr);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .app-section {
+        padding: 45px 0 50px;
+    }
+
+    .app-grid {
+        grid-template-columns:
+            repeat(5, 1fr);
+
+        gap: 23px 8px;
+    }
+
+    .app-icon {
+        width: 55px;
+        height: 55px;
+
+        border-radius: 16px;
+
+        font-size: 21px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .app-section-header {
+        margin-bottom: 24px;
+    }
+
+    .app-section-header h2 {
+        font-size: 23px;
+    }
+
+    .app-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap: 22px 5px;
+    }
+
+    .app-icon {
+        width: 54px;
+        height: 54px;
+
+        border-radius: 15px;
+
+        font-size: 20px;
+    }
+
+    .app-item {
+        font-size: 9.5px;
+    }
+
+}
