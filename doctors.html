@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>শ্রীকৃষ্ণপুরের ডাক্তার | Our Village Doctors | Srikrishnapur</title>
+
+    <meta name="description"
+          content="শ্রীকৃষ্ণপুর গ্রামের ডাক্তারদের তালিকা। ডাক্তারদের নাম, বিশেষজ্ঞতা, যোগাযোগের তথ্য এবং প্রয়োজনীয় স্বাস্থ্য পরিষেবার তথ্য এখানে দেখুন।">
+
+    <meta name="keywords"
+          content="Srikrishnapur doctors, শ্রীকৃষ্ণপুর ডাক্তার, village doctors, Srikrishnapur doctor list">
+
+    <meta name="author"
+          content="Mr Noor">
+
+    <meta name="theme-color"
+          content="#0f766e">
+
+
+    <!-- Open Graph -->
+
+    <meta property="og:title"
+          content="শ্রীকৃষ্ণপুরের ডাক্তার | Our Village Doctors">
+
+    <meta property="og:description"
+          content="শ্রীকৃষ্ণপুর গ্রামের ডাক্তারদের তালিকা ও যোগাযোগের তথ্য।">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://srikrishnapur.in/doctors.html">
+
+    <meta property="og:image"
+          content="https://srikrishnapur.in/images/og-image.webp">
+
+
+    <!-- Existing Website CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =====================================
+           DOCTORS PAGE
+        ===================================== */
+
+        .doctors-page {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 16px 50px;
+        }
+
+
+        /* =====================================
+           HERO
+        ===================================== */
+
+        .doctors-hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f766e,
+                    #115e59
+                );
+
+            color: #fff;
+
+            border-radius: 24px;
+
+            padding: 40px 25px;
+
+            text-align: center;
+
+            margin-bottom: 25px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .doctors-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.08);
+
+            top: -80px;
+            right: -50px;
+        }
+
+
+        .doctors-hero-icon {
+
+            width: 75px;
+            height: 75px;
+
+            margin: 0 auto 15px;
+
+            border-radius: 22px;
+
+            background:
+                rgba(255,255,255,.15);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 32px;
+        }
+
+
+        .doctors-hero h1 {
+
+            margin: 0 0 8px;
+
+            font-size: 30px;
+
+        }
+
+
+        .doctors-hero p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            line-height: 1.7;
+
+            opacity: .94;
+
+        }
+
+
+        /* =====================================
+           ACTION BAR
+        ===================================== */
+
+        .doctor-actions {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 25px;
+        }
+
+
+        .doctor-action-btn {
+
+            border: 0;
+
+            text-decoration: none;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 12px 18px;
+
+            border-radius: 12px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: .2s;
+
+        }
+
+
+        .doctor-action-btn:hover {
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .add-doctor-btn {
+
+            background: #0f766e;
+
+            color: #fff;
+
+        }
+
+
+        .share-page-btn {
+
+            background: #e8f5f3;
+
+            color: #0f766e;
+
+        }
+
+
+        /* =====================================
+           NOTICE
+        ===================================== */
+
+        .doctor-notice {
+
+            background: #fff8e1;
+
+            border: 1px solid #f1df9c;
+
+            padding: 14px 16px;
+
+            border-radius: 14px;
+
+            margin-bottom: 25px;
+
+            color: #6b5500;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .doctor-notice i {
+
+            margin-right: 6px;
+
+        }
+
+
+        /* =====================================
+           CATEGORY FILTER
+        ===================================== */
+
+        .doctor-filter {
+
+            display: flex;
+
+            gap: 8px;
+
+            overflow-x: auto;
+
+            padding-bottom: 8px;
+
+            margin-bottom: 25px;
+
+            scrollbar-width: none;
+        }
+
+
+        .doctor-filter::-webkit-scrollbar {
+
+            display: none;
+
+        }
+
+
+        .filter-btn {
+
+            flex: 0 0 auto;
+
+            border: 1px solid #dce7e5;
+
+            background: #fff;
+
+            color: #31504c;
+
+            padding: 9px 15px;
+
+            border-radius: 50px;
+
+            cursor: pointer;
+
+            font-weight: 600;
+
+        }
+
+
+        .filter-btn.active {
+
+            background: #0f766e;
+
+            color: #fff;
+
+            border-color: #0f766e;
+
+        }
+
+
+        /* =====================================
+           SECTION TITLE
+        ===================================== */
+
+        .doctors-section-title {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 10px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .doctors-section-title h2 {
+
+            margin: 0;
+
+            font-size: 23px;
+
+            color: #173b37;
+
+        }
+
+
+        .doctor-count {
+
+            background: #e8f5f3;
+
+            color: #0f766e;
+
+            padding: 5px 10px;
+
+            border-radius: 50px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+        }
+
+
+        /* =====================================
+           DOCTORS GRID
+        ===================================== */
+
+        .doctors-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        /* =====================================
+           DOCTOR CARD
+        ===================================== */
+
+        .doctor-card {
+
+            background: #fff;
+
+            border: 1px solid #e4ecea;
+
+            border-radius: 20px;
+
+            padding: 18px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,.05);
+
+            transition: .25s;
+
+        }
+
+
+        .doctor-card:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,.09);
+
+        }
+
+
+        .doctor-top {
+
+            display: flex;
+
+            gap: 14px;
+
+            align-items: center;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .doctor-photo {
+
+            width: 78px;
+
+            height: 78px;
+
+            border-radius: 18px;
+
+            object-fit: cover;
+
+            background: #edf5f3;
+
+            border: 2px solid #e2efed;
+
+        }
+
+
+        .doctor-info {
+
+            min-width: 0;
+
+        }
+
+
+        .doctor-name {
+
+            margin: 0 0 6px;
+
+            font-size: 18px;
+
+            color: #163d38;
+
+        }
+
+
+        .doctor-specialist {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            background: #e8f5f3;
+
+            color: #0f766e;
+
+            padding: 5px 9px;
+
+            border-radius: 50px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+        }
+
+
+        .doctor-description {
+
+            color: #667b77;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+            margin: 0 0 15px;
+
+        }
+
+
+        /* =====================================
+           DOCTOR BUTTONS
+        ===================================== */
+
+        .doctor-buttons {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 8px;
+
+        }
+
+
+        .doctor-btn {
+
+            text-decoration: none;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 7px;
+
+            padding: 10px;
+
+            border-radius: 11px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: .2s;
+
+        }
+
+
+        .doctor-call {
+
+            background: #0f766e;
+
+            color: #fff;
+
+        }
+
+
+        .doctor-whatsapp {
+
+            background: #e9f8ef;
+
+            color: #168a4b;
+
+        }
+
+
+        .doctor-details {
+
+            grid-column: 1 / -1;
+
+            background: #f5f7f7;
+
+            color: #405854;
+
+        }
+
+
+        .doctor-btn:hover {
+
+            transform: translateY(-1px);
+
+        }
+
+
+        /* =====================================
+           EMPTY STATE
+        ===================================== */
+
+        .no-doctors {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 45px 20px;
+
+            background: #f8faf9;
+
+            border-radius: 18px;
+
+            color: #667b77;
+
+        }
+
+
+        .no-doctors i {
+
+            font-size: 35px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        /* =====================================
+           ADD DOCTOR CARD
+        ===================================== */
+
+        .add-doctor-card {
+
+            margin-top: 30px;
+
+            border: 2px dashed #b7d8d3;
+
+            border-radius: 20px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #f8fcfb;
+
+        }
+
+
+        .add-doctor-card i {
+
+            width: 58px;
+
+            height: 58px;
+
+            border-radius: 50%;
+
+            background: #e3f3f0;
+
+            color: #0f766e;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin: 0 auto 12px;
+
+            font-size: 24px;
+
+        }
+
+
+        .add-doctor-card h3 {
+
+            margin: 0 0 7px;
+
+            color: #173b37;
+
+        }
+
+
+        .add-doctor-card p {
+
+            margin: 0 auto 17px;
+
+            max-width: 550px;
+
+            color: #6b7e7a;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================
+           FOOTER CREDIT
+        ===================================== */
+
+        .doctor-credit {
+
+            text-align: center;
+
+            margin-top: 35px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #e6eceb;
+
+            color: #71827f;
+
+            font-size: 13px;
+
+        }
+
+
+        .doctor-credit a {
+
+            color: #0f766e;
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+        }
+
+
+        /* =====================================
+           MOBILE
+        ===================================== */
+
+        @media (max-width: 900px) {
+
+            .doctors-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .doctors-page {
+
+                padding:
+                    20px 12px 40px;
+
+            }
+
+
+            .doctors-hero {
+
+                padding: 30px 18px;
+
+                border-radius: 20px;
+
+            }
+
+
+            .doctors-hero h1 {
+
+                font-size: 24px;
+
+            }
+
+
+            .doctors-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .doctor-card {
+
+                padding: 15px;
+
+            }
+
+
+            .doctor-photo {
+
+                width: 70px;
+
+                height: 70px;
+
+            }
+
+
+            .doctor-actions {
+
+                flex-direction: column;
+
+            }
+
+
+            .doctor-action-btn {
+
+                width: 100%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     HEADER
+===================================== -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <a href="index.html"
+           class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-house"></i>
+            </div>
+
+            <div>
+                <strong>Srikrishnapur</strong>
+                <small>শ্রীকৃষ্ণপুর</small>
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open Menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <nav
+            class="main-nav"
+            id="mainNav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="village.html">
+                Village
+            </a>
+
+            <a href="doctors.html"
+               class="active">
+                Doctors
+            </a>
+
+            <a href="emergency.html">
+                Emergency
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================
+     MAIN
+===================================== -->
+
+<main class="doctors-page">
+
+
+    <!-- HERO -->
+
+    <section class="doctors-hero">
+
+        <div class="doctors-hero-icon">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+        </div>
+
+
+        <h1>
+            আমাদের গ্রামের ডাক্তার
+        </h1>
+
+
+        <p>
+            শ্রীকৃষ্ণপুরের ডাক্তার ও স্বাস্থ্যসেবা
+            প্রদানকারীদের তথ্য এক জায়গায়।
+            প্রয়োজন অনুযায়ী আপনার কাছাকাছি
+            চিকিৎসকের সঙ্গে যোগাযোগ করুন।
+        </p>
+
+    </section>
+
+
+
+    <!-- ACTIONS -->
+
+    <div class="doctor-actions">
+
+        <a
+            href="https://wa.me/917557003853?text=Hello%20Mr%20Noor%2C%20I%20want%20to%20add%20a%20doctor%20to%20the%20Srikrishnapur%20Doctors%20List.%0A%0ADoctor%20Name%3A%20%0ASpecialist%2FCategory%3A%20%0AContact%20Number%3A%20%0AAddress%3A%20%0A%0APlease%20send%20the%20doctor%27s%20profile%20photo%20also."
+            target="_blank"
+            rel="noopener"
+            class="doctor-action-btn add-doctor-btn">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            আপনার ডাক্তার যোগ করুন
+
+        </a>
+
+
+        <button
+            class="doctor-action-btn share-page-btn"
+            onclick="shareDoctorsPage()">
+
+            <i class="fa-solid fa-share-nodes"></i>
+
+            Share
+
+        </button>
+
+    </div>
+
+
+
+    <!-- NOTICE -->
+
+    <div class="doctor-notice">
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        এখানে প্রকাশিত তথ্য শুধুমাত্র তথ্যের উদ্দেশ্যে।
+        চিকিৎসা সংক্রান্ত জরুরি পরিস্থিতিতে নিকটস্থ
+        হাসপাতাল বা জরুরি পরিষেবার সঙ্গে যোগাযোগ করুন।
+        কোনো তথ্য ভুল হলে বা পরিবর্তন হলে আমাদের জানান।
+
+    </div>
+
+
+
+    <!-- CATEGORY FILTER -->
+
+    <div class="doctor-filter">
+
+        <button
+            class="filter-btn active"
+            data-category="all">
+
+            সব ডাক্তার
+
+        </button>
+
+
+        <button
+            class="filter-btn"
+            data-category="medicine">
+
+            🩺 Medicine
+
+        </button>
+
+
+        <button
+            class="filter-btn"
+            data-category="heart">
+
+            ❤️ Heart
+
+        </button>
+
+
+        <button
+            class="filter-btn"
+            data-category="children">
+
+            👶 Children
+
+        </button>
+
+
+        <button
+            class="filter-btn"
+            data-category="dental">
+
+            🦷 Dental
+
+        </button>
+
+
+        <button
+            class="filter-btn"
+            data-category="skin">
+
+            🧴 Skin
+
+        </button>
+
+
+        <button
+            class="filter-btn"
+            data-category="other">
+
+            অন্যান্য
+
+        </button>
+
+    </div>
+
+
+
+    <!-- TITLE -->
+
+    <div class="doctors-section-title">
+
+        <h2>
+            👨‍⚕️ ডাক্তারদের তালিকা
+        </h2>
+
+        <span
+            class="doctor-count"
+            id="doctorCount">
+
+            0 জন
+
+        </span>
+
+    </div>
+
+
+
+    <!-- DOCTORS -->
+
+    <section
+        class="doctors-grid"
+        id="doctorsGrid">
+
+
+
+        <!-- =================================
+             DOCTOR 1
+             Replace information
+        ================================== -->
+
+        <article
+            class="doctor-card"
+            data-category="medicine">
+
+            <div class="doctor-top">
+
+                <img
+                    class="doctor-photo"
+                    src="images/doctor-placeholder.webp"
+                    alt="ডাক্তারের ছবি"
+                    loading="lazy"
+                    onerror="this.src='images/village.webp';">
+
+
+                <div class="doctor-info">
+
+                    <h3 class="doctor-name">
+                        ডাক্তারের নাম
+                    </h3>
+
+                    <span class="doctor-specialist">
+
+                        <i class="fa-solid fa-stethoscope"></i>
+
+                        Medicine Specialist
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p class="doctor-description">
+
+                এখানে ডাক্তারের সংক্ষিপ্ত
+                পরিচয় বা চিকিৎসার ক্ষেত্র
+                লিখুন।
+
+            </p>
+
+
+            <div class="doctor-buttons">
+
+                <a
+                    href="tel:+917557003853"
+                    class="doctor-btn doctor-call">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    Call Now
+
+                </a>
+
+
+                <a
+                    href="https://wa.me/917557003853"
+                    target="_blank"
+                    rel="noopener"
+                    class="doctor-btn doctor-whatsapp">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    WhatsApp
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="doctor-btn doctor-details">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    বিস্তারিত তথ্য
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================
+             COPY THIS CARD FOR MORE DOCTORS
+        ================================== -->
+
+        <!--
+
+        <article
+            class="doctor-card"
+            data-category="children">
+
+            <div class="doctor-top">
+
+                <img
+                    class="doctor-photo"
+                    src="images/doctor-name.webp"
+                    alt="Doctor Name"
+                    loading="lazy">
+
+                <div class="doctor-info">
+
+                    <h3 class="doctor-name">
+                        Doctor Name
+                    </h3>
+
+                    <span class="doctor-specialist">
+
+                        <i class="fa-solid fa-baby"></i>
+
+                        Children Specialist
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p class="doctor-description">
+
+                শিশুদের চিকিৎসা সংক্রান্ত
+                পরিষেবা।
+
+            </p>
+
+
+            <div class="doctor-buttons">
+
+                <a
+                    href="tel:+919XXXXXXXXX"
+                    class="doctor-btn doctor-call">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    Call Now
+
+                </a>
+
+
+                <a
+                    href="https://wa.me/919XXXXXXXXX"
+                    target="_blank"
+                    rel="noopener"
+                    class="doctor-btn doctor-whatsapp">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    WhatsApp
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="doctor-btn doctor-details">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    বিস্তারিত তথ্য
+
+                </a>
+
+            </div>
+
+        </article>
+
+        -->
+
+    </section>
+
+
+
+    <!-- EMPTY -->
+
+    <div
+        class="no-doctors"
+        id="noDoctors">
+
+        <i class="fa-solid fa-user-doctor"></i>
+
+        <div>
+            এই category-তে এখনো কোনো ডাক্তার
+            যোগ করা হয়নি।
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         ADD DOCTOR
+    ====================================== -->
+
+    <section class="add-doctor-card">
+
+        <i class="fa-solid fa-plus"></i>
+
+
+        <h3>
+            আপনার পরিচিত কোনো ডাক্তার কি তালিকায় নেই?
+        </h3>
+
+
+        <p>
+            আমাদের গ্রামের কোনো ডাক্তার,
+            চিকিৎসক বা স্বাস্থ্যসেবা প্রদানকারীর
+            তথ্য যদি এখানে না থাকে, তাহলে
+            আমাদের WhatsApp-এ নাম, ফোন নম্বর,
+            বিশেষজ্ঞতার category এবং profile photo
+            পাঠিয়ে জানান।
+        </p>
+
+
+        <a
+            href="https://wa.me/917557003853?text=Hello%20Mr%20Noor%2C%20please%20add%20this%20doctor%20to%20the%20Srikrishnapur%20Doctors%20List.%0A%0ADoctor%20Name%3A%20%0ASpecialist%2FCategory%3A%20%0APhone%20Number%3A%20%0AAddress%3A%20%0A%0AI%20will%20send%20the%20doctor%27s%20profile%20photo%20also."
+            target="_blank"
+            rel="noopener"
+            class="doctor-action-btn add-doctor-btn">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WhatsApp-এ তথ্য পাঠান
+
+        </a>
+
+    </section>
+
+
+
+    <!-- CREDIT -->
+
+    <div class="doctor-credit">
+
+        <div>
+            Srikrishnapur Community Website
+        </div>
+
+
+        <div style="margin-top:7px;">
+
+            Designed & Developed with ❤️ by
+
+            <a
+                href="https://www.noor.com.in/about-noor/"
+                target="_blank"
+                rel="noopener">
+
+                Mr Noor
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>
+            © <span id="currentYear"></span>
+            Srikrishnapur.
+            All rights reserved.
+        </p>
+
+        <p>
+
+            Made with ❤️ by
+
+            <a
+                href="https://www.noor.com.in/about-noor/"
+                target="_blank"
+                rel="noopener">
+
+                Mr Noor
+
+            </a>
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================
+     EXISTING JS
+===================================== -->
+
+<script src="js/main.js" defer></script>
+
+<script src="js/search.js" defer></script>
+
+
+
+<!-- =====================================
+     DOCTORS PAGE JS
+===================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =================================
+           CATEGORY FILTER
+        ================================= */
+
+        const filterButtons =
+            document.querySelectorAll(
+                ".filter-btn"
+            );
+
+
+        const doctorCards =
+            document.querySelectorAll(
+                ".doctor-card"
+            );
+
+
+        const doctorCount =
+            document.getElementById(
+                "doctorCount"
+            );
+
+
+        const noDoctors =
+            document.getElementById(
+                "noDoctors"
+            );
+
+
+        function filterDoctors(category) {
+
+            let visibleCount = 0;
+
+
+            doctorCards.forEach(
+                function (card) {
+
+                    const cardCategory =
+                        card.dataset.category;
+
+
+                    if (
+                        category === "all" ||
+                        cardCategory === category
+                    ) {
+
+                        card.style.display =
+                            "block";
+
+                        visibleCount++;
+
+                    } else {
+
+                        card.style.display =
+                            "none";
+
+                    }
+
+                }
+            );
+
+
+            doctorCount.textContent =
+                visibleCount + " জন";
+
+
+            if (visibleCount === 0) {
+
+                noDoctors.style.display =
+                    "block";
+
+            } else {
+
+                noDoctors.style.display =
+                    "none";
+
+            }
+
+        }
+
+
+        filterButtons.forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+
+                        filterButtons.forEach(
+                            function (btn) {
+
+                                btn.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        this.classList.add(
+                            "active"
+                        );
+
+
+                        filterDoctors(
+                            this.dataset.category
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* Initial */
+
+        filterDoctors("all");
+
+
+    }
+);
+
+
+
+/* =====================================
+   SHARE PAGE
+===================================== */
+
+function shareDoctorsPage() {
+
+    const shareData = {
+
+        title:
+            "শ্রীকৃষ্ণপুরের ডাক্তার",
+
+        text:
+            "শ্রীকৃষ্ণপুর গ্রামের ডাক্তারদের তালিকা ও যোগাযোগের তথ্য দেখুন।",
+
+        url:
+            "https://srikrishnapur.in/doctors.html"
+
+    };
+
+
+    if (
+        navigator.share
+    ) {
+
+        navigator.share(
+            shareData
+        ).catch(
+            function () {}
+        );
+
+    } else {
+
+        const url =
+            "https://srikrishnapur.in/doctors.html";
+
+
+        navigator.clipboard
+            .writeText(url)
+            .then(
+                function () {
+
+                    alert(
+                        "Doctors page link copied!"
+                    );
+
+                }
+            )
+            .catch(
+                function () {
+
+                    alert(
+                        "Share link: " + url
+                    );
+
+                }
+            );
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
