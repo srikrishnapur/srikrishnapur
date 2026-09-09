@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   const creatorsGrid = document.getElementById("creatorsGrid");
   const creatorCount = document.getElementById("creatorCount");
   const emptyState = document.getElementById("emptyState");
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   function escapeHTML(value) {
-    if (value === null || value === undefined) return "";
+    if (!value) return "";
 
     return String(value)
       .replace(/&/g, "&amp;")
@@ -41,33 +42,36 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderCreators() {
+
     creatorsGrid.innerHTML = "";
 
-    let filteredCreators = creators;
+    let filtered = creators;
 
     if (activeCategory !== "all") {
-      filteredCreators = creators.filter(
+      filtered = creators.filter(
         creator => creator.category === activeCategory
       );
     }
 
-    creatorCount.textContent = filteredCreators.length;
+    creatorCount.textContent = filtered.length;
 
-    if (filteredCreators.length === 0) {
+    if (filtered.length === 0) {
       emptyState.style.display = "block";
       return;
     }
 
     emptyState.style.display = "none";
 
-    filteredCreators.forEach(creator => {
+    filtered.forEach(creator => {
+
       const card = document.createElement("article");
       card.className = "creator-card";
 
       const icon =
         categoryIcons[creator.category] || "fa-user-pen";
 
-      const photo = creator.photo || "images/og-image.webp";
+      const photo =
+        creator.photo || "images/og-image.webp";
 
       let socialButtons = "";
 
@@ -78,10 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
             target="_blank"
             rel="noopener noreferrer"
             class="social-btn facebook"
-            aria-label="Facebook"
+            title="Facebook"
           >
             <i class="fab fa-facebook-f"></i>
-            Facebook
           </a>
         `;
       }
@@ -93,10 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
             target="_blank"
             rel="noopener noreferrer"
             class="social-btn instagram"
-            aria-label="Instagram"
+            title="Instagram"
           >
             <i class="fab fa-instagram"></i>
-            Instagram
           </a>
         `;
       }
@@ -108,16 +110,29 @@ document.addEventListener("DOMContentLoaded", () => {
             target="_blank"
             rel="noopener noreferrer"
             class="social-btn youtube"
-            aria-label="YouTube"
+            title="YouTube"
           >
             <i class="fab fa-youtube"></i>
-            YouTube
           </a>
         `;
       }
 
+      const detailsButton = validLink(creator.details_url)
+        ? `
+          <a
+            href="${escapeHTML(creator.details_url)}"
+            class="details-btn"
+          >
+            <i class="fas fa-circle-info"></i>
+            Details
+          </a>
+        `
+        : "";
+
       card.innerHTML = `
-        <div class="creator-photo-wrapper">
+
+        <div class="creator-card-top">
+
           <img
             src="${escapeHTML(photo)}"
             alt="${escapeHTML(creator.name)}"
@@ -125,27 +140,37 @@ document.addEventListener("DOMContentLoaded", () => {
             loading="lazy"
             onerror="this.src='images/og-image.webp';"
           >
+
+          <div class="creator-info">
+
+            <span class="creator-category">
+              <i class="fas ${icon}"></i>
+              ${escapeHTML(
+                creator.category_name || "Creator"
+              )}
+            </span>
+
+            <h2>
+              ${escapeHTML(creator.name)}
+            </h2>
+
+            <p>
+              ${escapeHTML(
+                creator.description || ""
+              )}
+            </p>
+
+          </div>
+
         </div>
 
-        <div class="creator-content">
-
-          <span class="creator-category">
-            <i class="fas ${icon}"></i>
-            ${escapeHTML(creator.category_name || "Creator")}
-          </span>
-
-          <h2>${escapeHTML(creator.name)}</h2>
-
-          <p class="creator-description">
-            ${escapeHTML(
-              creator.description ||
-              "Content Creator"
-            )}
-          </p>
+        <div class="creator-bottom">
 
           <div class="social-links">
             ${socialButtons}
           </div>
+
+          ${detailsButton}
 
         </div>
       `;
@@ -155,36 +180,45 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   categoryButtons.forEach(button => {
+
     button.addEventListener("click", () => {
 
-      categoryButtons.forEach(btn => {
-        btn.classList.remove("active");
-      });
+      categoryButtons.forEach(btn =>
+        btn.classList.remove("active")
+      );
 
       button.classList.add("active");
 
-      activeCategory = button.dataset.category;
+      activeCategory =
+        button.dataset.category;
 
       renderCreators();
+
     });
+
   });
 
   fetch("data/creators.json")
     .then(response => {
+
       if (!response.ok) {
-        throw new Error("Unable to load creators.json");
+        throw new Error("Creators data not found");
       }
 
       return response.json();
+
     })
     .then(data => {
+
       creators = Array.isArray(data.creators)
         ? data.creators
         : [];
 
       renderCreators();
+
     })
     .catch(error => {
+
       console.error(error);
 
       creatorCount.textContent = "0";
@@ -192,54 +226,52 @@ document.addEventListener("DOMContentLoaded", () => {
       creatorsGrid.innerHTML = `
         <div class="load-error">
           <i class="fas fa-triangle-exclamation"></i>
-          <h3>Creators তথ্য লোড করা যায়নি</h3>
-          <p>দয়া করে কিছুক্ষণ পরে আবার চেষ্টা করুন।</p>
+          <h3>Creator তথ্য লোড করা যায়নি</h3>
+          <p>কিছুক্ষণ পরে আবার চেষ্টা করুন।</p>
         </div>
       `;
+
     });
+
 });
 
 
-/* =========================================
-   SHARE PAGE
-========================================= */
+/* ================================
+   SHARE
+================================ */
 
 function shareCreatorsPage() {
 
-  const shareData = {
-    title: "Srikrishnapur Creators",
+  const data = {
+    title: "Srikrishnapur Content Creators",
     text: "শ্রীকৃষ্ণপুরের Content Creators দেখুন।",
     url: window.location.href
   };
 
   if (navigator.share) {
 
-    navigator.share(shareData).catch(() => {});
+    navigator.share(data).catch(() => {});
 
   } else {
 
-    navigator.clipboard.writeText(window.location.href)
-      .then(() => {
-        alert("Page link copied!");
-      })
-      .catch(() => {
-        alert("Unable to copy link.");
-      });
+    navigator.clipboard
+      .writeText(window.location.href)
+      .then(() => alert("Page link copied!"));
 
   }
 }
 
 
-/* =========================================
+/* ================================
    ADD CREATOR
-========================================= */
+================================ */
 
 function addCreator() {
 
   const message =
 `Hello Mr Noor,
 
-আমি Srikrishnapur.in-এ Creator হিসেবে আমার তথ্য যুক্ত করতে চাই।
+আমি Srikrishnapur.in-এ Creator হিসেবে আমার Profile যুক্ত করতে চাই।
 
 Creator Name:
 Category:
@@ -247,14 +279,15 @@ Facebook:
 Instagram:
 YouTube:
 Description:
+Details URL:
 
 আমার Profile Photo-ও পাঠাচ্ছি।
 
-Please add my Creator profile on Srikrishnapur.in.`;
+Please add my Creator profile.`;
 
-  const whatsappURL =
+  const url =
     "https://wa.me/917557003853?text=" +
     encodeURIComponent(message);
 
-  window.open(whatsappURL, "_blank");
+  window.open(url, "_blank");
 }
