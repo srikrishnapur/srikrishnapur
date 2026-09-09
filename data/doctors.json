@@ -1,0 +1,65 @@
+{
+  "last_updated": "2026-09-09",
+  "doctors": [
+    {
+      "id": "doctor-001",
+      "name": "ডাক্তারের নাম",
+      "specialist": "Medicine Specialist",
+      "category": "medicine",
+      "icon": "fa-solid fa-stethoscope",
+      "description": "সাধারণ রোগ ও মেডিসিন সংক্রান্ত চিকিৎসা।",
+      "phone": "919XXXXXXXXX",
+      "photo": "images/doctor-1.webp",
+      "address": "শ্রীকৃষ্ণপুর, পূর্ব বর্ধমান",
+      "details_url": "#"
+    },
+    {
+      "id": "doctor-002",
+      "name": "ডাক্তারের নাম",
+      "specialist": "Heart Specialist",
+      "category": "heart",
+      "icon": "fa-solid fa-heart-pulse",
+      "description": "হৃদযন্ত্র ও হৃদরোগ সংক্রান্ত চিকিৎসা।",
+      "phone": "919XXXXXXXXX",
+      "photo": "images/doctor-2.webp",
+      "address": "শ্রীকৃষ্ণপুর, পূর্ব বর্ধমান",
+      "details_url": "#"
+    },
+    {
+      "id": "doctor-003",
+      "name": "ডাক্তারের নাম",
+      "specialist": "Children Specialist",
+      "category": "children",
+      "icon": "fa-solid fa-child",
+      "description": "শিশুদের স্বাস্থ্য ও চিকিৎসা সংক্রান্ত পরিষেবা।",
+      "phone": "919XXXXXXXXX",
+      "photo": "images/doctor-3.webp",
+      "address": "শ্রীকৃষ্ণপুর, পূর্ব বর্ধমান",
+      "details_url": "#"
+    },
+    {
+      "id": "doctor-004",
+      "name": "ডাক্তারের নাম",
+      "specialist": "Dental Specialist",
+      "category": "dental",
+      "icon": "fa-solid fa-tooth",
+      "description": "দাঁত ও মুখের স্বাস্থ্য সংক্রান্ত চিকিৎসা।",
+      "phone": "919XXXXXXXXX",
+      "photo": "images/doctor-4.webp",
+      "address": "শ্রীকৃষ্ণপুর, পূর্ব বর্ধমান",
+      "details_url": "#"
+    },
+    {
+      "id": "doctor-005",
+      "name": "ডাক্তারের নাম",
+      "specialist": "Skin Specialist",
+      "category": "skin",
+      "icon": "fa-solid fa-hand-dots",
+      "description": "ত্বক সংক্রান্ত রোগ ও চিকিৎসা।",
+      "phone": "919XXXXXXXXX",
+      "photo": "images/doctor-5.webp",
+      "address": "শ্রীকৃষ্ণপুর, পূর্ব বর্ধমান",
+      "details_url": "#"
+    }
+  ]
+}
