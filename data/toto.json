@@ -1,0 +1,28 @@
+{
+  "last_updated": "2026-09-09",
+  "title": "শ্রীকৃষ্ণপুরের টোটো",
+  "totos": [
+    {
+      "id": "toto-001",
+      "name": "টোটো চালকের নাম",
+      "phone": "919XXXXXXXXX",
+      "photo": "images/toto-1.webp",
+      "area": "শ্রীকৃষ্ণপুর",
+      "service": "স্থানীয় যাতায়াত",
+      "category": "local",
+      "description": "শ্রীকৃষ্ণপুর ও আশেপাশের এলাকায় টোটো পরিষেবা।",
+      "details_url": "#"
+    },
+    {
+      "id": "toto-002",
+      "name": "টোটো চালকের নাম",
+      "phone": "919XXXXXXXXX",
+      "photo": "images/toto-2.webp",
+      "area": "শ্রীকৃষ্ণপুর",
+      "service": "স্টেশন যাতায়াত",
+      "category": "station",
+      "description": "স্টেশন ও আশেপাশের এলাকায় যাতায়াতের পরিষেবা।",
+      "details_url": "#"
+    }
+  ]
+}
