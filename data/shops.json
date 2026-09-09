@@ -1,0 +1,102 @@
+{
+  "last_updated": "2026-09-09",
+  "title": "শ্রীকৃষ্ণপুরের দোকান ও ব্যবসা",
+  "shops": [
+    {
+      "id": "shop-001",
+      "name": "দোকানের নাম",
+      "category": "grocery",
+      "category_name": "কেরানা / Daily Shop",
+      "photo": "images/shop-1.webp",
+      "phone": "919XXXXXXXXX",
+      "address": "শ্রীকৃষ্ণপুর",
+      "description": "দৈনন্দিন প্রয়োজনীয় জিনিসপত্র পাওয়া যায়।",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Srikrishnapur",
+      "details_url": "#"
+    },
+    {
+      "id": "shop-002",
+      "name": "দোকানের নাম",
+      "category": "fish",
+      "category_name": "Fish",
+      "photo": "images/shop-2.webp",
+      "phone": "919XXXXXXXXX",
+      "address": "শ্রীকৃষ্ণপুর",
+      "description": "তাজা মাছ পাওয়া যায়।",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Srikrishnapur",
+      "details_url": "#"
+    },
+    {
+      "id": "shop-003",
+      "name": "দোকানের নাম",
+      "category": "chicken",
+      "category_name": "Chicken",
+      "photo": "images/shop-3.webp",
+      "phone": "919XXXXXXXXX",
+      "address": "শ্রীকৃষ্ণপুর",
+      "description": "মুরগি ও মুরগির মাংস পাওয়া যায়।",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Srikrishnapur",
+      "details_url": "#"
+    },
+    {
+      "id": "shop-004",
+      "name": "দোকানের নাম",
+      "category": "mutton",
+      "category_name": "Mutton",
+      "photo": "images/shop-4.webp",
+      "phone": "919XXXXXXXXX",
+      "address": "শ্রীকৃষ্ণপুর",
+      "description": "ছাগলের মাংস পাওয়া যায়।",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Srikrishnapur",
+      "details_url": "#"
+    },
+    {
+      "id": "shop-005",
+      "name": "দোকানের নাম",
+      "category": "beef",
+      "category_name": "Beef",
+      "photo": "images/shop-5.webp",
+      "phone": "919XXXXXXXXX",
+      "address": "শ্রীকৃষ্ণপুর",
+      "description": "গরুর মাংস পাওয়া যায়।",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Srikrishnapur",
+      "details_url": "#"
+    },
+    {
+      "id": "shop-006",
+      "name": "দোকানের নাম",
+      "category": "clothes",
+      "category_name": "Clothes",
+      "photo": "images/shop-6.webp",
+      "phone": "919XXXXXXXXX",
+      "address": "শ্রীকৃষ্ণপুর",
+      "description": "পুরুষ, মহিলা ও শিশুদের পোশাক পাওয়া যায়।",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Srikrishnapur",
+      "details_url": "#"
+    },
+    {
+      "id": "shop-007",
+      "name": "দোকানের নাম",
+      "category": "repair",
+      "category_name": "Repair Shop",
+      "photo": "images/shop-7.webp",
+      "phone": "919XXXXXXXXX",
+      "address": "শ্রীকৃষ্ণপুর",
+      "description": "বিভিন্ন ধরনের repair service।",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Srikrishnapur",
+      "details_url": "#"
+    },
+    {
+      "id": "shop-008",
+      "name": "দোকানের নাম",
+      "category": "cyber",
+      "category_name": "Cyber Cafe",
+      "photo": "images/shop-8.webp",
+      "phone": "919XXXXXXXXX",
+      "address": "শ্রীকৃষ্ণপুর",
+      "description": "অনলাইন কাজ, প্রিন্ট, ফটোকপি ও অন্যান্য পরিষেবা।",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Srikrishnapur",
+      "details_url": "#"
+    }
+  ]
+}
