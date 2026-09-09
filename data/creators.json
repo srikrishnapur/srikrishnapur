@@ -1,0 +1,17 @@
+{
+  "last_updated": "2026-09-09",
+  "title": "শ্রীকৃষ্ণপুরের Content Creators",
+  "creators": [
+    {
+      "id": "creator-001",
+      "name": "Creator Name",
+      "category": "comedy",
+      "category_name": "Comedy",
+      "photo": "images/creator-1.webp",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/",
+      "description": "Comedy ও entertainment content তৈরি করেন।"
+    }
+  ]
+}
