@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Content Creators | Srikrishnapur</title>
+
+  <meta
+    name="description"
+    content="শ্রীকৃষ্ণপুরের Content Creators Directory। Comedy, Educational, Story Teller, Funny, Business ও Technology Creators খুঁজুন।"
+  >
+
+  <meta
+    name="keywords"
+    content="Srikrishnapur creators, content creators, comedy, educational, storyteller, funny, business, technology"
+  >
+
+  <meta name="theme-color" content="#198754">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* =========================================
+       PAGE HERO
+    ========================================= */
+
+    .creators-hero {
+      padding: 55px 20px;
+      text-align: center;
+      background:
+        linear-gradient(
+          135deg,
+          #198754,
+          #0d6efd
+        );
+      color: #fff;
+    }
+
+    .creators-hero .hero-icon {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      font-size: 32px;
+    }
+
+    .creators-hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 5vw, 44px);
+    }
+
+    .creators-hero p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.7;
+      opacity: .95;
+    }
+
+
+    /* =========================================
+       ACTION BUTTONS
+    ========================================= */
+
+    .creator-actions {
+      max-width: 1100px;
+      margin: 25px auto;
+      padding: 0 15px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .creator-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      transition: .2s;
+    }
+
+    .creator-action-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .add-creator-btn {
+      background: #198754;
+      color: #fff;
+    }
+
+    .share-creator-btn {
+      background: #0d6efd;
+      color: #fff;
+    }
+
+
+    /* =========================================
+       NOTICE
+    ========================================= */
+
+    .creator-notice {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 15px 18px;
+      border-radius: 12px;
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      color: #664d03;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.6;
+    }
+
+    .creator-notice i {
+      margin-top: 4px;
+      color: #f59f00;
+    }
+
+
+    /* =========================================
+       CATEGORY FILTER
+    ========================================= */
+
+    .creator-filter-wrapper {
+      max-width: 1200px;
+      margin: 30px auto 15px;
+      padding: 0 15px;
+    }
+
+    .creator-filter {
+      display: flex;
+      gap: 9px;
+      overflow-x: auto;
+      padding: 5px 2px 12px;
+      scrollbar-width: thin;
+    }
+
+    .category-btn {
+      flex: 0 0 auto;
+      border: 1px solid #ddd;
+      background: #fff;
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 14px;
+      white-space: nowrap;
+      transition: .2s;
+    }
+
+    .category-btn:hover {
+      border-color: #198754;
+      color: #198754;
+    }
+
+    .category-btn.active {
+      background: #198754;
+      border-color: #198754;
+      color: #fff;
+    }
+
+
+    /* =========================================
+       COUNT
+    ========================================= */
+
+    .creator-count {
+      max-width: 1200px;
+      margin: 0 auto 20px;
+      padding: 0 15px;
+      color: #666;
+      font-size: 15px;
+    }
+
+    .creator-count strong {
+      color: #198754;
+    }
+
+
+    /* =========================================
+       CREATOR GRID
+    ========================================= */
+
+    .creators-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px 40px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(260px, 1fr)
+        );
+
+      gap: 22px;
+    }
+
+
+    /* =========================================
+       CREATOR CARD
+    ========================================= */
+
+    .creator-card {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #e8e8e8;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,.07);
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .creator-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,.12);
+    }
+
+
+    /* =========================================
+       PHOTO
+    ========================================= */
+
+    .creator-photo-wrapper {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #f1f3f5;
+    }
+
+    .creator-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+
+      transition: transform .3s ease;
+    }
+
+    .creator-card:hover .creator-photo {
+      transform: scale(1.04);
+    }
+
+
+    /* =========================================
+       CONTENT
+    ========================================= */
+
+    .creator-content {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .creator-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+
+      width: fit-content;
+
+      padding: 6px 10px;
+      border-radius: 20px;
+
+      background: #e9f7ef;
+      color: #198754;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      margin-bottom: 10px;
+    }
+
+    .creator-content h2 {
+      margin: 0 0 9px;
+      font-size: 21px;
+      color: #222;
+    }
+
+    .creator-description {
+      margin: 0 0 16px;
+      color: #666;
+      line-height: 1.6;
+      font-size: 14px;
+      flex: 1;
+    }
+
+
+    /* =========================================
+       SOCIAL BUTTONS
+    ========================================= */
+
+    .social-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      flex: 1 1 auto;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+
+      min-width: 90px;
+
+      padding: 9px 10px;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+
+      font-size: 12px;
+      font-weight: 600;
+
+      transition: .2s;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px);
+      opacity: .9;
+    }
+
+    .social-btn.facebook {
+      background: #1877f2;
+      color: #fff;
+    }
+
+    .social-btn.instagram {
+      background: #e1306c;
+      color: #fff;
+    }
+
+    .social-btn.youtube {
+      background: #ff0000;
+      color: #fff;
+    }
+
+
+    /* =========================================
+       EMPTY STATE
+    ========================================= */
+
+    .empty-state {
+      max-width: 600px;
+      margin: 20px auto 50px;
+      padding: 50px 20px;
+      text-align: center;
+      display: none;
+    }
+
+    .empty-state i {
+      font-size: 45px;
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+
+    .empty-state h3 {
+      margin: 0 0 8px;
+    }
+
+    .empty-state p {
+      color: #777;
+    }
+
+
+    /* =========================================
+       LOAD ERROR
+    ========================================= */
+
+    .load-error {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .load-error i {
+      font-size: 40px;
+      color: #dc3545;
+      margin-bottom: 12px;
+    }
+
+
+    /* =========================================
+       ADD CREATOR SECTION
+    ========================================= */
+
+    .add-creator-section {
+      max-width: 1000px;
+      margin: 10px auto 50px;
+      padding: 35px 20px;
+
+      text-align: center;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f0fff7,
+          #eef6ff
+        );
+    }
+
+    .add-creator-section i.main-icon {
+      font-size: 38px;
+      color: #198754;
+      margin-bottom: 12px;
+    }
+
+    .add-creator-section h2 {
+      margin: 0 0 10px;
+    }
+
+    .add-creator-section p {
+      max-width: 650px;
+      margin: 0 auto 20px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 600px) {
+
+      .creators-hero {
+        padding: 40px 15px;
+      }
+
+      .creator-actions {
+        padding: 0 10px;
+      }
+
+      .creator-action-btn {
+        flex: 1;
+        justify-content: center;
+      }
+
+      .creators-grid {
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .creator-filter-wrapper {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .creator-count {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================
+       HERO
+  ========================================= -->
+
+  <section class="creators-hero">
+
+    <div class="hero-icon">
+      <i class="fas fa-video"></i>
+    </div>
+
+    <h1>Content Creators</h1>
+
+    <p>
+      শ্রীকৃষ্ণপুরের বিভিন্ন ধরনের
+      Content Creator-দের খুঁজে নিন।
+      Comedy, Educational, Story Teller,
+      Business, Technology এবং আরও অনেক কিছু।
+    </p>
+
+  </section>
+
+
+
+  <!-- =========================================
+       ACTION BUTTONS
+  ========================================= -->
+
+  <div class="creator-actions">
+
+    <button
+      class="creator-action-btn add-creator-btn"
+      onclick="addCreator()"
+    >
+      <i class="fas fa-user-plus"></i>
+      Add Your Profile
+    </button>
+
+    <button
+      class="creator-action-btn share-creator-btn"
+      onclick="shareCreatorsPage()"
+    >
+      <i class="fas fa-share-nodes"></i>
+      Share
+    </button>
+
+  </div>
+
+
+
+  <!-- =========================================
+       NOTICE
+  ========================================= -->
+
+  <div class="creator-notice">
+
+    <i class="fas fa-circle-info"></i>
+
+    <div>
+      <strong>Creator হিসেবে যুক্ত হতে চান?</strong><br>
+
+      আপনার নাম, Category, Profile Photo এবং
+      Facebook / Instagram / YouTube Link
+      পাঠিয়ে আমাদের Directory-তে যুক্ত হতে পারেন।
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================
+       CATEGORY FILTER
+  ========================================= -->
+
+  <div class="creator-filter-wrapper">
+
+    <div class="creator-filter">
+
+      <button
+        class="category-btn active"
+        data-category="all"
+      >
+        <i class="fas fa-users"></i>
+        All
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="comedy"
+      >
+        😂 Comedy
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="educational"
+      >
+        📚 Educational
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="storyteller"
+      >
+        📖 Story Teller
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="funny"
+      >
+        🤣 Funny
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="business"
+      >
+        🏪 Business
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="technology"
+      >
+        💻 Technology
+      </button>
+
+
+      <button
+        class="category-btn"
+        data-category="other"
+      >
+        🎨 Other
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================
+       COUNT
+  ========================================= -->
+
+  <div class="creator-count">
+
+    মোট
+    <strong id="creatorCount">0</strong>
+    জন Creator
+
+  </div>
+
+
+
+  <!-- =========================================
+       CREATOR GRID
+  ========================================= -->
+
+  <main
+    class="creators-grid"
+    id="creatorsGrid"
+  ></main>
+
+
+
+  <!-- =========================================
+       EMPTY STATE
+  ========================================= -->
+
+  <div
+    class="empty-state"
+    id="emptyState"
+  >
+
+    <i class="fas fa-user-slash"></i>
+
+    <h3>কোনো Creator পাওয়া যায়নি</h3>
+
+    <p>
+      এই Category-তে বর্তমানে কোনো Creator
+      যুক্ত করা হয়নি।
+    </p>
+
+  </div>
+
+
+
+  <!-- =========================================
+       ADD CREATOR
+  ========================================= -->
+
+  <section class="add-creator-section">
+
+    <i class="fas fa-user-plus main-icon"></i>
+
+    <h2>
+      আপনিও Creator?
+    </h2>
+
+    <p>
+      আপনার Facebook, Instagram অথবা YouTube
+      Profile আমাদের Directory-তে যুক্ত করুন।
+      আপনার Profile অন্যদের কাছে সহজে পৌঁছে দিতে
+      আমরা আপনার Creator Profile প্রদর্শন করব।
+    </p>
+
+    <button
+      class="creator-action-btn add-creator-btn"
+      onclick="addCreator()"
+    >
+      <i class="fab fa-whatsapp"></i>
+      WhatsApp-এ তথ্য পাঠান
+    </button>
+
+  </section>
+
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <p>
+      © 2026 Srikrishnapur.in
+    </p>
+
+    <p>
+      Designed & Developed with ❤️ by
+      <a
+        href="https://www.noor.com.in/about-noor/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Mr Noor
+      </a>
+    </p>
+
+  </footer>
+
+
+
+  <!-- =========================================
+       SCRIPTS
+  ========================================= -->
+
+  <script src="js/main.js"></script>
+
+  <script src="js/search.js"></script>
+
+  <script src="js/creators.js"></script>
+
+  <script src="js/visitor.js"></script>
+
+
+</body>
+
+</html>
