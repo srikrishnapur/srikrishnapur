@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        শ্রীকৃষ্ণপুরের দোকান | Shops & Businesses | Srikrishnapur
+    </title>
+
+    <meta name="description"
+          content="শ্রীকৃষ্ণপুরের বিভিন্ন দোকান ও ব্যবসার তালিকা। দোকানের নাম, ছবি, ফোন নম্বর এবং Google Maps location দেখুন।">
+
+    <meta name="keywords"
+          content="Srikrishnapur shops, Srikrishnapur business, শ্রীকৃষ্ণপুর দোকান, শ্রীকৃষ্ণপুর ব্যবসা">
+
+    <meta name="author"
+          content="Mr Noor">
+
+
+    <meta property="og:title"
+          content="শ্রীকৃষ্ণপুরের দোকান ও ব্যবসা">
+
+    <meta property="og:description"
+          content="শ্রীকৃষ্ণপুরের বিভিন্ন দোকান ও ব্যবসার তথ্য খুঁজে দেখুন।">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://srikrishnapur.in/shops.html">
+
+    <meta property="og:image"
+          content="https://srikrishnapur.in/images/og-image.webp">
+
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        .shops-page {
+
+            max-width:1200px;
+
+            margin:auto;
+
+            padding:
+                30px 16px 50px;
+
+        }
+
+
+        /* HERO */
+
+        .shops-hero {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f766e,
+                    #115e59
+                );
+
+            color:#fff;
+
+            border-radius:24px;
+
+            padding:40px 25px;
+
+            text-align:center;
+
+            margin-bottom:25px;
+
+        }
+
+
+        .shops-hero-icon {
+
+            width:75px;
+
+            height:75px;
+
+            margin:
+                0 auto 15px;
+
+            border-radius:22px;
+
+            background:
+                rgba(255,255,255,.15);
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            font-size:34px;
+
+        }
+
+
+        .shops-hero h1 {
+
+            margin:
+                0 0 8px;
+
+            font-size:30px;
+
+        }
+
+
+        .shops-hero p {
+
+            max-width:680px;
+
+            margin:auto;
+
+            line-height:1.7;
+
+            opacity:.94;
+
+        }
+
+
+        /* ACTIONS */
+
+        .shop-actions {
+
+            display:flex;
+
+            justify-content:center;
+
+            gap:10px;
+
+            flex-wrap:wrap;
+
+            margin-bottom:25px;
+
+        }
+
+
+        .shop-action-btn {
+
+            border:0;
+
+            text-decoration:none;
+
+            display:inline-flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:8px;
+
+            padding:
+                12px 18px;
+
+            border-radius:12px;
+
+            font-weight:700;
+
+            cursor:pointer;
+
+            transition:.2s;
+
+        }
+
+
+        .shop-action-btn:hover {
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .add-shop-btn {
+
+            background:#0f766e;
+
+            color:#fff;
+
+        }
+
+
+        .share-shop-btn {
+
+            background:#e8f5f3;
+
+            color:#0f766e;
+
+        }
+
+
+        /* NOTICE */
+
+        .shop-notice {
+
+            background:#fff8e1;
+
+            border:
+                1px solid #f1df9c;
+
+            padding:14px 16px;
+
+            border-radius:14px;
+
+            margin-bottom:25px;
+
+            color:#6b5500;
+
+            font-size:14px;
+
+            line-height:1.6;
+
+        }
+
+
+        /* FILTER */
+
+        .shop-filter {
+
+            display:flex;
+
+            gap:8px;
+
+            overflow-x:auto;
+
+            padding-bottom:8px;
+
+            margin-bottom:25px;
+
+            scrollbar-width:none;
+
+        }
+
+
+        .shop-filter::-webkit-scrollbar {
+
+            display:none;
+
+        }
+
+
+        .shop-filter-btn {
+
+            flex:
+                0 0 auto;
+
+            border:
+                1px solid #dce7e5;
+
+            background:#fff;
+
+            color:#31504c;
+
+            padding:
+                9px 15px;
+
+            border-radius:50px;
+
+            cursor:pointer;
+
+            font-weight:600;
+
+            white-space:nowrap;
+
+        }
+
+
+        .shop-filter-btn.active {
+
+            background:#0f766e;
+
+            color:#fff;
+
+            border-color:#0f766e;
+
+        }
+
+
+        /* TITLE */
+
+        .shops-section-title {
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:space-between;
+
+            gap:10px;
+
+            margin-bottom:18px;
+
+        }
+
+
+        .shops-section-title h2 {
+
+            margin:0;
+
+            font-size:23px;
+
+            color:#173b37;
+
+        }
+
+
+        .shop-count {
+
+            background:#e8f5f3;
+
+            color:#0f766e;
+
+            padding:
+                5px 10px;
+
+            border-radius:50px;
+
+            font-size:13px;
+
+            font-weight:700;
+
+        }
+
+
+        /* GRID */
+
+        .shops-grid {
+
+            display:grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:18px;
+
+        }
+
+
+        /* CARD */
+
+        .shop-card {
+
+            background:#fff;
+
+            border:
+                1px solid #e4ecea;
+
+            border-radius:20px;
+
+            padding:18px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,.05);
+
+            transition:.25s;
+
+        }
+
+
+        .shop-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,.09);
+
+        }
+
+
+        .shop-top {
+
+            display:flex;
+
+            gap:14px;
+
+            align-items:center;
+
+            margin-bottom:15px;
+
+        }
+
+
+        .shop-photo {
+
+            width:78px;
+
+            height:78px;
+
+            border-radius:18px;
+
+            object-fit:cover;
+
+            background:#edf5f3;
+
+            border:
+                2px solid #e2efed;
+
+        }
+
+
+        .shop-info {
+
+            min-width:0;
+
+        }
+
+
+        .shop-name {
+
+            margin:
+                0 0 6px;
+
+            font-size:18px;
+
+            color:#163d38;
+
+        }
+
+
+        .shop-category {
+
+            display:inline-flex;
+
+            align-items:center;
+
+            gap:5px;
+
+            background:#e8f5f3;
+
+            color:#0f766e;
+
+            padding:
+                5px 9px;
+
+            border-radius:50px;
+
+            font-size:12px;
+
+            font-weight:700;
+
+        }
+
+
+        .shop-description {
+
+            color:#667b77;
+
+            font-size:13px;
+
+            line-height:1.6;
+
+            margin:
+                0 0 12px;
+
+        }
+
+
+        .shop-location {
+
+            color:#71827f;
+
+            font-size:13px;
+
+            margin-bottom:15px;
+
+        }
+
+
+        .shop-location i {
+
+            margin-right:4px;
+
+        }
+
+
+        /* BUTTONS */
+
+        .shop-buttons {
+
+            display:grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:8px;
+
+        }
+
+
+        .shop-btn {
+
+            text-decoration:none;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:7px;
+
+            padding:10px;
+
+            border-radius:11px;
+
+            font-size:13px;
+
+            font-weight:700;
+
+            transition:.2s;
+
+        }
+
+
+        .shop-call {
+
+            background:#0f766e;
+
+            color:#fff;
+
+        }
+
+
+        .shop-whatsapp {
+
+            background:#e9f8ef;
+
+            color:#168a4b;
+
+        }
+
+
+        .shop-map {
+
+            background:#eef5ff;
+
+            color:#2563a8;
+
+        }
+
+
+        .shop-details {
+
+            background:#f5f7f7;
+
+            color:#405854;
+
+        }
+
+
+        .shop-btn:hover {
+
+            transform:
+                translateY(-1px);
+
+        }
+
+
+        /* EMPTY */
+
+        .no-shops {
+
+            display:none;
+
+            text-align:center;
+
+            padding:45px 20px;
+
+            background:#f8faf9;
+
+            border-radius:18px;
+
+            color:#667b77;
+
+        }
+
+
+        .no-shops i {
+
+            font-size:35px;
+
+            margin-bottom:12px;
+
+        }
+
+
+        /* ADD SHOP */
+
+        .add-shop-card {
+
+            margin-top:30px;
+
+            border:
+                2px dashed #b7d8d3;
+
+            border-radius:20px;
+
+            padding:30px 20px;
+
+            text-align:center;
+
+            background:#f8fcfb;
+
+        }
+
+
+        .add-shop-icon {
+
+            width:58px;
+
+            height:58px;
+
+            border-radius:50%;
+
+            background:#e3f3f0;
+
+            color:#0f766e;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            margin:
+                0 auto 12px;
+
+            font-size:24px;
+
+        }
+
+
+        .add-shop-card h3 {
+
+            margin:
+                0 0 7px;
+
+            color:#173b37;
+
+        }
+
+
+        .add-shop-card p {
+
+            margin:
+                0 auto 17px;
+
+            max-width:600px;
+
+            color:#6b7e7a;
+
+            line-height:1.6;
+
+            font-size:14px;
+
+        }
+
+
+        /* CREDIT */
+
+        .shop-credit {
+
+            text-align:center;
+
+            margin-top:35px;
+
+            padding-top:25px;
+
+            border-top:
+                1px solid #e6eceb;
+
+            color:#71827f;
+
+            font-size:13px;
+
+        }
+
+
+        .shop-credit a {
+
+            color:#0f766e;
+
+            font-weight:700;
+
+            text-decoration:none;
+
+        }
+
+
+        /* MOBILE */
+
+        @media(max-width:900px) {
+
+            .shops-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+        }
+
+
+        @media(max-width:600px) {
+
+            .shops-page {
+
+                padding:
+                    20px 12px 40px;
+
+            }
+
+
+            .shops-hero {
+
+                padding:
+                    30px 18px;
+
+                border-radius:20px;
+
+            }
+
+
+            .shops-hero h1 {
+
+                font-size:24px;
+
+            }
+
+
+            .shops-grid {
+
+                grid-template-columns:1fr;
+
+            }
+
+
+            .shop-actions {
+
+                flex-direction:column;
+
+            }
+
+
+            .shop-action-btn {
+
+                width:100%;
+
+            }
+
+
+            .shop-photo {
+
+                width:70px;
+
+                height:70px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <a href="index.html"
+           class="logo">
+
+            <div class="logo-icon">
+
+                <i class="fa-solid fa-house"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Srikrishnapur
+                </strong>
+
+                <small>
+                    শ্রীকৃষ্ণপুর
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open Menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <nav
+            class="main-nav"
+            id="mainNav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="village.html">
+                Village
+            </a>
+
+            <a href="doctors.html">
+                Doctors
+            </a>
+
+            <a href="teachers.html">
+                Teachers
+            </a>
+
+            <a href="shops.html"
+               class="active">
+
+                Shops
+
+            </a>
+
+            <a href="auto.html">
+                টোটো
+            </a>
+
+            <a href="emergency.html">
+                Emergency
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main class="shops-page">
+
+
+    <!-- HERO -->
+
+    <section class="shops-hero">
+
+        <div class="shops-hero-icon">
+
+            <i class="fa-solid fa-store"></i>
+
+        </div>
+
+
+        <h1>
+            আমাদের গ্রামের দোকান
+        </h1>
+
+
+        <p>
+
+            শ্রীকৃষ্ণপুরের বিভিন্ন দোকান,
+            ব্যবসা ও পরিষেবার তথ্য
+            এক জায়গায়।
+
+            প্রয়োজনীয় দোকান খুঁজে
+            সরাসরি যোগাযোগ করুন।
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ACTIONS -->
+
+    <div class="shop-actions">
+
+
+        <a
+            href="https://wa.me/917557003853?text=Hello%20Mr%20Noor%2C%20I%20want%20to%20add%20a%20shop%20to%20the%20Srikrishnapur%20Shop%20List.%0A%0AShop%20Name%3A%20%0ACategory%3A%20%0AOwner%2FContact%20Name%3A%20%0APhone%20Number%3A%20%0AAddress%3A%20%0AGoogle%20Maps%20Location%3A%20%0A%0APlease%20send%20the%20shop%20photo%20also."
+            target="_blank"
+            rel="noopener"
+            class="shop-action-btn add-shop-btn">
+
+            <i class="fa-solid fa-store"></i>
+
+            আপনার দোকান যোগ করুন
+
+        </a>
+
+
+        <button
+            class="shop-action-btn share-shop-btn"
+            onclick="shareShopsPage()">
+
+            <i class="fa-solid fa-share-nodes"></i>
+
+            Share
+
+        </button>
+
+    </div>
+
+
+
+    <!-- NOTICE -->
+
+    <div class="shop-notice">
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        এখানে প্রকাশিত দোকান ও ব্যবসার তথ্য
+        শুধুমাত্র তথ্যের উদ্দেশ্যে দেওয়া হয়েছে।
+        দোকানে যাওয়ার আগে ফোন করে
+        পণ্য/পরিষেবা উপলব্ধতা নিশ্চিত করে নিন।
+
+    </div>
+
+
+
+    <!-- FILTER -->
+
+    <div class="shop-filter">
+
+
+        <button
+            class="shop-filter-btn active"
+            data-category="all">
+
+            সব দোকান
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="grocery">
+
+            🛒 কেরানা / Daily Shop
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="fish">
+
+            🐟 Fish
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="chicken">
+
+            🐔 Chicken
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="mutton">
+
+            🐐 Mutton
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="beef">
+
+            🥩 Beef
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="clothes">
+
+            👕 Clothes
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="repair">
+
+            🔧 Repair
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="cyber">
+
+            💻 Cyber Cafe
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="pharmacy">
+
+            💊 Pharmacy
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="fruits">
+
+            🍎 Fruits
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="restaurant">
+
+            🍽️ Restaurant
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="dairy">
+
+            🥛 Dairy
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="mobile">
+
+            📱 Mobile
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="salon">
+
+            💇 Salon
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="hardware">
+
+            🧱 Hardware
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="stationery">
+
+            📚 Stationery
+
+        </button>
+
+
+        <button
+            class="shop-filter-btn"
+            data-category="other">
+
+            অন্যান্য
+
+        </button>
+
+    </div>
+
+
+
+    <!-- TITLE -->
+
+    <div class="shops-section-title">
+
+        <h2>
+            🏪 দোকান ও ব্যবসার তালিকা
+        </h2>
+
+
+        <span
+            class="shop-count"
+            id="shopCount">
+
+            0 টি
+
+        </span>
+
+    </div>
+
+
+
+    <!-- SHOP GRID -->
+
+    <section
+        class="shops-grid"
+        id="shopsGrid">
+
+    </section>
+
+
+
+    <!-- EMPTY -->
+
+    <div
+        class="no-shops"
+        id="noShops">
+
+        <i class="fa-solid fa-store-slash"></i>
+
+        <div>
+
+            এই category-তে এখনো কোনো
+            দোকানের তথ্য যোগ করা হয়নি।
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ADD SHOP -->
+
+    <section class="add-shop-card">
+
+
+        <div class="add-shop-icon">
+
+            <i class="fa-solid fa-plus"></i>
+
+        </div>
+
+
+        <h3>
+
+            আপনার দোকান কি তালিকায় নেই?
+
+        </h3>
+
+
+        <p>
+
+            শ্রীকৃষ্ণপুরের কোনো দোকান বা
+            ব্যবসার তথ্য এখানে না থাকলে
+            আমাদের WhatsApp-এ দোকানের নাম,
+            ছবি, ফোন নম্বর, category,
+            ঠিকানা এবং Google Maps location
+            পাঠিয়ে জানান।
+
+        </p>
+
+
+        <a
+            href="https://wa.me/917557003853?text=Hello%20Mr%20Noor%2C%20please%20add%20this%20shop%20to%20the%20Srikrishnapur%20Shop%20List.%0A%0AShop%20Name%3A%20%0ACategory%3A%20%0AOwner%2FContact%20Name%3A%20%0APhone%20Number%3A%20%0AAddress%3A%20%0AGoogle%20Maps%20Location%3A%20%0A%0AI%20will%20send%20the%20shop%20photo%20also."
+            target="_blank"
+            rel="noopener"
+            class="shop-action-btn add-shop-btn">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WhatsApp-এ তথ্য পাঠান
+
+        </a>
+
+    </section>
+
+
+
+    <!-- CREDIT -->
+
+    <div class="shop-credit">
+
+        <div>
+            Srikrishnapur Community Website
+        </div>
+
+
+        <div style="margin-top:7px;">
+
+            Designed & Developed with ❤️ by
+
+            <a
+                href="https://www.noor.com.in/about-noor/"
+                target="_blank"
+                rel="noopener">
+
+                Mr Noor
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>
+
+            © <span id="currentYear"></span>
+            Srikrishnapur.
+            All rights reserved.
+
+        </p>
+
+
+        <p>
+
+            Made with ❤️ by
+
+            <a
+                href="https://www.noor.com.in/about-noor/"
+                target="_blank"
+                rel="noopener">
+
+                Mr Noor
+
+            </a>
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- JS -->
+
+<script
+    src="js/main.js"
+    defer>
+</script>
+
+
+<script
+    src="js/search.js"
+    defer>
+</script>
+
+
+<script
+    src="js/shops.js"
+    defer>
+</script>
+
+
+<script
+    src="js/visitor.js"
+    defer>
+</script>
+
+
+
+<!-- SHARE -->
+
+<script>
+
+function shareShopsPage() {
+
+    const shareData = {
+
+        title:
+            "শ্রীকৃষ্ণপুরের দোকান ও ব্যবসা",
+
+        text:
+            "শ্রীকৃষ্ণপুরের বিভিন্ন দোকান ও ব্যবসার তথ্য দেখুন।",
+
+        url:
+            "https://srikrishnapur.in/shops.html"
+
+    };
+
+
+    if (navigator.share) {
+
+        navigator.share(
+            shareData
+        ).catch(
+            function () {}
+        );
+
+    } else {
+
+        const url =
+            "https://srikrishnapur.in/shops.html";
+
+
+        if (navigator.clipboard) {
+
+            navigator.clipboard
+                .writeText(url)
+                .then(function () {
+
+                    alert(
+                        "Shops page link copied!"
+                    );
+
+                })
+                .catch(function () {
+
+                    alert(
+                        "Share Link: " + url
+                    );
+
+                });
+
+        } else {
+
+            alert(
+                "Share Link: " + url
+            );
+
+        }
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
