@@ -1,0 +1,70 @@
+{
+  "last_updated": "2026-09-09",
+  "title": "শ্রীকৃষ্ণপুর গ্রাম Gallery",
+  "description": "শ্রীকৃষ্ণপুর গ্রামের ছবি, মানুষ, অনুষ্ঠান, উৎসব, পুরনো ছবি ও গ্রামের জীবনের স্মৃতি।",
+  "photos": [
+    {
+      "id": "photo-001",
+      "title": "শ্রীকৃষ্ণপুর গ্রামের দৃশ্য",
+      "category": "village",
+      "category_name": "Village",
+      "image": "images/village.webp",
+      "description": "শ্রীকৃষ্ণপুর গ্রামের সুন্দর একটি দৃশ্য।",
+      "date": "2026-09-01"
+    },
+    {
+      "id": "photo-002",
+      "title": "গ্রামের অনুষ্ঠান",
+      "category": "events",
+      "category_name": "Events",
+      "image": "images/gallery/event-1.webp",
+      "description": "গ্রামের একটি অনুষ্ঠানের মুহূর্ত।",
+      "date": "2026-08-15"
+    },
+    {
+      "id": "photo-003",
+      "title": "গ্রামের মানুষের সঙ্গে স্মৃতি",
+      "category": "people",
+      "category_name": "Village People",
+      "image": "images/gallery/people-1.webp",
+      "description": "গ্রামের মানুষের একটি সুন্দর মুহূর্ত।",
+      "date": "2026-08-10"
+    },
+    {
+      "id": "photo-004",
+      "title": "পুরনো দিনের ছবি",
+      "category": "old",
+      "category_name": "Old Memories",
+      "image": "images/gallery/old-1.webp",
+      "description": "শ্রীকৃষ্ণপুর গ্রামের পুরনো দিনের একটি ছবি।",
+      "date": "1995-01-01"
+    },
+    {
+      "id": "photo-005",
+      "title": "গ্রামের উৎসব",
+      "category": "festival",
+      "category_name": "Festival",
+      "image": "images/gallery/festival-1.webp",
+      "description": "গ্রামের উৎসবের একটি মুহূর্ত।",
+      "date": "2026-01-01"
+    },
+    {
+      "id": "photo-006",
+      "title": "গ্রামের দৈনন্দিন জীবন",
+      "category": "life",
+      "category_name": "Village Life",
+      "image": "images/gallery/life-1.webp",
+      "description": "গ্রামের দৈনন্দিন জীবনের একটি ছবি।",
+      "date": "2026-07-20"
+    },
+    {
+      "id": "photo-007",
+      "title": "অন্যান্য স্মৃতি",
+      "category": "other",
+      "category_name": "Other",
+      "image": "images/gallery/other-1.webp",
+      "description": "শ্রীকৃষ্ণপুরের একটি স্মরণীয় মুহূর্ত।",
+      "date": "2026-06-15"
+    }
+  ]
+}
