@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "name": "Gamer Name",
+    "category": "cricket",
+    "category_name": "Cricket",
+    "photo": "images/gamers/gamer-1.webp",
+    "description": "Srikrishnapur-এর একজন প্রতিভাবান ক্রিকেটার।",
+    "social": {
+      "platform": "instagram",
+      "url": "https://instagram.com/username"
+    },
+    "details_url": "#"
+  },
+  {
+    "id": 2,
+    "name": "Gamer Name",
+    "category": "football",
+    "category_name": "Football",
+    "photo": "images/gamers/gamer-2.webp",
+    "description": "ফুটবলে দক্ষ এবং গ্রামের একজন উদীয়মান প্রতিভা।",
+    "social": {
+      "platform": "facebook",
+      "url": "https://facebook.com/username"
+    },
+    "details_url": "#"
+  }
+]
