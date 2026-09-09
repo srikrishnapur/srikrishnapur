@@ -1,0 +1,3637 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+  About Srikrishnapur Village | Srikrishnapur.in
+</title>
+
+<meta
+  name="description"
+  content="শ্রীকৃষ্ণপুর গ্রামের সম্পূর্ণ তথ্য — ইতিহাস, জনসংখ্যা, শিক্ষা, যোগাযোগ, কৃষি, পরিষেবা, প্রশাসন, জল, বিদ্যুৎ এবং গ্রামের জীবন।"
+>
+
+<meta
+  name="keywords"
+  content="Srikrishnapur village, Srikrishnapur, Srikrishnapur West Bengal, Srikrishnapur Ausgram, Srikrishnapur Purba Bardhaman, Srikrishnapur 318990, শ্রীকৃষ্ণপুর"
+>
+
+<meta name="theme-color" content="#198754">
+
+
+<!-- Open Graph -->
+
+<meta
+  property="og:title"
+  content="About Srikrishnapur Village"
+>
+
+<meta
+  property="og:description"
+  content="শ্রীকৃষ্ণপুর গ্রামের সম্পূর্ণ তথ্য ও গ্রামের ছবি।"
+>
+
+<meta
+  property="og:image"
+  content="images/village-hero.webp"
+>
+
+<meta
+  property="og:type"
+  content="website"
+>
+
+
+<!-- Font Awesome -->
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+
+<!-- Main CSS -->
+
+<link
+  rel="stylesheet"
+  href="css/style.css"
+>
+
+
+<style>
+
+/* ==================================================
+   GLOBAL
+================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f6f8fa;
+  color: #202124;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ==================================================
+   HERO SLIDER
+================================================== */
+
+.village-hero {
+
+  position: relative;
+
+  height: min(680px, 78vh);
+
+  min-height: 500px;
+
+  overflow: hidden;
+
+  color: #fff;
+
+  background: #111;
+
+}
+
+.hero-slide {
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity 1.2s ease,
+    transform 6s ease;
+
+  transform: scale(1.08);
+
+}
+
+.hero-slide.active {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: scale(1);
+
+}
+
+.hero-slide img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+}
+
+.hero-slide::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.78)
+    );
+
+}
+
+.hero-content {
+
+  position: absolute;
+
+  z-index: 5;
+
+  left: 50%;
+
+  bottom: 90px;
+
+  width: min(1000px, 92%);
+
+  transform: translateX(-50%);
+
+  text-align: center;
+
+}
+
+.hero-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 14px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255,255,255,.16);
+
+  border:
+    1px solid rgba(255,255,255,.25);
+
+  backdrop-filter: blur(8px);
+
+  font-size: 13px;
+
+  margin-bottom: 15px;
+
+}
+
+.hero-content h1 {
+
+  margin: 0 0 12px;
+
+  font-size:
+    clamp(38px, 7vw, 76px);
+
+  line-height: 1;
+
+  text-shadow:
+    0 4px 20px rgba(0,0,0,.5);
+
+}
+
+.hero-content p {
+
+  max-width: 760px;
+
+  margin: auto;
+
+  font-size:
+    clamp(15px, 2vw, 20px);
+
+  line-height: 1.7;
+
+  color: #f1f1f1;
+
+}
+
+.hero-buttons {
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 25px;
+
+}
+
+.hero-btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 19px;
+
+  border-radius: 10px;
+
+  color: #fff;
+
+  background:
+    rgba(255,255,255,.16);
+
+  border:
+    1px solid rgba(255,255,255,.3);
+
+  backdrop-filter: blur(8px);
+
+  font-weight: 600;
+
+  transition: .25s;
+
+}
+
+.hero-btn:hover {
+
+  background: #198754;
+
+  transform:
+    translateY(-3px);
+
+}
+
+.slider-dots {
+
+  position: absolute;
+
+  z-index: 10;
+
+  bottom: 28px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  gap: 7px;
+
+}
+
+.slider-dot {
+
+  width: 9px;
+
+  height: 9px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background: rgba(255,255,255,.5);
+
+}
+
+.slider-dot.active {
+
+  width: 27px;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+}
+
+
+/* ==================================================
+   PAGE CONTAINER
+================================================== */
+
+.village-container {
+
+  width: min(1180px, 94%);
+
+  margin: auto;
+
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.village-intro {
+
+  margin-top: -35px;
+
+  position: relative;
+
+  z-index: 20;
+
+  padding: 30px;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.08);
+
+  text-align: center;
+
+}
+
+.village-intro h2 {
+
+  margin:
+    0 0 12px;
+
+  font-size:
+    clamp(25px,4vw,36px);
+
+}
+
+.village-intro h2 span {
+
+  color: #198754;
+
+}
+
+.village-intro p {
+
+  max-width: 850px;
+
+  margin: auto;
+
+  color: #666;
+
+  line-height: 1.8;
+
+}
+
+
+/* ==================================================
+   SECTION
+================================================== */
+
+.village-section {
+
+  padding:
+    55px 0 10px;
+
+}
+
+.section-heading {
+
+  text-align: center;
+
+  margin-bottom: 30px;
+
+}
+
+.section-heading .icon {
+
+  width: 54px;
+
+  height: 54px;
+
+  margin: 0 auto 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #e9f7ef;
+
+  color: #198754;
+
+  font-size: 22px;
+
+}
+
+.section-heading h2 {
+
+  margin: 0 0 8px;
+
+  font-size:
+    clamp(25px,4vw,35px);
+
+}
+
+.section-heading p {
+
+  max-width: 700px;
+
+  margin: auto;
+
+  color: #777;
+
+  line-height: 1.6;
+
+}
+
+
+/* ==================================================
+   FACT CARDS
+================================================== */
+
+.fact-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+  gap: 15px;
+
+}
+
+.fact-card {
+
+  position: relative;
+
+  padding: 22px;
+
+  background: #fff;
+
+  border: 1px solid #e8ecef;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  transition: .25s;
+
+}
+
+.fact-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 70px;
+
+  height: 70px;
+
+  right: -25px;
+
+  top: -25px;
+
+  border-radius: 50%;
+
+  background: #e9f7ef;
+
+}
+
+.fact-card:hover {
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.fact-icon {
+
+  color: #198754;
+
+  font-size: 23px;
+
+  margin-bottom: 13px;
+
+}
+
+.fact-card h3 {
+
+  margin:
+    0 0 7px;
+
+  font-size: 14px;
+
+  color: #777;
+
+  font-weight: 500;
+
+}
+
+.fact-card strong {
+
+  display: block;
+
+  font-size: 20px;
+
+  color: #222;
+
+}
+
+
+/* ==================================================
+   INFORMATION CARDS
+================================================== */
+
+.info-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+  gap: 20px;
+
+}
+
+.info-card {
+
+  padding: 24px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  border: 1px solid #e7eaed;
+
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.04);
+
+}
+
+.info-card h3 {
+
+  margin:
+    0 0 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  font-size: 19px;
+
+}
+
+.info-card h3 i {
+
+  color: #198754;
+
+}
+
+.info-list {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+
+}
+
+.info-list li {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    11px 0;
+
+  border-bottom:
+    1px dashed #e1e5e8;
+
+  font-size: 14px;
+
+}
+
+.info-list li:last-child {
+
+  border-bottom: 0;
+
+}
+
+.info-list span:first-child {
+
+  color: #777;
+
+}
+
+.info-list strong {
+
+  text-align: right;
+
+}
+
+
+/* ==================================================
+   STATISTICS
+================================================== */
+
+.statistics {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+  gap: 18px;
+
+}
+
+.stat-card {
+
+  padding: 25px;
+
+  text-align: center;
+
+  color: #fff;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #198754,
+      #126b43
+    );
+
+  box-shadow:
+    0 8px 25px rgba(25,135,84,.2);
+
+}
+
+.stat-card:nth-child(2) {
+
+  background:
+    linear-gradient(
+      135deg,
+      #0d6efd,
+      #084298
+    );
+
+}
+
+.stat-card:nth-child(3) {
+
+  background:
+    linear-gradient(
+      135deg,
+      #fd7e14,
+      #c85a00
+    );
+
+}
+
+.stat-card:nth-child(4) {
+
+  background:
+    linear-gradient(
+      135deg,
+      #6f42c1,
+      #4d2690
+    );
+
+}
+
+.stat-card i {
+
+  font-size: 28px;
+
+  margin-bottom: 12px;
+
+}
+
+.stat-card strong {
+
+  display: block;
+
+  font-size: 32px;
+
+}
+
+.stat-card span {
+
+  font-size: 13px;
+
+  opacity: .9;
+
+}
+
+
+/* ==================================================
+   TWO COLUMN
+================================================== */
+
+.two-column {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 20px;
+
+}
+
+
+/* ==================================================
+   FACILITY LIST
+================================================== */
+
+.facility-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+  gap: 12px;
+
+}
+
+.facility-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background: #fff;
+
+  border: 1px solid #e8ecef;
+
+}
+
+.facility-item i {
+
+  width: 38px;
+
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #e9f7ef;
+
+  color: #198754;
+
+}
+
+.facility-item strong {
+
+  display: block;
+
+  font-size: 14px;
+
+}
+
+.facility-item small {
+
+  display: block;
+
+  margin-top: 3px;
+
+  color: #777;
+
+}
+
+
+/* ==================================================
+   AGRICULTURE
+================================================== */
+
+.agriculture-box {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 25px;
+
+  padding: 25px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  border: 1px solid #e5e8ea;
+
+}
+
+.land-bar {
+
+  margin-top: 15px;
+
+}
+
+.land-bar-label {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 6px;
+
+  font-size: 13px;
+
+}
+
+.land-bar-track {
+
+  height: 10px;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  background: #e9ecef;
+
+}
+
+.land-bar-fill {
+
+  height: 100%;
+
+  width: 93.7%;
+
+  background: #198754;
+
+  border-radius: 10px;
+
+}
+
+
+/* ==================================================
+   NEARBY VILLAGES
+================================================== */
+
+.nearby-grid {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 10px;
+
+}
+
+.nearby-village {
+
+  padding:
+    9px 14px;
+
+  border-radius: 30px;
+
+  background: #fff;
+
+  border: 1px solid #ddd;
+
+  color: #444;
+
+  font-size: 13px;
+
+  transition: .2s;
+
+}
+
+.nearby-village:hover {
+
+  background: #198754;
+
+  color: #fff;
+
+  border-color: #198754;
+
+}
+
+
+/* ==================================================
+   MAP
+================================================== */
+
+.map-card {
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  border: 1px solid #e5e5e5;
+
+}
+
+.map-card iframe {
+
+  display: block;
+
+  width: 100%;
+
+  height: 400px;
+
+  border: 0;
+
+}
+
+.map-note {
+
+  padding: 14px 18px;
+
+  color: #777;
+
+  font-size: 12px;
+
+}
+
+
+/* ==================================================
+   SOURCE NOTE
+================================================== */
+
+.source-note {
+
+  margin:
+    45px 0;
+
+  padding: 20px;
+
+  border-left:
+    4px solid #198754;
+
+  border-radius: 10px;
+
+  background: #eef9f3;
+
+  color: #555;
+
+  line-height: 1.7;
+
+  font-size: 13px;
+
+}
+
+.source-note strong {
+
+  color: #198754;
+
+}
+
+
+/* ==================================================
+   SHARE
+================================================== */
+
+.village-share {
+
+  margin:
+    30px 0 55px;
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  border-radius: 22px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #198754,
+      #0d6efd
+    );
+
+}
+
+.village-share h2 {
+
+  margin:
+    0 0 10px;
+
+}
+
+.village-share p {
+
+  max-width: 650px;
+
+  margin:
+    0 auto 20px;
+
+  color: rgba(255,255,255,.9);
+
+  line-height: 1.7;
+
+}
+
+.share-btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 20px;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: #198754;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.site-footer {
+
+  padding:
+    50px 20px 20px;
+
+  color: #adb5bd;
+
+  background: #17202a;
+
+}
+
+.footer-container {
+
+  width: min(1150px,94%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.5fr 1fr 1fr;
+
+  gap: 40px;
+
+}
+
+.footer-section h3 {
+
+  margin:
+    0 0 15px;
+
+  color: #fff;
+
+  font-size: 18px;
+
+}
+
+.footer-section p {
+
+  margin: 0;
+
+  line-height: 1.8;
+
+  font-size: 13px;
+
+}
+
+.footer-links {
+
+  padding: 0;
+
+  margin: 0;
+
+  list-style: none;
+
+}
+
+.footer-links li {
+
+  margin-bottom: 10px;
+
+}
+
+.footer-links a {
+
+  color: #adb5bd;
+
+  font-size: 13px;
+
+  transition: .2s;
+
+}
+
+.footer-links a:hover {
+
+  color: #fff;
+
+  padding-left: 4px;
+
+}
+
+.footer-social {
+
+  display: flex;
+
+  gap: 9px;
+
+  margin-top: 18px;
+
+}
+
+.footer-social a {
+
+  width: 39px;
+
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #273746;
+
+  color: #fff;
+
+  transition: .2s;
+
+}
+
+.footer-social a:hover {
+
+  background: #198754;
+
+  transform:
+    translateY(-3px);
+
+}
+
+.footer-bottom {
+
+  width: min(1150px,94%);
+
+  margin:
+    35px auto 0;
+
+  padding-top: 20px;
+
+  text-align: center;
+
+  border-top:
+    1px solid #34495e;
+
+  font-size: 12px;
+
+}
+
+.footer-bottom a {
+
+  color: #fff;
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media(max-width:800px) {
+
+  .village-hero {
+
+    min-height: 560px;
+
+    height: 75vh;
+
+  }
+
+  .hero-content {
+
+    bottom: 80px;
+
+  }
+
+  .two-column {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .agriculture-box {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .footer-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+  }
+
+}
+
+@media(max-width:550px) {
+
+  .village-intro {
+
+    margin-top: -25px;
+
+    padding: 22px 17px;
+
+  }
+
+  .fact-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+  .fact-card {
+
+    padding: 16px;
+
+  }
+
+  .fact-card strong {
+
+    font-size: 17px;
+
+  }
+
+  .info-list li {
+
+    flex-direction: column;
+
+    gap: 4px;
+
+  }
+
+  .info-list strong {
+
+    text-align: left;
+
+  }
+
+  .hero-content h1 {
+
+    font-size: 40px;
+
+  }
+
+  .hero-buttons {
+
+    flex-direction: column;
+
+    align-items: center;
+
+  }
+
+}
+
+
+/* ==================================================
+   REVEAL ANIMATION
+================================================== */
+
+.reveal {
+
+  opacity: 0;
+
+  transform:
+    translateY(25px);
+
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
+
+}
+
+.reveal.visible {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HERO SLIDER
+================================================== -->
+
+<section class="village-hero">
+
+
+  <!-- Slide 1 -->
+
+  <div class="hero-slide active">
+
+    <img
+      src="images/village-hero.webp"
+      alt="Srikrishnapur Village"
+    >
+
+  </div>
+
+
+  <!-- Slide 2 -->
+
+  <div class="hero-slide">
+
+    <img
+      src="images/village.webp"
+      alt="Srikrishnapur Village"
+    >
+
+  </div>
+
+
+  <!-- Slide 3 -->
+
+  <div class="hero-slide">
+
+    <img
+      src="images/village-life.webp"
+      alt="Village Life of Srikrishnapur"
+    >
+
+  </div>
+
+
+  <!-- Slide 4 -->
+
+  <div class="hero-slide">
+
+    <img
+      src="images/village-story.webp"
+      alt="Srikrishnapur Village Story"
+    >
+
+  </div>
+
+
+  <div class="hero-content">
+
+
+    <span class="hero-badge">
+
+      <i class="fas fa-location-dot"></i>
+
+      Ausgram-I • Purba Bardhaman • West Bengal
+
+    </span>
+
+
+    <h1>
+      শ্রীকৃষ্ণপুর
+    </h1>
+
+
+    <p>
+
+      আমাদের গ্রাম, আমাদের পরিচয়।
+      মানুষ, মাটি, কৃষি, স্মৃতি ও
+      গ্রামের জীবনকে একসঙ্গে জানুন।
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+      <a
+        href="#overview"
+        class="hero-btn"
+      >
+        <i class="fas fa-circle-info"></i>
+        গ্রামের তথ্য
+      </a>
+
+
+      <a
+        href="#gallery"
+        class="hero-btn"
+      >
+        <i class="fas fa-images"></i>
+        Village Gallery
+      </a>
+
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Srikrishnapur%2C%20Ausgram%2C%20West%20Bengal"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hero-btn"
+      >
+        <i class="fas fa-map-location-dot"></i>
+        Map
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- Dots -->
+
+  <div class="slider-dots">
+
+    <button
+      class="slider-dot active"
+      data-slide="0"
+      aria-label="Slide 1"
+    ></button>
+
+    <button
+      class="slider-dot"
+      data-slide="1"
+      aria-label="Slide 2"
+    ></button>
+
+    <button
+      class="slider-dot"
+      data-slide="2"
+      aria-label="Slide 3"
+    ></button>
+
+    <button
+      class="slider-dot"
+      data-slide="3"
+      aria-label="Slide 4"
+    ></button>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     MAIN
+================================================== -->
+
+<main class="village-container">
+
+
+  <!-- INTRO -->
+
+  <section
+    class="village-intro reveal"
+    id="overview"
+  >
+
+    <h2>
+
+      Welcome to
+      <span>Srikrishnapur</span>
+
+    </h2>
+
+
+    <p>
+
+      শ্রীকৃষ্ণপুর পশ্চিমবঙ্গের
+      Purba Bardhaman জেলার Ausgram-I
+      Block-এর একটি গ্রাম। 2011 সালের
+      Census record অনুযায়ী গ্রামের
+      Census Village Code 318990 এবং
+      454টি household-এ মোট 1,717 জন
+      মানুষ বসবাস করতেন।
+
+    </p>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       QUICK FACTS
+  ================================================== -->
+
+  <section class="village-section reveal">
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-star"></i>
+
+      </div>
+
+      <h2>
+        গ্রামের গুরুত্বপূর্ণ তথ্য
+      </h2>
+
+      <p>
+        Srikrishnapur at a glance
+      </p>
+
+    </div>
+
+
+    <div class="fact-grid">
+
+
+      <div class="fact-card">
+
+        <div class="fact-icon">
+          <i class="fas fa-users"></i>
+        </div>
+
+        <h3>
+          Population
+        </h3>
+
+        <strong>
+          1,717
+        </strong>
+
+      </div>
+
+
+      <div class="fact-card">
+
+        <div class="fact-icon">
+          <i class="fas fa-house"></i>
+        </div>
+
+        <h3>
+          Households
+        </h3>
+
+        <strong>
+          454
+        </strong>
+
+      </div>
+
+
+      <div class="fact-card">
+
+        <div class="fact-icon">
+          <i class="fas fa-map"></i>
+        </div>
+
+        <h3>
+          Area
+        </h3>
+
+        <strong>
+          257.26 ha
+        </strong>
+
+      </div>
+
+
+      <div class="fact-card">
+
+        <div class="fact-icon">
+          <i class="fas fa-id-card"></i>
+        </div>
+
+        <h3>
+          Census Code
+        </h3>
+
+        <strong>
+          318990
+        </strong>
+
+      </div>
+
+
+      <div class="fact-card">
+
+        <div class="fact-icon">
+          <i class="fas fa-location-dot"></i>
+        </div>
+
+        <h3>
+          PIN Code
+        </h3>
+
+        <strong>
+          713126
+        </strong>
+
+      </div>
+
+
+      <div class="fact-card">
+
+        <div class="fact-icon">
+          <i class="fas fa-city"></i>
+        </div>
+
+        <h3>
+          Nearest Town
+        </h3>
+
+        <strong>
+          Gushkara
+        </strong>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       ADMINISTRATION
+  ================================================== -->
+
+  <section class="village-section reveal">
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-landmark"></i>
+
+      </div>
+
+      <h2>
+        প্রশাসনিক পরিচয়
+      </h2>
+
+      <p>
+        Administrative information
+      </p>
+
+    </div>
+
+
+    <div class="info-grid">
+
+
+      <div class="info-card">
+
+        <h3>
+
+          <i class="fas fa-location-dot"></i>
+
+          Location
+
+        </h3>
+
+
+        <ul class="info-list">
+
+          <li>
+            <span>Village</span>
+            <strong>Srikrishnapur</strong>
+          </li>
+
+          <li>
+            <span>State</span>
+            <strong>West Bengal</strong>
+          </li>
+
+          <li>
+            <span>District</span>
+            <strong>Purba Bardhaman</strong>
+          </li>
+
+          <li>
+            <span>Block / Sub-district</span>
+            <strong>Ausgram-I</strong>
+          </li>
+
+          <li>
+            <span>Gram Panchayat</span>
+            <strong>Berenda</strong>
+          </li>
+
+          <li>
+            <span>PIN Code</span>
+            <strong>713126</strong>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="info-card">
+
+        <h3>
+
+          <i class="fas fa-barcode"></i>
+
+          Census Identity
+
+        </h3>
+
+
+        <ul class="info-list">
+
+          <li>
+            <span>Village Code</span>
+            <strong>318990</strong>
+          </li>
+
+          <li>
+            <span>State Code</span>
+            <strong>19</strong>
+          </li>
+
+          <li>
+            <span>District Code</span>
+            <strong>335</strong>
+          </li>
+
+          <li>
+            <span>Sub-district Code</span>
+            <strong>02277</strong>
+          </li>
+
+          <li>
+            <span>CD Block</span>
+            <strong>Ausgram-I</strong>
+          </li>
+
+          <li>
+            <span>Population Year</span>
+            <strong>Census 2011</strong>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       POPULATION
+  ================================================== -->
+
+  <section class="village-section reveal">
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-chart-pie"></i>
+
+      </div>
+
+      <h2>
+        জনসংখ্যা ও সামাজিক তথ্য
+      </h2>
+
+      <p>
+        Population & social profile
+      </p>
+
+    </div>
+
+
+    <div class="statistics">
+
+
+      <div class="stat-card">
+
+        <i class="fas fa-users"></i>
+
+        <strong>
+          1,717
+        </strong>
+
+        <span>
+          Total Population
+        </span>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <i class="fas fa-person"></i>
+
+        <strong>
+          879
+        </strong>
+
+        <span>
+          Male Population
+        </span>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <i class="fas fa-person-dress"></i>
+
+        <strong>
+          838
+        </strong>
+
+        <span>
+          Female Population
+        </span>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <i class="fas fa-people-roof"></i>
+
+        <strong>
+          454
+        </strong>
+
+        <span>
+          Households
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <br>
+
+
+    <div class="info-grid">
+
+
+      <div class="info-card">
+
+        <h3>
+
+          <i class="fas fa-venus-mars"></i>
+
+          Gender & Household
+
+        </h3>
+
+
+        <ul class="info-list">
+
+          <li>
+            <span>Male</span>
+            <strong>879</strong>
+          </li>
+
+          <li>
+            <span>Female</span>
+            <strong>838</strong>
+          </li>
+
+          <li>
+            <span>Sex Ratio</span>
+            <strong>953.36 / 1000</strong>
+          </li>
+
+          <li>
+            <span>Households</span>
+            <strong>454</strong>
+          </li>
+
+          <li>
+            <span>Average Household Size</span>
+            <strong>3.78 people</strong>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="info-card">
+
+        <h3>
+
+          <i class="fas fa-people-group"></i>
+
+          Social Groups
+
+        </h3>
+
+
+        <ul class="info-list">
+
+          <li>
+            <span>SC Population</span>
+            <strong>280</strong>
+          </li>
+
+          <li>
+            <span>SC Share</span>
+            <strong>16.31%</strong>
+          </li>
+
+          <li>
+            <span>SC Male</span>
+            <strong>138</strong>
+          </li>
+
+          <li>
+            <span>SC Female</span>
+            <strong>142</strong>
+          </li>
+
+          <li>
+            <span>ST Population</span>
+            <strong>17</strong>
+          </li>
+
+          <li>
+            <span>ST Share</span>
+            <strong>0.99%</strong>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       LITERACY
+  ================================================== -->
+
+  <section class="village-section reveal">
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-graduation-cap"></i>
+
+      </div>
+
+      <h2>
+        শিক্ষা ও সাক্ষরতা
+      </h2>
+
+      <p>
+        Education & literacy information reported in the available 2011 data
+      </p>
+
+    </div>
+
+
+    <div class="info-grid">
+
+
+      <div class="info-card">
+
+        <h3>
+
+          <i class="fas fa-book-open"></i>
+
+          Literacy
+
+        </h3>
+
+
+        <ul class="info-list">
+
+          <li>
+            <span>Literate Population</span>
+            <strong>1,256</strong>
+          </li>
+
+          <li>
+            <span>Literate Male</span>
+            <strong>668</strong>
+          </li>
+
+          <li>
+            <span>Literate Female</span>
+            <strong>588</strong>
+          </li>
+
+          <li>
+            <span>Illiterate Population</span>
+            <strong>461</strong>
+          </li>
+
+          <li>
+            <span>Illiterate Male</span>
+            <strong>211</strong>
+          </li>
+
+          <li>
+            <span>Illiterate Female</span>
+            <strong>250</strong>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="info-card">
+
+        <h3>
+
+          <i class="fas fa-school"></i>
+
+          Schools
+
+        </h3>
+
+
+        <ul class="info-list">
+
+          <li>
+            <span>Government Pre-primary</span>
+            <strong>1</strong>
+          </li>
+
+          <li>
+            <span>Government Primary</span>
+            <strong>1</strong>
+          </li>
+
+          <li>
+            <span>Middle School</span>
+            <strong>Not reported</strong>
+          </li>
+
+          <li>
+            <span>Secondary School</span>
+            <strong>Not reported</strong>
+          </li>
+
+          <li>
+            <span>Senior Secondary</span>
+            <strong>Not reported</strong>
+          </li>
+
+          <li>
+            <span>College</span>
+            <strong>Not reported</strong>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       HEALTH
+  ================================================== -->
+
+  <section class="village-section reveal">
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-heart-pulse"></i>
+
+      </div>
+
+      <h2>
+        স্বাস্থ্য পরিষেবা
+      </h2>
+
+      <p>
+        Health facilities reported in the village directory
+      </p>
+
+    </div>
+
+
+    <div class="facility-grid">
+
+
+      <div class="facility-item">
+
+        <i class="fas fa-user-nurse"></i>
+
+        <div>
+
+          <strong>
+            ASHA Worker
+          </strong>
+
+          <small>
+            Available
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <div class="facility-item">
+
+        <i class="fas fa-hospital"></i>
+
+        <div>
+
+          <strong>
+            Medical Facility
+          </strong>
+
+          <small>
+            Reported within 3–5 km
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <div class="facility-item">
+
+        <i class="fas fa-house-medical"></i>
+
+        <div>
+
+          <strong>
+            PHC
+          </strong>
+
+          <small>
+            Local source does not report a village PHC
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <div class="facility-item">
+
+        <i class="fas fa-kit-medical"></i>
+
+        <div>
+
+          <strong>
+            Hospital / Dispensary
+          </strong>
+
+          <small>
+            No in-village facility reported
+          </small>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       CONNECTIVITY
+  ================================================== -->
+
+  <section class="village-section reveal">
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-road"></i>
+
+      </div>
+
+      <h2>
+        যোগাযোগ ও পরিবহন
+      </h2>
+
+      <p>
+        Connectivity & transportation
+      </p>
+
+    </div>
+
+
+    <div class="info-grid">
+
+
+      <div class="info-card">
+
+        <h3>
+
+          <i class="fas fa-bus"></i>
+
+          Transport
+
+        </h3>
+
+
+        <ul class="info-list">
+
+          <li>
+            <span>Public Bus</span>
+            <strong>Available</strong>
+          </li>
+
+          <li>
+            <span>Private Bus</span>
+            <strong>Available</strong>
+          </li>
+
+          <li>
+            <span>Railway Station</span>
+            <strong>Not in village</strong>
+          </li>
+
+          <li>
+            <span>National Highway</span>
+            <strong>Not reported</strong>
+          </li>
+
+          <li>
+            <span>State Highway</span>
+            <strong>Not reported</strong>
+          </li>
+
+          <li>
+            <span>Major District Road</span>
+            <strong>Available</strong>
+          </li>
+
+          <li>
+            <span>All-weather Road</span>
+            <strong>Not reported</strong>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="info-card">
+
+        <h3>
+
+          <i class="fas fa-location-arrow"></i>
+
+          Distance
+
+        </h3>
+
+
+        <ul class="info-list">
+
+          <li>
+            <span>Nearest Town</span>
+            <strong>Gushkara</strong>
+          </li>
+
+          <li>
+            <span>Nearest Town Distance</span>
+            <strong>17 km</strong>
+          </li>
+
+          <li>
+            <span>Ausgram HQ</span>
+            <strong>10.8 km</strong>
+          </li>
+
+          <li>
+            <span>Barddhaman HQ</span>
+            <strong>48.4 km</strong>
+          </li>
+
+          <li>
+            <span>PIN</span>
+            <strong>713126</strong>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       PUBLIC SERVICES
+  ================================================== -->
+
+  <section class="village-section reveal">
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-building-columns"></i>
+
+      </div>
+
+      <h2>
+        গ্রামের পরিষেবা ও সুবিধা
+      </h2>
+
+      <p>
+        Public facilities reported in available village records
+      </p>
+
+    </div>
+
+
+    <div class="facility-grid">
+
+
+      <div class="facility-item">
+        <i class="fas fa-shop"></i>
+        <div>
+          <strong>PDS Shop</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-calendar-days"></i>
+        <div>
+          <strong>Weekly Haat</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-hand-holding-heart"></i>
+        <div>
+          <strong>Self Help Group</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-seedling"></i>
+        <div>
+          <strong>Agricultural Credit Society</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-child"></i>
+        <div>
+          <strong>Anganwadi / ICDS</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-users"></i>
+        <div>
+          <strong>Community Centre</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-futbol"></i>
+        <div>
+          <strong>Sports Field</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-people-group"></i>
+        <div>
+          <strong>Sports Club</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-book"></i>
+        <div>
+          <strong>Public Library</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-book-open"></i>
+        <div>
+          <strong>Public Reading Room</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-newspaper"></i>
+        <div>
+          <strong>Daily Newspaper</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-landmark"></i>
+        <div>
+          <strong>Polling Station</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-file-signature"></i>
+        <div>
+          <strong>Birth & Death Registration</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+
+      <div class="facility-item">
+        <i class="fas fa-film"></i>
+        <div>
+          <strong>Cinema / Video Hall</strong>
+          <small>Available</small>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       WATER & POWER
+  ================================================== -->
+
+  <section class="village-section reveal">
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-droplet"></i>
+
+      </div>
+
+      <h2>
+        জল, বিদ্যুৎ ও যোগাযোগ
+      </h2>
+
+      <p>
+        Water, electricity and communication
+      </p>
+
+    </div>
+
+
+    <div class="two-column">
+
+
+      <div class="info-card">
+
+        <h3>
+
+          <i class="fas fa-water"></i>
+
+          Water
+
+        </h3>
+
+
+        <ul class="info-list">
+
+          <li>
+            <span>Hand Pump</span>
+            <strong>Available</strong>
+          </li>
+
+          <li>
+            <span>Tube Well / Borehole</span>
+            <strong>Not reported</strong>
+          </li>
+
+          <li>
+            <span>Treated Tap Water</span>
+            <strong>Not reported</strong>
+          </li>
+
+          <li>
+            <span>Untreated Tap Water</span>
+            <strong>Not reported</strong>
+          </li>
+
+          <li>
+            <span>Open Drainage</span>
+            <strong>Not reported</strong>
+          </li>
+
+          <li>
+            <span>Closed Drainage</span>
+            <strong>Not reported</strong>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="info-card">
+
+        <h3>
+
+          <i class="fas fa-bolt"></i>
+
+          Electricity
+
+        </h3>
+
+
+        <ul class="info-list">
+
+          <li>
+            <span>Domestic Power</span>
+            <strong>Available</strong>
+          </li>
+
+          <li>
+            <span>Summer Supply</span>
+            <strong>18 hours/day</strong>
+          </li>
+
+          <li>
+            <span>Winter Supply</span>
+            <strong>20 hours/day</strong>
+          </li>
+
+          <li>
+            <span>Agriculture Power</span>
+            <strong>Not reported</strong>
+          </li>
+
+          <li>
+            <span>Commercial Power</span>
+            <strong>Not reported</strong>
+          </li>
+
+          <li>
+            <span>Mobile Coverage</span>
+            <strong>Available</strong>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       AGRICULTURE
+  ================================================== -->
+
+  <section class="village-section reveal">
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-wheat-awn"></i>
+
+      </div>
+
+      <h2>
+        কৃষি ও জমি
+      </h2>
+
+      <p>
+        Agriculture & land-use information
+      </p>
+
+    </div>
+
+
+    <div class="agriculture-box">
+
+
+      <div>
+
+        <div class="info-card">
+
+          <h3>
+
+            <i class="fas fa-seedling"></i>
+
+            কৃষির গুরুত্বপূর্ণ তথ্য
+
+          </h3>
+
+
+          <ul class="info-list">
+
+            <li>
+              <span>Main Crop</span>
+              <strong>Paddy / ধান</strong>
+            </li>
+
+            <li>
+              <span>Net Sown Area</span>
+              <strong>255 ha</strong>
+            </li>
+
+            <li>
+              <span>Irrigated Area</span>
+              <strong>239 ha</strong>
+            </li>
+
+            <li>
+              <span>Unirrigated Area</span>
+              <strong>16 ha</strong>
+            </li>
+
+            <li>
+              <span>Canal Irrigation</span>
+              <strong>214.5 ha</strong>
+            </li>
+
+            <li>
+              <span>Other Irrigation Source</span>
+              <strong>24.5 ha</strong>
+            </li>
+
+            <li>
+              <span>Non-agricultural Area</span>
+              <strong>0.64 ha</strong>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Irrigated Land
+        </h3>
+
+        <p>
+          Reported irrigated land is approximately
+          93.7% of the net sown area.
+        </p>
+
+
+        <div class="land-bar">
+
+          <div class="land-bar-label">
+
+            <span>
+              Irrigated
+            </span>
+
+            <strong>
+              93.7%
+            </strong>
+
+          </div>
+
+
+          <div class="land-bar-track">
+
+            <div class="land-bar-fill"></div>
+
+          </div>
+
+        </div>
+
+
+        <br>
+
+
+        <p
+          style="
+            color:#777;
+            line-height:1.7;
+            font-size:13px;
+          "
+        >
+
+          কৃষি তথ্যগুলো Census/District Census
+          Handbook ভিত্তিক ঐতিহাসিক তথ্য।
+          বর্তমান কৃষি পরিস্থিতি বা জমির
+          মালিকানা বোঝাতে এগুলো ব্যবহার করা উচিত নয়।
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       NEARBY VILLAGES
+  ================================================== -->
+
+  <section class="village-section reveal">
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-map-location-dot"></i>
+
+      </div>
+
+      <h2>
+        আশেপাশের গ্রাম
+      </h2>
+
+      <p>
+        Nearby villages reported in the available records
+      </p>
+
+    </div>
+
+
+    <div class="nearby-grid">
+
+
+      <span class="nearby-village">
+        Baburbandh
+      </span>
+
+      <span class="nearby-village">
+        Beluti
+      </span>
+
+      <span class="nearby-village">
+        Beranda
+      </span>
+
+      <span class="nearby-village">
+        Jaykrishnapur
+      </span>
+
+      <span class="nearby-village">
+        Kurumba
+      </span>
+
+      <span class="nearby-village">
+        Majhergram
+      </span>
+
+      <span class="nearby-village">
+        Mallikpur
+      </span>
+
+      <span class="nearby-village">
+        Nabagram
+      </span>
+
+      <span class="nearby-village">
+        Nripatigram
+      </span>
+
+      <span class="nearby-village">
+        Sahapur
+      </span>
+
+      <span class="nearby-village">
+        Silut
+      </span>
+
+      <span class="nearby-village">
+        Somaipur
+      </span>
+
+      <span class="nearby-village">
+        Srinagar
+      </span>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       MAP
+  ================================================== -->
+
+  <section
+    class="village-section reveal"
+    id="location"
+  >
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-map"></i>
+
+      </div>
+
+      <h2>
+        গ্রামের অবস্থান
+      </h2>
+
+      <p>
+        Srikrishnapur, Ausgram-I, West Bengal
+      </p>
+
+    </div>
+
+
+    <div class="map-card">
+
+      <iframe
+        src="https://www.google.com/maps?q=Srikrishnapur%2C%20Ausgram%2C%20West%20Bengal&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Srikrishnapur Village Map"
+      ></iframe>
+
+
+      <div class="map-note">
+
+        <i class="fas fa-circle-info"></i>
+
+        Mapটি সাধারণ location reference-এর জন্য।
+        Land boundary, survey number বা legal
+        purpose-এর জন্য official records যাচাই করুন।
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       GALLERY
+  ================================================== -->
+
+  <section
+    class="village-section reveal"
+    id="gallery"
+  >
+
+    <div class="section-heading">
+
+      <div class="icon">
+
+        <i class="fas fa-images"></i>
+
+      </div>
+
+      <h2>
+        গ্রামের কিছু ছবি
+      </h2>
+
+      <p>
+        আমাদের গ্রাম, আমাদের স্মৃতি
+      </p>
+
+    </div>
+
+
+    <div
+      style="
+        display:grid;
+        grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+        gap:15px;
+      "
+    >
+
+
+      <a href="images/village-hero.webp"
+         target="_blank">
+
+        <img
+          src="images/village-hero.webp"
+          alt="Srikrishnapur Village"
+          loading="lazy"
+          style="
+            width:100%;
+            height:240px;
+            object-fit:cover;
+            border-radius:15px;
+            display:block;
+          "
+        >
+
+      </a>
+
+
+      <a href="images/village.webp"
+         target="_blank">
+
+        <img
+          src="images/village.webp"
+          alt="Srikrishnapur"
+          loading="lazy"
+          style="
+            width:100%;
+            height:240px;
+            object-fit:cover;
+            border-radius:15px;
+            display:block;
+          "
+        >
+
+      </a>
+
+
+      <a href="images/village-life.webp"
+         target="_blank">
+
+        <img
+          src="images/village-life.webp"
+          alt="Village Life"
+          loading="lazy"
+          style="
+            width:100%;
+            height:240px;
+            object-fit:cover;
+            border-radius:15px;
+            display:block;
+          "
+        >
+
+      </a>
+
+
+      <a href="images/village-story.webp"
+         target="_blank">
+
+        <img
+          src="images/village-story.webp"
+          alt="Village Story"
+          loading="lazy"
+          style="
+            width:100%;
+            height:240px;
+            object-fit:cover;
+            border-radius:15px;
+            display:block;
+          "
+        >
+
+      </a>
+
+    </div>
+
+
+    <div
+      style="
+        text-align:center;
+        margin-top:20px;
+      "
+    >
+
+      <a
+        href="gallery.html"
+        class="hero-btn"
+        style="
+          display:inline-flex;
+          background:#198754;
+          color:#fff;
+        "
+      >
+
+        <i class="fas fa-images"></i>
+
+        View Full Gallery
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       SOURCE / VERIFICATION
+  ================================================== -->
+
+  <section class="source-note">
+
+    <strong>
+      তথ্যের উৎস ও যাচাই
+    </strong>
+
+    <br><br>
+
+    এই page-এর demographic, administrative,
+    agricultural, education, connectivity এবং
+    public-facility information মূলত Census 2011,
+    District Census Handbook এবং আপনার দেওয়া
+    village-directory sources-এর published records
+    থেকে সংগৃহীত ও cross-check করা হয়েছে।
+
+    <br><br>
+
+    Population, household, village code এবং
+    administrative identity-এর ক্ষেত্রে
+    Census of India-এর village record-কে
+    অগ্রাধিকার দেওয়া হয়েছে।
+
+    <br><br>
+
+    <strong>
+      গুরুত্বপূর্ণ:
+    </strong>
+
+    এগুলো মূলত Census 2011/পুরনো village-directory
+    তথ্য। বর্তমান school, road, electricity,
+    transport, bank, health facility, postal service,
+    village boundary বা প্রশাসনিক অবস্থার পরিবর্তন
+    হতে পারে। গুরুত্বপূর্ণ সরকারি/আইনি কাজে
+    সংশ্লিষ্ট সরকারি দপ্তরের latest record যাচাই করুন।
+
+  </section>
+
+
+
+  <!-- ==================================================
+       SHARE
+  ================================================== -->
+
+  <section class="village-share">
+
+    <i
+      class="fas fa-share-nodes"
+      style="font-size:32px;"
+    ></i>
+
+
+    <h2>
+      আমাদের গ্রামের পরিচয় ছড়িয়ে দিন
+    </h2>
+
+
+    <p>
+
+      Srikrishnapur Village-এর এই information
+      page আপনার বন্ধু, পরিবার ও গ্রামের
+      মানুষের সঙ্গে Share করুন।
+
+    </p>
+
+
+    <button
+      class="share-btn"
+      onclick="shareVillage()"
+    >
+
+      <i class="fas fa-share"></i>
+
+      Share Village
+
+    </button>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer class="site-footer">
+
+
+  <div class="footer-container">
+
+
+    <!-- ABOUT -->
+
+    <div class="footer-section">
+
+      <h3>
+        Srikrishnapur.in
+      </h3>
+
+
+      <p>
+
+        শ্রীকৃষ্ণপুর গ্রামের মানুষ,
+        ইতিহাস, সংস্কৃতি, শিক্ষা,
+        ব্যবসা, পরিষেবা, অনুষ্ঠান
+        এবং গ্রামের স্মৃতিকে
+        ডিজিটালভাবে সংরক্ষণ ও
+        সবার কাছে পৌঁছে দেওয়ার
+        একটি উদ্যোগ।
+
+      </p>
+
+
+      <div class="footer-social">
+
+
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+
+          <i class="fab fa-facebook-f"></i>
+
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+
+          <i class="fab fa-instagram"></i>
+
+        </a>
+
+
+        <a
+          href="https://www.youtube.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+
+          <i class="fab fa-youtube"></i>
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- IMPORTANT LINKS -->
+
+    <div class="footer-section">
+
+      <h3>
+        Important Links
+      </h3>
+
+
+      <ul class="footer-links">
+
+        <li>
+          <a href="index.html">
+            <i class="fas fa-home"></i>
+            Home
+          </a>
+        </li>
+
+
+        <li>
+          <a href="village.html">
+            <i class="fas fa-house"></i>
+            Village
+          </a>
+        </li>
+
+
+        <li>
+          <a href="gallery.html">
+            <i class="fas fa-images"></i>
+            Gallery
+          </a>
+        </li>
+
+
+        <li>
+          <a href="events.html">
+            <i class="fas fa-calendar-days"></i>
+            Events
+          </a>
+        </li>
+
+
+        <li>
+          <a href="news.html">
+            <i class="fas fa-newspaper"></i>
+            News
+          </a>
+        </li>
+
+
+        <li>
+          <a href="business.html">
+            <i class="fas fa-store"></i>
+            Businesses
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+
+    <!-- INFORMATION -->
+
+    <div class="footer-section">
+
+      <h3>
+        Information
+      </h3>
+
+
+      <ul class="footer-links">
+
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+
+
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+
+
+        <li>
+          <a href="privacy-policy.html">
+            Privacy Policy
+          </a>
+        </li>
+
+
+        <li>
+          <a href="terms-and-conditions.html">
+            Terms & Conditions
+          </a>
+        </li>
+
+
+        <li>
+          <a href="disclaimer.html">
+            Disclaimer
+          </a>
+        </li>
+
+
+        <li>
+          <a href="services.html">
+            Services
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- FOOTER BOTTOM -->
+
+  <div class="footer-bottom">
+
+    <p>
+
+      © 2026 Srikrishnapur.in.
+      All Rights Reserved.
+
+    </p>
+
+
+    <p>
+
+      Designed & Developed with ❤️ by
+
+      <a
+        href="https://www.noor.com.in/about-noor/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Mr Noor
+      </a>
+
+    </p>
+
+  </div>
+
+
+</footer>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+/* ==========================================
+   HERO SLIDER
+========================================== */
+
+const slides =
+  document.querySelectorAll(".hero-slide");
+
+const dots =
+  document.querySelectorAll(".slider-dot");
+
+let currentSlide = 0;
+
+
+function showSlide(index) {
+
+  slides.forEach(
+    slide => slide.classList.remove("active")
+  );
+
+  dots.forEach(
+    dot => dot.classList.remove("active")
+  );
+
+
+  slides[index].classList.add("active");
+
+  dots[index].classList.add("active");
+
+  currentSlide = index;
+
+}
+
+
+function nextSlide() {
+
+  let next =
+    currentSlide + 1;
+
+  if (next >= slides.length) {
+    next = 0;
+  }
+
+  showSlide(next);
+
+}
+
+
+setInterval(
+  nextSlide,
+  5000
+);
+
+
+dots.forEach(
+  (dot, index) => {
+
+    dot.addEventListener(
+      "click",
+      () => showSlide(index)
+    );
+
+  }
+);
+
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+const revealElements =
+  document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+  new IntersectionObserver(
+    entries => {
+
+      entries.forEach(
+        entry => {
+
+          if (
+            entry.isIntersecting
+          ) {
+
+            entry.target.classList.add(
+              "visible"
+            );
+
+            revealObserver.unobserve(
+              entry.target
+            );
+
+          }
+
+        }
+      );
+
+    },
+    {
+      threshold: 0.08
+    }
+  );
+
+
+revealElements.forEach(
+  element =>
+    revealObserver.observe(element)
+);
+
+
+/* ==========================================
+   SHARE
+========================================== */
+
+function shareVillage() {
+
+  const shareData = {
+
+    title:
+      "Srikrishnapur Village",
+
+    text:
+      "শ্রীকৃষ্ণপুর গ্রামের সম্পূর্ণ তথ্য ও ছবি দেখুন।",
+
+    url:
+      window.location.href
+
+  };
+
+
+  if (
+    navigator.share
+  ) {
+
+    navigator.share(
+      shareData
+    ).catch(
+      () => {}
+    );
+
+  } else {
+
+    navigator.clipboard
+      .writeText(
+        window.location.href
+      )
+      .then(
+        () =>
+          alert(
+            "Village page link copied!"
+          )
+      )
+      .catch(
+        () =>
+          alert(
+            "Link copy করা যায়নি।"
+          )
+      );
+
+  }
+
+}
+
+</script>
+
+
+<!-- Existing website scripts -->
+
+<script src="js/main.js"></script>
+
+<script src="js/search.js"></script>
+
+<script src="js/visitor.js"></script>
+
+
+</body>
+
+</html>
