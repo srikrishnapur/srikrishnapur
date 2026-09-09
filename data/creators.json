@@ -8,10 +8,11 @@
       "category": "comedy",
       "category_name": "Comedy",
       "photo": "images/creator-1.webp",
-      "facebook": "https://www.facebook.com/",
-      "instagram": "https://www.instagram.com/",
-      "youtube": "https://www.youtube.com/",
-      "description": "Comedy ও entertainment content তৈরি করেন।"
+      "description": "Comedy ও entertainment content তৈরি করেন।",
+      "facebook": "https://www.facebook.com/username",
+      "instagram": "https://www.instagram.com/username",
+      "youtube": "https://www.youtube.com/@username",
+      "details_url": "/creator/creator-name"
     }
   ]
 }
