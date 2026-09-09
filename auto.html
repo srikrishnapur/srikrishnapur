@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        শ্রীকৃষ্ণপুরের টোটো | Toto Service | Srikrishnapur
+    </title>
+
+    <meta name="description"
+          content="শ্রীকৃষ্ণপুর গ্রামের টোটো চালকদের তালিকা, ছবি, ফোন নম্বর ও যোগাযোগের তথ্য।">
+
+    <meta name="keywords"
+          content="Srikrishnapur Toto, শ্রীকৃষ্ণপুর টোটো, Toto service Srikrishnapur">
+
+    <meta name="author"
+          content="Mr Noor">
+
+
+    <!-- Open Graph -->
+
+    <meta property="og:title"
+          content="শ্রীকৃষ্ণপুরের টোটো">
+
+    <meta property="og:description"
+          content="শ্রীকৃষ্ণপুরের টোটো চালকদের তালিকা ও যোগাযোগের তথ্য।">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://srikrishnapur.in/auto.html">
+
+    <meta property="og:image"
+          content="https://srikrishnapur.in/images/og-image.webp">
+
+
+    <!-- Existing CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =================================
+           TOTO PAGE
+        ================================= */
+
+        .toto-page {
+
+            max-width:1200px;
+
+            margin:auto;
+
+            padding:
+                30px 16px 50px;
+
+        }
+
+
+        /* =================================
+           HERO
+        ================================= */
+
+        .toto-hero {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f766e,
+                    #115e59
+                );
+
+            color:#fff;
+
+            border-radius:24px;
+
+            padding:40px 25px;
+
+            text-align:center;
+
+            margin-bottom:25px;
+
+            position:relative;
+
+            overflow:hidden;
+
+        }
+
+
+        .toto-hero-icon {
+
+            width:75px;
+
+            height:75px;
+
+            margin:
+                0 auto 15px;
+
+            border-radius:22px;
+
+            background:
+                rgba(255,255,255,.15);
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            font-size:34px;
+
+        }
+
+
+        .toto-hero h1 {
+
+            margin:0 0 8px;
+
+            font-size:30px;
+
+        }
+
+
+        .toto-hero p {
+
+            max-width:650px;
+
+            margin:auto;
+
+            line-height:1.7;
+
+            opacity:.94;
+
+        }
+
+
+        /* =================================
+           ACTIONS
+        ================================= */
+
+        .toto-actions {
+
+            display:flex;
+
+            justify-content:center;
+
+            gap:10px;
+
+            flex-wrap:wrap;
+
+            margin-bottom:25px;
+
+        }
+
+
+        .toto-action-btn {
+
+            border:0;
+
+            text-decoration:none;
+
+            display:inline-flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:8px;
+
+            padding:
+                12px 18px;
+
+            border-radius:12px;
+
+            font-weight:700;
+
+            cursor:pointer;
+
+            transition:.2s;
+
+        }
+
+
+        .toto-action-btn:hover {
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .toto-add-btn {
+
+            background:#0f766e;
+
+            color:#fff;
+
+        }
+
+
+        .toto-share-btn {
+
+            background:#e8f5f3;
+
+            color:#0f766e;
+
+        }
+
+
+        /* =================================
+           NOTICE
+        ================================= */
+
+        .toto-notice {
+
+            background:#fff8e1;
+
+            border:
+                1px solid #f1df9c;
+
+            padding:14px 16px;
+
+            border-radius:14px;
+
+            margin-bottom:25px;
+
+            color:#6b5500;
+
+            font-size:14px;
+
+            line-height:1.6;
+
+        }
+
+
+        /* =================================
+           FILTER
+        ================================= */
+
+        .toto-filter {
+
+            display:flex;
+
+            gap:8px;
+
+            overflow-x:auto;
+
+            padding-bottom:8px;
+
+            margin-bottom:25px;
+
+            scrollbar-width:none;
+
+        }
+
+
+        .toto-filter::-webkit-scrollbar {
+
+            display:none;
+
+        }
+
+
+        .toto-filter-btn {
+
+            flex:0 0 auto;
+
+            border:
+                1px solid #dce7e5;
+
+            background:#fff;
+
+            color:#31504c;
+
+            padding:
+                9px 15px;
+
+            border-radius:50px;
+
+            cursor:pointer;
+
+            font-weight:600;
+
+        }
+
+
+        .toto-filter-btn.active {
+
+            background:#0f766e;
+
+            color:#fff;
+
+            border-color:#0f766e;
+
+        }
+
+
+        /* =================================
+           SECTION TITLE
+        ================================= */
+
+        .toto-section-title {
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:space-between;
+
+            gap:10px;
+
+            margin-bottom:18px;
+
+        }
+
+
+        .toto-section-title h2 {
+
+            margin:0;
+
+            font-size:23px;
+
+            color:#173b37;
+
+        }
+
+
+        .toto-count {
+
+            background:#e8f5f3;
+
+            color:#0f766e;
+
+            padding:
+                5px 10px;
+
+            border-radius:50px;
+
+            font-size:13px;
+
+            font-weight:700;
+
+        }
+
+
+        /* =================================
+           GRID
+        ================================= */
+
+        .toto-grid {
+
+            display:grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:18px;
+
+        }
+
+
+        /* =================================
+           CARD
+        ================================= */
+
+        .toto-card {
+
+            background:#fff;
+
+            border:
+                1px solid #e4ecea;
+
+            border-radius:20px;
+
+            padding:18px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,.05);
+
+            transition:.25s;
+
+        }
+
+
+        .toto-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,.09);
+
+        }
+
+
+        .toto-top {
+
+            display:flex;
+
+            gap:14px;
+
+            align-items:center;
+
+            margin-bottom:15px;
+
+        }
+
+
+        .toto-photo {
+
+            width:78px;
+
+            height:78px;
+
+            border-radius:18px;
+
+            object-fit:cover;
+
+            background:#edf5f3;
+
+            border:
+                2px solid #e2efed;
+
+        }
+
+
+        .toto-info {
+
+            min-width:0;
+
+        }
+
+
+        .toto-name {
+
+            margin:
+                0 0 6px;
+
+            font-size:18px;
+
+            color:#163d38;
+
+        }
+
+
+        .toto-service {
+
+            display:inline-flex;
+
+            align-items:center;
+
+            gap:5px;
+
+            background:#e8f5f3;
+
+            color:#0f766e;
+
+            padding:
+                5px 9px;
+
+            border-radius:50px;
+
+            font-size:12px;
+
+            font-weight:700;
+
+        }
+
+
+        .toto-description {
+
+            color:#667b77;
+
+            font-size:13px;
+
+            line-height:1.6;
+
+            margin:
+                0 0 12px;
+
+        }
+
+
+        .toto-location {
+
+            color:#71827f;
+
+            font-size:13px;
+
+            margin-bottom:15px;
+
+        }
+
+
+        .toto-location i {
+
+            margin-right:4px;
+
+        }
+
+
+        /* =================================
+           BUTTONS
+        ================================= */
+
+        .toto-buttons {
+
+            display:grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:8px;
+
+        }
+
+
+        .toto-btn {
+
+            text-decoration:none;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:7px;
+
+            padding:10px;
+
+            border-radius:11px;
+
+            font-size:13px;
+
+            font-weight:700;
+
+            transition:.2s;
+
+        }
+
+
+        .toto-call {
+
+            background:#0f766e;
+
+            color:#fff;
+
+        }
+
+
+        .toto-whatsapp {
+
+            background:#e9f8ef;
+
+            color:#168a4b;
+
+        }
+
+
+        .toto-details {
+
+            grid-column:
+                1 / -1;
+
+            background:#f5f7f7;
+
+            color:#405854;
+
+        }
+
+
+        .toto-btn:hover {
+
+            transform:
+                translateY(-1px);
+
+        }
+
+
+        /* =================================
+           EMPTY
+        ================================= */
+
+        .no-toto {
+
+            display:none;
+
+            text-align:center;
+
+            padding:45px 20px;
+
+            background:#f8faf9;
+
+            border-radius:18px;
+
+            color:#667b77;
+
+        }
+
+
+        .no-toto i {
+
+            font-size:35px;
+
+            margin-bottom:12px;
+
+        }
+
+
+        /* =================================
+           ADD CARD
+        ================================= */
+
+        .add-toto-card {
+
+            margin-top:30px;
+
+            border:
+                2px dashed #b7d8d3;
+
+            border-radius:20px;
+
+            padding:30px 20px;
+
+            text-align:center;
+
+            background:#f8fcfb;
+
+        }
+
+
+        .add-toto-icon {
+
+            width:58px;
+
+            height:58px;
+
+            border-radius:50%;
+
+            background:#e3f3f0;
+
+            color:#0f766e;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            margin:
+                0 auto 12px;
+
+            font-size:24px;
+
+        }
+
+
+        .add-toto-card h3 {
+
+            margin:
+                0 0 7px;
+
+            color:#173b37;
+
+        }
+
+
+        .add-toto-card p {
+
+            margin:
+                0 auto 17px;
+
+            max-width:550px;
+
+            color:#6b7e7a;
+
+            line-height:1.6;
+
+            font-size:14px;
+
+        }
+
+
+        /* =================================
+           CREDIT
+        ================================= */
+
+        .toto-credit {
+
+            text-align:center;
+
+            margin-top:35px;
+
+            padding-top:25px;
+
+            border-top:
+                1px solid #e6eceb;
+
+            color:#71827f;
+
+            font-size:13px;
+
+        }
+
+
+        .toto-credit a {
+
+            color:#0f766e;
+
+            font-weight:700;
+
+            text-decoration:none;
+
+        }
+
+
+        /* =================================
+           MOBILE
+        ================================= */
+
+        @media(max-width:900px) {
+
+            .toto-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+        }
+
+
+        @media(max-width:600px) {
+
+            .toto-page {
+
+                padding:
+                    20px 12px 40px;
+
+            }
+
+
+            .toto-hero {
+
+                padding:30px 18px;
+
+                border-radius:20px;
+
+            }
+
+
+            .toto-hero h1 {
+
+                font-size:24px;
+
+            }
+
+
+            .toto-grid {
+
+                grid-template-columns:1fr;
+
+            }
+
+
+            .toto-actions {
+
+                flex-direction:column;
+
+            }
+
+
+            .toto-action-btn {
+
+                width:100%;
+
+            }
+
+
+            .toto-photo {
+
+                width:70px;
+
+                height:70px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     HEADER
+================================= -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <a href="index.html"
+           class="logo">
+
+            <div class="logo-icon">
+
+                <i class="fa-solid fa-house"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Srikrishnapur
+                </strong>
+
+                <small>
+                    শ্রীকৃষ্ণপুর
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open Menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <nav
+            class="main-nav"
+            id="mainNav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="village.html">
+                Village
+            </a>
+
+            <a href="doctors.html">
+                Doctors
+            </a>
+
+            <a href="auto.html"
+               class="active">
+
+                টোটো
+
+            </a>
+
+            <a href="emergency.html">
+                Emergency
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =================================
+     MAIN
+================================= -->
+
+<main class="toto-page">
+
+
+    <!-- HERO -->
+
+    <section class="toto-hero">
+
+        <div class="toto-hero-icon">
+
+            <i class="fa-solid fa-car-side"></i>
+
+        </div>
+
+
+        <h1>
+            আমাদের গ্রামের টোটো
+        </h1>
+
+
+        <p>
+
+            শ্রীকৃষ্ণপুরের টোটো চালকদের
+            তালিকা ও যোগাযোগের তথ্য
+            এক জায়গায়।
+
+            প্রয়োজন অনুযায়ী আপনার
+            কাছাকাছি টোটো চালকের সঙ্গে
+            যোগাযোগ করুন।
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ACTION BUTTONS -->
+
+    <div class="toto-actions">
+
+
+        <a
+            href="https://wa.me/917557003853?text=Hello%20Mr%20Noor%2C%20I%20want%20to%20add%20a%20Toto%20driver%20to%20the%20Srikrishnapur%20Toto%20List.%0A%0AToto%20Driver%20Name%3A%20%0AContact%20Number%3A%20%0AArea%2FRoute%3A%20%0AService%3A%20%0A%0AI%20will%20send%20the%20Toto%20driver%27s%20photo%20also."
+            target="_blank"
+            rel="noopener"
+            class="toto-action-btn toto-add-btn">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            আপনার টোটো যোগ করুন
+
+        </a>
+
+
+        <button
+            class="toto-action-btn toto-share-btn"
+            onclick="shareTotoPage()">
+
+            <i class="fa-solid fa-share-nodes"></i>
+
+            Share
+
+        </button>
+
+    </div>
+
+
+
+    <!-- NOTICE -->
+
+    <div class="toto-notice">
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        এখানে প্রকাশিত তথ্য শুধুমাত্র
+        তথ্যের উদ্দেশ্যে।
+
+        টোটো পরিষেবা নেওয়ার আগে
+        ভাড়া, সময় ও গন্তব্য সম্পর্কে
+        চালকের সঙ্গে কথা বলে নিন।
+
+    </div>
+
+
+
+    <!-- FILTER -->
+
+    <div class="toto-filter">
+
+
+        <button
+            class="toto-filter-btn active"
+            data-category="all">
+
+            সব টোটো
+
+        </button>
+
+
+        <button
+            class="toto-filter-btn"
+            data-category="local">
+
+            🛺 স্থানীয় যাতায়াত
+
+        </button>
+
+
+        <button
+            class="toto-filter-btn"
+            data-category="station">
+
+            🚉 স্টেশন
+
+        </button>
+
+
+        <button
+            class="toto-filter-btn"
+            data-category="hospital">
+
+            🏥 হাসপাতাল
+
+        </button>
+
+
+        <button
+            class="toto-filter-btn"
+            data-category="school">
+
+            🏫 স্কুল
+
+        </button>
+
+
+        <button
+            class="toto-filter-btn"
+            data-category="other">
+
+            অন্যান্য
+
+        </button>
+
+    </div>
+
+
+
+    <!-- SECTION TITLE -->
+
+    <div class="toto-section-title">
+
+        <h2>
+            🛺 টোটো চালকদের তালিকা
+        </h2>
+
+
+        <span
+            class="toto-count"
+            id="totoCount">
+
+            0 জন
+
+        </span>
+
+    </div>
+
+
+
+    <!-- TOTO GRID -->
+
+    <section
+        class="toto-grid"
+        id="totoGrid">
+
+    </section>
+
+
+
+    <!-- EMPTY -->
+
+    <div
+        class="no-toto"
+        id="noToto">
+
+        <i class="fa-solid fa-car-side"></i>
+
+        <div>
+
+            এই category-তে এখনো কোনো
+            টোটো চালকের তথ্য যোগ করা হয়নি।
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================
+         ADD TOTO
+    ================================= -->
+
+    <section class="add-toto-card">
+
+
+        <div class="add-toto-icon">
+
+            <i class="fa-solid fa-plus"></i>
+
+        </div>
+
+
+        <h3>
+
+            আপনার পরিচিত কোনো টোটো
+            চালক কি তালিকায় নেই?
+
+        </h3>
+
+
+        <p>
+
+            শ্রীকৃষ্ণপুরের কোনো টোটো চালকের
+            নাম এখানে না থাকলে আমাদের
+            WhatsApp-এ চালকের নাম,
+            ফোন নম্বর, এলাকা/রুট এবং
+            ছবি পাঠিয়ে জানান।
+
+        </p>
+
+
+        <a
+            href="https://wa.me/917557003853?text=Hello%20Mr%20Noor%2C%20please%20add%20this%20Toto%20driver%20to%20the%20Srikrishnapur%20Toto%20List.%0A%0AToto%20Driver%20Name%3A%20%0APhone%20Number%3A%20%0AArea%2FRoute%3A%20%0AService%3A%20%0A%0AI%20will%20send%20the%20driver%27s%20photo%20also."
+            target="_blank"
+            rel="noopener"
+            class="toto-action-btn toto-add-btn">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WhatsApp-এ তথ্য পাঠান
+
+        </a>
+
+    </section>
+
+
+
+    <!-- CREDIT -->
+
+    <div class="toto-credit">
+
+        <div>
+
+            Srikrishnapur Community Website
+
+        </div>
+
+
+        <div style="margin-top:7px;">
+
+            Designed & Developed with ❤️ by
+
+            <a
+                href="https://www.noor.com.in/about-noor/"
+                target="_blank"
+                rel="noopener">
+
+                Mr Noor
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =================================
+     FOOTER
+================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>
+
+            © <span id="currentYear"></span>
+            Srikrishnapur.
+            All rights reserved.
+
+        </p>
+
+
+        <p>
+
+            Made with ❤️ by
+
+            <a
+                href="https://www.noor.com.in/about-noor/"
+                target="_blank"
+                rel="noopener">
+
+                Mr Noor
+
+            </a>
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =================================
+     EXISTING JS
+================================= -->
+
+<script
+    src="js/main.js"
+    defer>
+</script>
+
+
+<script
+    src="js/search.js"
+    defer>
+</script>
+
+
+<!-- =================================
+     TOTO JS
+================================= -->
+
+<script
+    src="js/toto.js"
+    defer>
+</script>
+
+
+<!-- =================================
+     VISITOR ANALYTICS
+================================= -->
+
+<script
+    src="js/visitor.js"
+    defer>
+</script>
+
+
+
+<!-- =================================
+     SHARE FUNCTION
+================================= -->
+
+<script>
+
+function shareTotoPage() {
+
+    const shareData = {
+
+        title:
+            "শ্রীকৃষ্ণপুরের টোটো",
+
+        text:
+            "শ্রীকৃষ্ণপুর গ্রামের টোটো চালকদের তালিকা ও যোগাযোগের তথ্য দেখুন।",
+
+        url:
+            "https://srikrishnapur.in/auto.html"
+
+    };
+
+
+    if (
+        navigator.share
+    ) {
+
+        navigator.share(
+            shareData
+        )
+        .catch(
+            function () {}
+        );
+
+    }
+
+    else {
+
+        const url =
+            "https://srikrishnapur.in/auto.html";
+
+
+        if (
+            navigator.clipboard
+        ) {
+
+            navigator.clipboard
+                .writeText(url)
+                .then(
+                    function () {
+
+                        alert(
+                            "টোটো পেজের লিংক কপি হয়েছে!"
+                        );
+
+                    }
+                )
+                .catch(
+                    function () {
+
+                        alert(
+                            "Share Link: " +
+                            url
+                        );
+
+                    }
+                );
+
+        }
+
+        else {
+
+            alert(
+                "Share Link: " +
+                url
+            );
+
+        }
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
