@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "title": "News Title Here",
+    "category": "village",
+    "category_name": "Village News",
+    "image": "images/placeholder.webp",
+    "description": "এখানে গ্রামের গুরুত্বপূর্ণ খবরের সংক্ষিপ্ত বিবরণ লিখুন।",
+    "date": "2026-09-10",
+    "author": "Srikrishnapur",
+    "details_url": "#"
+  }
+]
