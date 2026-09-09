@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Top Gamers & Sports Talents | Srikrishnapur</title>
+
+  <meta name="description"
+        content="Discover the top gamers, sports players and real talents of Srikrishnapur village. Cricket, football, carrom, mobile games, kabaddi and volleyball players.">
+
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    .gamers-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 70px 20px 60px;
+      text-align: center;
+      color: #fff;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(59,130,246,.35), transparent 30%),
+        radial-gradient(circle at 80% 30%, rgba(168,85,247,.30), transparent 30%),
+        linear-gradient(135deg, #0f172a, #172554 55%, #312e81);
+    }
+
+    .gamers-hero::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.06);
+      top: -130px;
+      right: -80px;
+    }
+
+    .gamers-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .hero-icon {
+      width: 78px;
+      height: 78px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 24px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      font-size: 34px;
+      backdrop-filter: blur(10px);
+    }
+
+    .gamers-hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 800;
+      letter-spacing: -.8px;
+    }
+
+    .gamers-hero p {
+      margin: 0 auto;
+      max-width: 650px;
+      color: rgba(255,255,255,.82);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .hero-highlight {
+      color: #93c5fd;
+    }
+
+    .gamers-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 35px 16px 70px;
+    }
+
+    .intro-box {
+      max-width: 850px;
+      margin: 0 auto 30px;
+      padding: 22px;
+      text-align: center;
+      background: var(--card-bg, #fff);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(15,23,42,.08);
+    }
+
+    .intro-box h2 {
+      margin: 0 0 8px;
+      font-size: 25px;
+    }
+
+    .intro-box p {
+      margin: 0;
+      line-height: 1.7;
+      opacity: .75;
+    }
+
+    .category-filter {
+      display: flex;
+      gap: 9px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 25px 0 18px;
+    }
+
+    .category-btn {
+      border: 1px solid #e2e8f0;
+      background: #fff;
+      color: #334155;
+      padding: 10px 15px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .25s ease;
+    }
+
+    .category-btn:hover,
+    .category-btn.active {
+      background: #0f172a;
+      color: #fff;
+      border-color: #0f172a;
+      transform: translateY(-2px);
+    }
+
+    .gamers-count {
+      text-align: center;
+      margin: 15px 0 25px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .gamers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gamer-card {
+      position: relative;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      box-shadow: 0 7px 25px rgba(15,23,42,.07);
+      transition: .3s ease;
+      overflow: hidden;
+    }
+
+    .gamer-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(15,23,42,.12);
+    }
+
+    .gamer-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .gamer-photo {
+      width: 82px;
+      height: 82px;
+      flex: 0 0 82px;
+      object-fit: cover;
+      border-radius: 18px;
+      background: #f1f5f9;
+      border: 2px solid #e2e8f0;
+    }
+
+    .gamer-info {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .gamer-name {
+      margin: 0 0 7px;
+      font-size: 19px;
+      font-weight: 750;
+      color: #0f172a;
+      word-break: break-word;
+    }
+
+    .gamer-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .gamer-description {
+      margin: 15px 0;
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .gamer-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .gamer-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 38px;
+      padding: 8px 12px;
+      border-radius: 11px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .2s ease;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      color: #334155;
+    }
+
+    .gamer-action:hover {
+      transform: translateY(-2px);
+    }
+
+    .social-action {
+      background: #eef2ff;
+      color: #4338ca;
+      border-color: #c7d2fe;
+    }
+
+    .details-action {
+      background: #0f172a;
+      color: #fff;
+      border-color: #0f172a;
+    }
+
+    .empty-state {
+      display: none;
+      text-align: center;
+      padding: 45px 20px;
+      color: #64748b;
+    }
+
+    .empty-state i {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .add-gamer {
+      margin-top: 45px;
+      padding: 30px 22px;
+      border-radius: 24px;
+      text-align: center;
+      background: linear-gradient(135deg, #eff6ff, #eef2ff);
+      border: 1px solid #dbeafe;
+    }
+
+    .add-gamer h2 {
+      margin: 0 0 8px;
+      color: #0f172a;
+    }
+
+    .add-gamer p {
+      max-width: 650px;
+      margin: 0 auto 18px;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    .add-gamer-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 19px;
+      border-radius: 13px;
+      background: #16a34a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      transition: .25s ease;
+    }
+
+    .add-gamer-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .share-section {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .share-btn {
+      border: 0;
+      background: #f1f5f9;
+      color: #334155;
+      padding: 11px 17px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    @media (max-width: 850px) {
+      .gamers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 580px) {
+      .gamers-hero {
+        padding: 55px 16px 45px;
+      }
+
+      .gamers-container {
+        padding: 25px 12px 55px;
+      }
+
+      .gamers-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .gamer-card {
+        padding: 15px;
+      }
+
+      .gamer-photo {
+        width: 74px;
+        height: 74px;
+        flex-basis: 74px;
+      }
+
+      .category-filter {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 5px;
+      }
+
+      .category-btn {
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <!--
+      আপনার doctors.html-এর existing header এখানে রাখুন।
+      যদি main.js header তৈরি করে, তাহলে সেটিই ব্যবহার হবে।
+    -->
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="gamers-hero">
+      <div class="gamers-hero-content">
+
+        <div class="hero-icon">
+          <i class="fa-solid fa-trophy"></i>
+        </div>
+
+        <h1>Our Village <span class="hero-highlight">Gamers & Talents</span></h1>
+
+        <p>
+          Srikrishnapur-এর মাঠ থেকে মোবাইল গেমিং পর্যন্ত—
+          আমাদের গ্রামের প্রতিভাবান খেলোয়াড়দের পরিচয় তুলে ধরার
+          একটি বিশেষ প্ল্যাটফর্ম।
+        </p>
+
+      </div>
+    </section>
+
+
+    <section class="gamers-container">
+
+      <!-- INTRO -->
+      <div class="intro-box">
+        <h2>🏆 Srikrishnapur-এর সেরা প্রতিভা</h2>
+
+        <p>
+          ক্রিকেট, ফুটবল, ক্যারাম, মোবাইল গেমস, কাবাডি ও ভলিবল—
+          যে খেলাতেই আপনার প্রতিভা থাকুক, এই তালিকায় আপনার
+          পরিচয় তুলে ধরুন।
+        </p>
+      </div>
+
+
+      <!-- CATEGORY FILTER -->
+      <div class="category-filter">
+
+        <button class="category-btn active" data-category="all">
+          <i class="fa-solid fa-border-all"></i>
+          All
+        </button>
+
+        <button class="category-btn" data-category="cricket">
+          🏏 Cricket
+        </button>
+
+        <button class="category-btn" data-category="football">
+          ⚽ Football
+        </button>
+
+        <button class="category-btn" data-category="carrom">
+          🎯 Carrom
+        </button>
+
+        <button class="category-btn" data-category="mobile-games">
+          🎮 Mobile Games
+        </button>
+
+        <button class="category-btn" data-category="kabaddi">
+          🤼 Kabaddi
+        </button>
+
+        <button class="category-btn" data-category="volleyball">
+          🏐 Volleyball
+        </button>
+
+      </div>
+
+
+      <div class="gamers-count" id="gamersCount">
+        Loading gamers...
+      </div>
+
+
+      <!-- GAMERS -->
+      <div class="gamers-grid" id="gamersGrid"></div>
+
+
+      <div class="empty-state" id="emptyState">
+        <i class="fa-solid fa-user-slash"></i>
+        <h3>এই category-তে এখনো কোনো gamer নেই</h3>
+        <p>আপনি চাইলে আপনার প্রতিভাবান gamer-এর তথ্য আমাদের পাঠাতে পারেন।</p>
+      </div>
+
+
+      <!-- ADD GAMER -->
+      <div class="add-gamer">
+
+        <h2>🌟 আপনার গ্রামের প্রতিভা তুলে ধরুন</h2>
+
+        <p>
+          Srikrishnapur-এর কোনো প্রতিভাবান ক্রিকেটার, ফুটবলার,
+          ক্যারাম খেলোয়াড়, mobile gamer, কাবাডি বা volleyball
+          player-এর নাম এই তালিকায় থাকা উচিত মনে হলে আমাদের জানান।
+        </p>
+
+        <a
+          class="add-gamer-btn"
+          href="https://wa.me/917557003853?text=Hello%20Srikrishnapur%20%E2%80%94%20I%20want%20to%20add%20a%20Gamer%20/%20Sports%20Talent.%0A%0AName:%20%0ACategory:%20%0ASocial%20Media%20Platform:%20%0ASocial%20Media%20Link:%20%0ADetails%20Link:%20%0ADescription:%20%0A%0AI%20will%20send%20the%20photo%20with%20this%20message."
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          Add Your Talent
+        </a>
+
+      </div>
+
+
+      <!-- SHARE -->
+      <div class="share-section">
+
+        <button class="share-btn" id="sharePage">
+          <i class="fa-solid fa-share-nodes"></i>
+          Share Gamers
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <!-- আপনার doctors.html-এর existing footer এখানে রাখুন। -->
+  </footer>
+
+
+  <script src="js/main.js"></script>
+  <script src="js/gamers.js"></script>
+
+</body>
+</html>
