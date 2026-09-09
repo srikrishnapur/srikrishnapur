@@ -1,36 +1,46 @@
-/* =========================================
-   SRIKRISHNAPUR VISITOR ANALYTICS
-========================================= */
-
 (function () {
 
     "use strict";
 
 
-    /* =========================
-       CONFIG
-    ========================= */
+    /*
+    |--------------------------------------------------------------------------
+    | Analytics API
+    |--------------------------------------------------------------------------
+    */
 
     const API_URL =
-        "https://srikrishnapur-analytics.mr-nuralammondal.workers.dev";
+        "https://mrnoor.in/api/visitor.php";
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Cookie
+    |--------------------------------------------------------------------------
+    */
 
     const COOKIE_NAME =
         "sk_visitor_id";
 
 
+    /*
+    | Approximately 10 years
+    */
+
     const COOKIE_DAYS =
-        3650; // approximately 10 years
+        3650;
 
 
-    /* =========================
-       UUID
-    ========================= */
+    /*
+    |--------------------------------------------------------------------------
+    | Generate visitor ID
+    |--------------------------------------------------------------------------
+    */
 
     function generateVisitorId() {
 
         if (
-            crypto &&
+            window.crypto &&
             crypto.randomUUID
         ) {
 
@@ -54,14 +64,17 @@
     }
 
 
-    /* =========================
-       GET COOKIE
-    ========================= */
+    /*
+    |--------------------------------------------------------------------------
+    | Get cookie
+    |--------------------------------------------------------------------------
+    */
 
     function getCookie(name) {
 
         const cookies =
-            document.cookie.split(";");
+            document.cookie
+                .split(";");
 
 
         for (
@@ -73,9 +86,9 @@
 
 
             if (
-                cookie.startsWith(
+                cookie.indexOf(
                     name + "="
-                )
+                ) === 0
             ) {
 
                 return decodeURIComponent(
@@ -94,9 +107,11 @@
     }
 
 
-    /* =========================
-       SET COOKIE
-    ========================= */
+    /*
+    |--------------------------------------------------------------------------
+    | Set cookie
+    |--------------------------------------------------------------------------
+    */
 
     function setCookie(
         name,
@@ -104,29 +119,40 @@
         days
     ) {
 
-        const maxAge =
-            days * 24 * 60 * 60;
+        const expires =
+            new Date(
+                Date.now() +
+                days *
+                24 *
+                60 *
+                60 *
+                1000
+            );
 
 
         document.cookie =
-            `${name}=${encodeURIComponent(value)};` +
-            `Max-Age=${maxAge};` +
-            `Path=/;` +
-            `SameSite=Lax;` +
-            `Secure`;
+            name +
+            "=" +
+            encodeURIComponent(value) +
+            "; expires=" +
+            expires.toUTCString() +
+            "; path=/" +
+            "; SameSite=Lax" +
+            "; Secure";
 
     }
 
 
-    /* =========================
-       GET / CREATE ID
-    ========================= */
+    /*
+    |--------------------------------------------------------------------------
+    | Get or create visitor ID
+    |--------------------------------------------------------------------------
+    */
 
     let visitorId =
-        getCookie(COOKIE_NAME);
-
-
-    let isNewVisitor = false;
+        getCookie(
+            COOKIE_NAME
+        );
 
 
     if (!visitorId) {
@@ -134,65 +160,106 @@
         visitorId =
             generateVisitorId();
 
+
         setCookie(
             COOKIE_NAME,
             visitorId,
             COOKIE_DAYS
         );
 
-        isNewVisitor = true;
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Current page
+    |--------------------------------------------------------------------------
+    */
+
+    let page =
+        window.location.pathname;
+
+
+    if (!page) {
+
+        page = "/";
 
     }
 
 
-    /* =========================
-       CURRENT PAGE
-    ========================= */
+    /*
+    |--------------------------------------------------------------------------
+    | Send analytics
+    |--------------------------------------------------------------------------
+    */
 
-    const page =
-        window.location.pathname || "/";
+    const payload = {
+
+        visitor_id:
+            visitorId,
+
+        page:
+            page
+
+    };
 
 
-    /* =========================
-       SEND ANALYTICS
-    ========================= */
+    fetch(
+        API_URL,
+        {
 
-    fetch(API_URL, {
+            method: "POST",
 
-        method: "POST",
+            headers: {
 
-        headers: {
+                "Content-Type":
+                    "application/json"
 
-            "Content-Type":
-                "application/json"
+            },
 
-        },
+            body:
+                JSON.stringify(
+                    payload
+                ),
 
-        body: JSON.stringify({
+            keepalive:
+                true
 
-            visitor_id:
-                visitorId,
+        }
+    )
 
-            page:
-                page,
+    .then(
+        response =>
+            response.json()
+    )
 
-            new_visitor:
-                isNewVisitor
+    .then(
+        data => {
 
-        }),
+            if (
+                !data.success
+            ) {
 
-        keepalive: true
+                console.warn(
+                    "Analytics error:",
+                    data
+                );
 
-    })
+            }
 
-    .catch(function () {
+        }
+    )
 
-        /*
-         Analytics failure should
-         never break the website.
-        */
+    .catch(
+        error => {
 
-    });
+            console.warn(
+                "Analytics request failed:",
+                error
+            );
+
+        }
+    );
 
 
 })();
