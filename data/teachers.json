@@ -1,0 +1,78 @@
+{
+  "last_updated": "2026-09-09",
+  "title": "শ্রীকৃষ্ণপুরের শিক্ষক ও টিউটর",
+  "teachers": [
+    {
+      "id": "teacher-001",
+      "name": "শিক্ষকের নাম",
+      "category": "tuition",
+      "category_name": "Tution",
+      "subject": "বাংলা ও ইংরেজি",
+      "photo": "images/teacher-1.webp",
+      "phone": "919XXXXXXXXX",
+      "location": "শ্রীকৃষ্ণপুর",
+      "description": "ছাত্রছাত্রীদের নিয়মিত পড়াশোনা ও পরীক্ষার প্রস্তুতিতে সহায়তা করেন।",
+      "details_url": "#"
+    },
+    {
+      "id": "teacher-002",
+      "name": "শিক্ষকের নাম",
+      "category": "lkg",
+      "category_name": "LKG",
+      "subject": "প্রাথমিক শিক্ষা",
+      "photo": "images/teacher-2.webp",
+      "phone": "919XXXXXXXXX",
+      "location": "শ্রীকৃষ্ণপুর",
+      "description": "LKG স্তরের শিশুদের পড়াশোনায় সহায়তা।",
+      "details_url": "#"
+    },
+    {
+      "id": "teacher-003",
+      "name": "শিক্ষকের নাম",
+      "category": "primary",
+      "category_name": "Primary",
+      "subject": "সব বিষয়",
+      "photo": "images/teacher-3.webp",
+      "phone": "919XXXXXXXXX",
+      "location": "শ্রীকৃষ্ণপুর",
+      "description": "প্রাথমিক স্তরের ছাত্রছাত্রীদের পড়াশোনায় সহায়তা।",
+      "details_url": "#"
+    },
+    {
+      "id": "teacher-004",
+      "name": "শিক্ষকের নাম",
+      "category": "high-school",
+      "category_name": "High School",
+      "subject": "গণিত ও বিজ্ঞান",
+      "photo": "images/teacher-4.webp",
+      "phone": "919XXXXXXXXX",
+      "location": "শ্রীকৃষ্ণপুর",
+      "description": "High School ছাত্রছাত্রীদের বিষয়ভিত্তিক পড়াশোনা ও পরীক্ষার প্রস্তুতি।",
+      "details_url": "#"
+    },
+    {
+      "id": "teacher-005",
+      "name": "শিক্ষকের নাম",
+      "category": "college",
+      "category_name": "College",
+      "subject": "ইতিহাস",
+      "photo": "images/teacher-5.webp",
+      "phone": "919XXXXXXXXX",
+      "location": "শ্রীকৃষ্ণপুর",
+      "description": "College level বিষয়ভিত্তিক পড়াশোনায় সহায়তা।",
+      "details_url": "#"
+    },
+    {
+      "id": "teacher-006",
+      "name": "শিক্ষকের নাম",
+      "category": "university",
+      "category_name": "University",
+      "subject": "ইংরেজি",
+      "photo": "images/teacher-6.webp",
+      "phone": "919XXXXXXXXX",
+      "location": "শ্রীকৃষ্ণপুর",
+      "description": "University level পড়াশোনা ও বিষয়ভিত্তিক সহায়তা।",
+      "details_url": "#"
+    }
+  ]
+}
