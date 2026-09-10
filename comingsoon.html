@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Coming Soon | Srikrishnapur</title>
+
+  <meta name="description"
+        content="Something new is coming soon to Srikrishnapur.in. Join our official WhatsApp Channel to receive all important village news, notices, events and updates.">
+
+  <meta name="theme-color" content="#0f172a">
+
+  <meta property="og:title"
+        content="Coming Soon | Srikrishnapur">
+
+  <meta property="og:description"
+        content="Something exciting is coming soon to Srikrishnapur.in. Follow our official WhatsApp Channel for updates.">
+
+  <meta property="og:image"
+        content="https://srikrishnapur.in/images/og-image.webp">
+
+  <meta property="og:url"
+        content="https://srikrishnapur.in/comingsoon.html">
+
+  <meta property="og:type"
+        content="website">
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- Existing Website CSS -->
+  <link rel="stylesheet"
+        href="css/style.css">
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    .cs-header {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+
+    .cs-header-inner {
+      max-width: 1180px;
+      margin: auto;
+
+      padding: 12px 16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 15px;
+    }
+
+
+    .cs-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: #0f172a;
+      text-decoration: none;
+
+      font-weight: 800;
+    }
+
+
+    .cs-brand img {
+      width: 46px;
+      height: 46px;
+
+      object-fit: cover;
+
+      border-radius: 13px;
+
+      box-shadow:
+        0 5px 18px rgba(15,23,42,.12);
+    }
+
+
+    .cs-brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+
+    .cs-brand-name {
+      font-size: 18px;
+    }
+
+
+    .cs-brand-url {
+      font-size: 10px;
+      color: #64748b;
+      margin-top: 3px;
+      font-weight: 600;
+    }
+
+
+    .cs-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+
+    .cs-nav a {
+      padding: 9px 10px;
+
+      color: #475569;
+
+      text-decoration: none;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      border-radius: 9px;
+
+      transition: .25s ease;
+    }
+
+
+    .cs-nav a:hover {
+      background: #eff6ff;
+      color: #2563eb;
+    }
+
+
+    .cs-nav-join {
+      background: #16a34a !important;
+      color: white !important;
+    }
+
+
+    /* =========================
+       MAIN HERO
+    ========================== */
+
+    .cs-main {
+      min-height: calc(100vh - 72px);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+      overflow: hidden;
+
+      padding: 80px 18px 90px;
+
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(59,130,246,.25),
+          transparent 28%
+        ),
+
+        radial-gradient(
+          circle at 85% 25%,
+          rgba(168,85,247,.22),
+          transparent 28%
+        ),
+
+        radial-gradient(
+          circle at 50% 100%,
+          rgba(16,185,129,.18),
+          transparent 32%
+        ),
+
+        linear-gradient(
+          135deg,
+          #020617,
+          #0f172a 45%,
+          #172554
+        );
+    }
+
+
+    /* Animated blobs */
+
+    .cs-orb {
+      position: absolute;
+
+      border-radius: 50%;
+
+      filter: blur(2px);
+
+      opacity: .45;
+
+      animation: floatingOrb 8s ease-in-out infinite;
+    }
+
+
+    .cs-orb.one {
+      width: 180px;
+      height: 180px;
+
+      background: rgba(59,130,246,.18);
+
+      top: 10%;
+      left: -60px;
+    }
+
+
+    .cs-orb.two {
+      width: 230px;
+      height: 230px;
+
+      background: rgba(168,85,247,.15);
+
+      right: -80px;
+      bottom: 10%;
+
+      animation-delay: 2s;
+    }
+
+
+    .cs-orb.three {
+      width: 110px;
+      height: 110px;
+
+      background: rgba(34,197,94,.15);
+
+      right: 25%;
+      top: 12%;
+
+      animation-delay: 4s;
+    }
+
+
+    @keyframes floatingOrb {
+
+      0%,100% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-25px) scale(1.08);
+      }
+
+    }
+
+
+    .cs-content {
+      position: relative;
+      z-index: 5;
+
+      max-width: 800px;
+
+      width: 100%;
+
+      text-align: center;
+
+      color: white;
+    }
+
+
+    /* Logo */
+
+    .cs-logo-wrap {
+      width: 100px;
+      height: 100px;
+
+      margin: 0 auto 25px;
+
+      padding: 7px;
+
+      border-radius: 30px;
+
+      background: rgba(255,255,255,.10);
+
+      border: 1px solid rgba(255,255,255,.16);
+
+      backdrop-filter: blur(12px);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.25);
+
+      animation: logoFloat 4s ease-in-out infinite;
+    }
+
+
+    .cs-logo-wrap img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      border-radius: 23px;
+    }
+
+
+    @keyframes logoFloat {
+
+      0%,100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+
+    }
+
+
+    .cs-small-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 7px 13px;
+
+      border-radius: 999px;
+
+      background: rgba(255,255,255,.09);
+
+      border: 1px solid rgba(255,255,255,.12);
+
+      color: #bfdbfe;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      letter-spacing: .4px;
+
+      margin-bottom: 17px;
+    }
+
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: #22c55e;
+
+      box-shadow:
+        0 0 0 5px rgba(34,197,94,.12);
+
+      animation: pulseDot 1.8s infinite;
+    }
+
+
+    @keyframes pulseDot {
+
+      0%,100% {
+        box-shadow:
+          0 0 0 4px rgba(34,197,94,.12);
+      }
+
+      50% {
+        box-shadow:
+          0 0 0 9px rgba(34,197,94,.04);
+      }
+
+    }
+
+
+    .cs-content h1 {
+      margin: 0;
+
+      font-size: clamp(
+        42px,
+        8vw,
+        76px
+      );
+
+      line-height: 1.05;
+
+      font-weight: 900;
+
+      letter-spacing: -2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #ffffff,
+          #bfdbfe,
+          #ddd6fe,
+          #ffffff
+        );
+
+      background-size: 250% auto;
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+
+      animation: gradientMove 5s linear infinite;
+    }
+
+
+    @keyframes gradientMove {
+
+      to {
+        background-position: 250% center;
+      }
+
+    }
+
+
+    .cs-subtitle {
+      max-width: 650px;
+
+      margin: 22px auto 0;
+
+      font-size: 18px;
+
+      line-height: 1.75;
+
+      color: rgba(255,255,255,.75);
+    }
+
+
+    .cs-highlight {
+      color: #93c5fd;
+      font-weight: 800;
+    }
+
+
+    /* =========================
+       FEATURE CARDS
+    ========================== */
+
+    .cs-features {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 12px;
+
+      max-width: 700px;
+
+      margin: 35px auto;
+    }
+
+
+    .cs-feature {
+      padding: 17px 12px;
+
+      border-radius: 17px;
+
+      background:
+        rgba(255,255,255,.07);
+
+      border:
+        1px solid rgba(255,255,255,.10);
+
+      backdrop-filter: blur(10px);
+
+      transition: .3s ease;
+    }
+
+
+    .cs-feature:hover {
+      transform: translateY(-5px);
+
+      background:
+        rgba(255,255,255,.11);
+    }
+
+
+    .cs-feature-icon {
+      width: 43px;
+      height: 43px;
+
+      margin: auto auto 9px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 13px;
+
+      background: rgba(255,255,255,.09);
+
+      color: #bfdbfe;
+
+      font-size: 18px;
+    }
+
+
+    .cs-feature strong {
+      display: block;
+
+      font-size: 13px;
+
+      color: white;
+    }
+
+
+    .cs-feature span {
+      display: block;
+
+      margin-top: 4px;
+
+      font-size: 11px;
+
+      color: rgba(255,255,255,.55);
+    }
+
+
+    /* =========================
+       WHATSAPP CTA
+    ========================== */
+
+    .cs-cta {
+      margin: 30px auto 0;
+
+      max-width: 560px;
+
+      padding: 24px;
+
+      border-radius: 24px;
+
+      background:
+        rgba(255,255,255,.08);
+
+      border:
+        1px solid rgba(255,255,255,.13);
+
+      backdrop-filter: blur(15px);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.15);
+    }
+
+
+    .cs-cta h2 {
+      margin: 0 0 7px;
+
+      font-size: 21px;
+    }
+
+
+    .cs-cta p {
+      margin: 0 0 18px;
+
+      color: rgba(255,255,255,.68);
+
+      font-size: 14px;
+
+      line-height: 1.65;
+    }
+
+
+    .cs-whatsapp-btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 9px;
+
+      padding: 13px 21px;
+
+      border-radius: 13px;
+
+      background: #22c55e;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      box-shadow:
+        0 10px 30px rgba(34,197,94,.20);
+
+      transition: .25s ease;
+    }
+
+
+    .cs-whatsapp-btn:hover {
+      transform: translateY(-3px);
+
+      background: #16a34a;
+
+      box-shadow:
+        0 15px 35px rgba(34,197,94,.28);
+    }
+
+
+    .cs-channel-note {
+      margin-top: 13px;
+
+      font-size: 11px;
+
+      color: rgba(255,255,255,.48);
+    }
+
+
+    /* =========================
+       SHARE
+    ========================== */
+
+    .cs-share-btn {
+      margin-top: 20px;
+
+      display: inline-flex;
+
+      align-items: center;
+      gap: 8px;
+
+      padding: 10px 16px;
+
+      border: 1px solid rgba(255,255,255,.15);
+
+      border-radius: 11px;
+
+      background: rgba(255,255,255,.07);
+
+      color: rgba(255,255,255,.78);
+
+      cursor: pointer;
+
+      font-weight: 700;
+
+      transition: .25s ease;
+    }
+
+
+    .cs-share-btn:hover {
+      background: rgba(255,255,255,.12);
+
+      color: white;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    .cs-footer {
+      background: #020617;
+
+      color: #cbd5e1;
+
+      padding:
+        50px 16px 25px;
+
+      border-top:
+        1px solid #1e293b;
+    }
+
+
+    .cs-footer-inner {
+      max-width: 1150px;
+
+      margin: auto;
+    }
+
+
+    .cs-footer-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.4fr 1fr 1fr;
+
+      gap: 40px;
+    }
+
+
+    .cs-footer-brand {
+      color: white;
+
+      font-size: 23px;
+
+      font-weight: 900;
+
+      margin-bottom: 10px;
+    }
+
+
+    .cs-footer-text {
+      font-size: 14px;
+
+      line-height: 1.75;
+
+      color: #94a3b8;
+    }
+
+
+    .cs-footer-title {
+      color: white;
+
+      font-weight: 800;
+
+      margin-bottom: 15px;
+    }
+
+
+    .cs-footer-links {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,1fr);
+
+      gap: 8px;
+    }
+
+
+    .cs-footer-links a {
+      color: #94a3b8;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
+      transition: .2s;
+    }
+
+
+    .cs-footer-links a:hover {
+      color: white;
+    }
+
+
+    .cs-social {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+
+    .cs-social a {
+      width: 40px;
+      height: 40px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 12px;
+
+      background: #0f172a;
+
+      color: white;
+
+      text-decoration: none;
+
+      border: 1px solid #1e293b;
+
+      transition: .25s;
+    }
+
+
+    .cs-social a:hover {
+      transform: translateY(-3px);
+
+      background: #1e293b;
+    }
+
+
+    .cs-footer-bottom {
+      margin-top: 35px;
+
+      padding-top: 20px;
+
+      border-top:
+        1px solid #1e293b;
+
+      text-align: center;
+
+      font-size: 12px;
+
+      color: #64748b;
+
+      line-height: 1.8;
+    }
+
+
+    .cs-footer-bottom a {
+      color: #cbd5e1;
+
+      text-decoration: none;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width:850px) {
+
+      .cs-nav a {
+        display: none;
+      }
+
+      .cs-nav .cs-nav-join {
+        display: inline-flex;
+      }
+
+
+      .cs-features {
+        grid-template-columns:
+          repeat(3,1fr);
+      }
+
+
+      .cs-footer-grid {
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+    }
+
+
+    @media(max-width:580px) {
+
+      .cs-main {
+        min-height:
+          calc(100vh - 70px);
+
+        padding:
+          55px 14px 65px;
+      }
+
+
+      .cs-logo-wrap {
+        width: 82px;
+        height: 82px;
+
+        border-radius: 25px;
+      }
+
+
+      .cs-logo-wrap img {
+        border-radius: 19px;
+      }
+
+
+      .cs-content h1 {
+        letter-spacing: -1.5px;
+      }
+
+
+      .cs-subtitle {
+        font-size: 15px;
+      }
+
+
+      .cs-features {
+        grid-template-columns:
+          1fr;
+
+        max-width: 330px;
+      }
+
+
+      .cs-feature {
+        display: flex;
+
+        align-items: center;
+
+        text-align: left;
+
+        gap: 12px;
+      }
+
+
+      .cs-feature-icon {
+        margin: 0;
+
+        flex: 0 0 43px;
+      }
+
+
+      .cs-cta {
+        padding: 20px 16px;
+      }
+
+
+      .cs-footer-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .cs-footer-links {
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="cs-header">
+
+  <div class="cs-header-inner">
+
+
+    <a href="index.html"
+       class="cs-brand">
+
+      <img
+        src="images/logo.webp"
+        alt="Srikrishnapur Logo">
+
+      <span class="cs-brand-text">
+
+        <span class="cs-brand-name">
+          Srikrishnapur
+        </span>
+
+        <span class="cs-brand-url">
+          srikrishnapur.in
+        </span>
+
+      </span>
+
+    </a>
+
+
+    <nav class="cs-nav">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="village.html">
+        Village
+      </a>
+
+      <a href="news.html">
+        News
+      </a>
+
+      <a href="notice.html">
+        Notice
+      </a>
+
+      <a href="events.html">
+        Events
+      </a>
+
+      <a href="gallery.html">
+        Gallery
+      </a>
+
+      <a
+        class="cs-nav-join"
+        href="https://whatsapp.com/channel/0029VbDkEuy6RGJPYLqIOP14"
+        target="_blank"
+        rel="noopener">
+
+        <i class="fa-brands fa-whatsapp"></i>
+        Join Us
+
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="cs-main">
+
+
+  <div class="cs-orb one"></div>
+
+  <div class="cs-orb two"></div>
+
+  <div class="cs-orb three"></div>
+
+
+  <div class="cs-content">
+
+
+    <!-- LOGO -->
+
+    <div class="cs-logo-wrap">
+
+      <img
+        src="images/logo.webp"
+        alt="Srikrishnapur">
+
+    </div>
+
+
+    <!-- LABEL -->
+
+    <div class="cs-small-label">
+
+      <span class="pulse-dot"></span>
+
+      Something New Is Coming
+
+    </div>
+
+
+    <!-- TITLE -->
+
+    <h1>
+      Coming Soon
+    </h1>
+
+
+    <p class="cs-subtitle">
+
+      We are preparing something special for
+      <span class="cs-highlight">
+        Srikrishnapur
+      </span>.
+
+      A new experience is coming soon to
+      <strong>Srikrishnapur.in</strong>.
+
+    </p>
+
+
+    <!-- FEATURES -->
+
+    <div class="cs-features">
+
+
+      <div class="cs-feature">
+
+        <div class="cs-feature-icon">
+
+          <i class="fa-solid fa-newspaper"></i>
+
+        </div>
+
+        <div>
+
+          <strong>
+            Village News
+          </strong>
+
+          <span>
+            Latest updates
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="cs-feature">
+
+        <div class="cs-feature-icon">
+
+          <i class="fa-solid fa-bullhorn"></i>
+
+        </div>
+
+        <div>
+
+          <strong>
+            Important Notices
+          </strong>
+
+          <span>
+            Never miss updates
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="cs-feature">
+
+        <div class="cs-feature-icon">
+
+          <i class="fa-solid fa-calendar-days"></i>
+
+        </div>
+
+        <div>
+
+          <strong>
+            Village Events
+          </strong>
+
+          <span>
+            Events & activities
+          </span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <!-- WHATSAPP CTA -->
+
+    <div class="cs-cta">
+
+      <h2>
+        🔔 Stay Updated
+      </h2>
+
+
+      <p>
+
+        নতুন কিছু আসার সাথে সাথে notification পেতে
+        আমাদের <strong>official WhatsApp Channel</strong>-এ
+        যুক্ত থাকুন।
+
+      </p>
+
+
+      <a
+        class="cs-whatsapp-btn"
+        href="https://whatsapp.com/channel/0029VbDkEuy6RGJPYLqIOP14"
+        target="_blank"
+        rel="noopener">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        Join Official WhatsApp Channel
+
+      </a>
+
+
+      <div class="cs-channel-note">
+
+        Get important News • Notices • Events • Updates
+
+      </div>
+
+    </div>
+
+
+    <!-- SHARE -->
+
+    <button
+      class="cs-share-btn"
+      id="sharePage">
+
+      <i class="fa-solid fa-share-nodes"></i>
+
+      Share Srikrishnapur
+
+    </button>
+
+
+  </div>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="cs-footer">
+
+
+  <div class="cs-footer-inner">
+
+
+    <div class="cs-footer-grid">
+
+
+      <!-- ABOUT -->
+
+      <div>
+
+        <div class="cs-footer-brand">
+          Srikrishnapur
+        </div>
+
+
+        <p class="cs-footer-text">
+
+          Srikrishnapur.in is a digital platform
+          created to connect our village with
+          useful information, news, notices,
+          events, businesses, services and more.
+
+        </p>
+
+
+        <p class="cs-footer-text">
+
+          📍 Srikrishnapur, P.O. - Kurumba,
+          P.S. - Ausgram,
+          Purba Bardhaman, 713126,
+          West Bengal, India
+
+        </p>
+
+      </div>
+
+
+      <!-- IMPORTANT LINKS -->
+
+      <div>
+
+        <div class="cs-footer-title">
+          Important Links
+        </div>
+
+
+        <div class="cs-footer-links">
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="village.html">
+            Village
+          </a>
+
+          <a href="about.html">
+            About
+          </a>
+
+          <a href="news.html">
+            News
+          </a>
+
+          <a href="notice.html">
+            Notice
+          </a>
+
+          <a href="events.html">
+            Events
+          </a>
+
+          <a href="gallery.html">
+            Gallery
+          </a>
+
+          <a href="business.html">
+            Business
+          </a>
+
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="emergency.html">
+            Emergency
+          </a>
+
+          <a href="doctors.html">
+            Doctors
+          </a>
+
+          <a href="teachers.html">
+            Teachers
+          </a>
+
+          <a href="gamers.html">
+            Gamers
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+          <a href="privacy-policy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms-and-conditions.html">
+            Terms
+          </a>
+
+          <a href="disclaimer.html">
+            Disclaimer
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- SOCIAL -->
+
+      <div>
+
+        <div class="cs-footer-title">
+          Follow Srikrishnapur
+        </div>
+
+
+        <div class="cs-social">
+
+
+          <!-- Facebook -->
+
+          <a
+            href="https://www.facebook.com/srikrishnapurofficial"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook">
+
+            <i class="fa-brands fa-facebook-f"></i>
+
+          </a>
+
+
+          <!-- Instagram -->
+
+          <a
+            href="https://www.instagram.com/srikrishnapurofficial"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+
+          </a>
+
+
+          <!-- YouTube -->
+
+          <a
+            href="https://www.youtube.com/@Srikrishnapurofficial"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube">
+
+            <i class="fa-brands fa-youtube"></i>
+
+          </a>
+
+
+          <!-- WhatsApp -->
+
+          <a
+            href="https://whatsapp.com/channel/0029VbDkEuy6RGJPYLqIOP14"
+            target="_blank"
+            rel="noopener"
+            aria-label="WhatsApp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+          </a>
+
+
+          <!-- Telegram -->
+
+          <a
+            href="https://t.me/srikrishnapur"
+            target="_blank"
+            rel="noopener"
+            aria-label="Telegram">
+
+            <i class="fa-brands fa-telegram"></i>
+
+          </a>
+
+
+          <!-- X -->
+
+          <a
+            href="https://x.com/srikrishna_pur"
+            target="_blank"
+            rel="noopener"
+            aria-label="X">
+
+            <i class="fa-brands fa-x-twitter"></i>
+
+          </a>
+
+        </div>
+
+
+        <p class="cs-footer-text">
+
+          <i class="fa-solid fa-envelope"></i>
+
+          <a
+            href="mailto:srikrishnapur.in@gmail.com"
+            style="color:#cbd5e1;text-decoration:none;">
+
+            srikrishnapur.in@gmail.com
+
+          </a>
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="cs-footer-bottom">
+
+      © <span id="year"></span>
+      Srikrishnapur. All Rights Reserved.
+
+      <br>
+
+      Made with ❤️ for Srikrishnapur
+
+      <br>
+
+      Designed & Developed with ❤️ by
+
+      <a
+        href="https://www.noor.com.in/about-noor/"
+        target="_blank"
+        rel="noopener">
+
+        Mr Noor
+
+      </a>
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+  /* =========================
+     YEAR
+  ========================== */
+
+  document.getElementById("year")
+    .textContent = new Date().getFullYear();
+
+
+  /* =========================
+     SHARE
+  ========================== */
+
+  document
+    .getElementById("sharePage")
+    .addEventListener("click", async () => {
+
+      const shareData = {
+
+        title:
+          "Srikrishnapur.in — Coming Soon",
+
+        text:
+          "Something new is coming soon to Srikrishnapur.in. Follow our official WhatsApp Channel for all updates.",
+
+        url:
+          window.location.href
+
+      };
+
+
+      try {
+
+        if (navigator.share) {
+
+          await navigator.share(shareData);
+
+        } else {
+
+          await navigator.clipboard
+            .writeText(window.location.href);
+
+          alert(
+            "Srikrishnapur page link copied!"
+          );
+
+        }
+
+      } catch (error) {
+
+        console.log(
+          "Share cancelled."
+        );
+
+      }
+
+    });
+
+</script>
+
+
+</body>
+</html>
