@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "Important Notice Title",
+    "category": "important",
+    "category_name": "Important",
+    "description": "এখানে গুরুত্বপূর্ণ নোটিশের বিস্তারিত সংক্ষিপ্তভাবে লিখুন।",
+    "date": "2026-09-10",
+    "valid_until": "",
+    "details_url": "#"
+  }
+]
