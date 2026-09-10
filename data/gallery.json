@@ -28,6 +28,51 @@
       "category_name": "Village People",
       "image": "images/gallery/people-1.webp",
       "description": "গ্রামের মানুষের একটি সুন্দর মুহূর্ত।",
+      "date": "2022-10-04"
+    },
+    {
+      "id": "photo-007",
+      "title": "গ্রামের মানুষের সঙ্গে স্মৃতি",
+      "category": "people",
+      "category_name": "Village People",
+      "image": "images/gallery/people-2.webp",
+      "description": "গ্রামের মানুষের একটি সুন্দর মুহূর্ত।",
+      "date": "2026-08-10"
+    },
+    {
+      "id": "photo-008",
+      "title": "গ্রামের মানুষের সঙ্গে স্মৃতি",
+      "category": "people",
+      "category_name": "Village People",
+      "image": "images/gallery/people-3.webp",
+      "description": "গ্রামের মানুষের একটি সুন্দর মুহূর্ত।",
+      "date": "2019-08-04"
+    },
+    {
+      "id": "photo-009",
+      "title": "গ্রামের মানুষের সঙ্গে স্মৃতি",
+      "category": "people",
+      "category_name": "Village People",
+      "image": "images/gallery/people-4.webp",
+      "description": "গ্রামের মানুষের একটি সুন্দর মুহূর্ত।",
+      "date": "2023-04-22"
+    },
+    {
+      "id": "photo-010",
+      "title": "গ্রামের মানুষের সঙ্গে স্মৃতি",
+      "category": "people",
+      "category_name": "Village People",
+      "image": "images/gallery/people-5.webp",
+      "description": "গ্রামের মানুষের একটি সুন্দর মুহূর্ত।",
+      "date": "2021-01-02"
+    },
+    {
+      "id": "photo-011",
+      "title": "গ্রামের মানুষের সঙ্গে স্মৃতি",
+      "category": "people",
+      "category_name": "Village People",
+      "image": "images/gallery/people-6.webp",
+      "description": "গ্রামের মানুষের একটি সুন্দর মুহূর্ত।",
       "date": "2026-08-10"
     },
     {
