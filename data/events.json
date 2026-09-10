@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "title": "Village Event Name",
+    "category": "community",
+    "category_name": "Community",
+    "image": "images/placeholder.webp",
+    "description": "এখানে অনুষ্ঠানের সংক্ষিপ্ত বিবরণ লিখুন।",
+    "date": "2026-09-20",
+    "time": "05:00 PM",
+    "location": "Srikrishnapur",
+    "organizer": "Srikrishnapur Community",
+    "details_url": "#"
+  }
+]
