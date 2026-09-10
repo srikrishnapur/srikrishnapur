@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Events | Srikrishnapur</title>
+
+<meta name="description"
+      content="Upcoming and past events of Srikrishnapur village.">
+
+<meta name="theme-color" content="#0f172a">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: Arial,sans-serif;
+}
+
+.site-header {
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+}
+
+.header-inner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.brand img {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.header-links {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.header-links a {
+  text-decoration: none;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 9px;
+}
+
+.header-links a:hover {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.page-hero {
+  padding: 60px 18px;
+  text-align: center;
+  color: white;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(34,197,94,.25),transparent 30%),
+    radial-gradient(circle at 80% 30%,rgba(14,165,233,.25),transparent 30%),
+    linear-gradient(135deg,#052e16,#14532d,#064e3b);
+}
+
+.hero-icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto auto 15px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.12);
+  font-size: 30px;
+}
+
+.page-hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(32px,6vw,52px);
+}
+
+.page-hero p {
+  max-width: 680px;
+  margin: auto;
+  color: rgba(255,255,255,.82);
+  line-height: 1.7;
+}
+
+.page-container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 32px 15px 70px;
+}
+
+.notification-box {
+  padding: 22px;
+  margin-bottom: 28px;
+  text-align: center;
+  border-radius: 20px;
+  background: linear-gradient(135deg,#ecfdf5,#eff6ff);
+  border: 1px solid #bbf7d0;
+}
+
+.notification-box h2 {
+  margin: 0 0 8px;
+}
+
+.notification-box p {
+  max-width: 700px;
+  margin: auto auto 16px;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 17px;
+  border-radius: 12px;
+  background: #16a34a;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 230px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+}
+
+.filter-box {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+}
+
+.filter-btn {
+  white-space: nowrap;
+  border: 1px solid #e2e8f0;
+  background: white;
+  padding: 10px 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #475569;
+}
+
+.filter-btn.active {
+  background: #166534;
+  color: white;
+  border-color: #166534;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.event-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(15,23,42,.06);
+  transition: .3s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(15,23,42,.11);
+}
+
+.event-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-content {
+  padding: 17px;
+}
+
+.event-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #ecfdf5;
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.event-title {
+  margin: 11px 0 8px;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.event-description {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.event-info {
+  display: grid;
+  gap: 8px;
+  margin: 15px 0;
+  color: #475569;
+  font-size: 13px;
+}
+
+.event-info i {
+  width: 18px;
+  color: #16a34a;
+}
+
+.details-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border-radius: 10px;
+  background: #0f172a;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.empty {
+  display: none;
+  text-align: center;
+  padding: 45px;
+  color: #64748b;
+}
+
+.share-area {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.share-btn {
+  border: 0;
+  background: #e2e8f0;
+  color: #334155;
+  padding: 11px 17px;
+  border-radius: 11px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 45px 16px 25px;
+}
+
+.footer-inner {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 35px;
+}
+
+.footer-brand,
+.footer-title {
+  color: white;
+  font-weight: 800;
+}
+
+.footer-brand {
+  font-size: 22px;
+}
+
+.footer-title {
+  margin-bottom: 13px;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer-links {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.social-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #1e293b;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-bottom a {
+  color: white;
+}
+
+@media(max-width:850px) {
+
+  .event-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media(max-width:580px) {
+
+  .header-links {
+    display: none;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header class="site-header">
+
+<div class="header-inner">
+
+<a href="index.html" class="brand">
+
+<img src="images/logo.webp"
+     alt="Srikrishnapur">
+
+<span>Srikrishnapur</span>
+
+</a>
+
+
+<nav class="header-links">
+
+<a href="index.html">Home</a>
+<a href="village.html">Village</a>
+<a href="news.html">News</a>
+<a href="notice.html">Notice</a>
+<a href="events.html">Events</a>
+<a href="gallery.html">Gallery</a>
+<a href="business.html">Business</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="page-hero">
+
+<div class="hero-icon">
+<i class="fa-solid fa-calendar-days"></i>
+</div>
+
+<h1>Village Events</h1>
+
+<p>
+Srikrishnapur-এর upcoming events, অনুষ্ঠান,
+sports, cultural programs এবং community activities।
+</p>
+
+</section>
+
+
+<main class="page-container">
+
+
+<section class="notification-box">
+
+<h2>📅 কোনো Event মিস করবেন না!</h2>
+
+<p>
+Srikrishnapur-এর গুরুত্বপূর্ণ News, Notice এবং
+Events-এর notification পেতে official WhatsApp group-এ
+যুক্ত থাকুন।
+</p>
+
+<a
+href="WHATSAPP_GROUP_LINK_HERE"
+target="_blank"
+class="wa-btn">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Join Official WhatsApp Group
+
+</a>
+
+</section>
+
+
+<div class="toolbar">
+
+<div class="search-box">
+
+<input
+type="search"
+id="eventSearch"
+placeholder="Search events...">
+
+</div>
+
+
+<div class="filter-box">
+
+<button
+class="filter-btn active"
+data-category="all">
+All
+</button>
+
+<button
+class="filter-btn"
+data-category="community">
+Community
+</button>
+
+<button
+class="filter-btn"
+data-category="sports">
+Sports
+</button>
+
+<button
+class="filter-btn"
+data-category="cultural">
+Cultural
+</button>
+
+<button
+class="filter-btn"
+data-category="education">
+Education
+</button>
+
+<button
+class="filter-btn"
+data-category="festival">
+Festival
+</button>
+
+</div>
+
+</div>
+
+
+<div id="eventCount"
+style="color:#64748b;font-size:14px;margin-bottom:18px;">
+Loading...
+</div>
+
+
+<div class="event-grid"
+id="eventGrid">
+</div>
+
+
+<div class="empty"
+id="eventEmpty">
+
+<i class="fa-regular fa-calendar-xmark"
+style="font-size:40px;"></i>
+
+<h3>No events found</h3>
+
+<p>
+এই category বা search-এ কোনো event পাওয়া যায়নি।
+</p>
+
+</div>
+
+
+<div class="share-area">
+
+<button class="share-btn" id="shareEvents">
+
+<i class="fa-solid fa-share-nodes"></i>
+
+Share Events Page
+
+</button>
+
+</div>
+
+</main>
+
+
+<footer class="site-footer">
+
+<div class="footer-inner">
+
+<div class="footer-grid">
+
+
+<div>
+
+<div class="footer-brand">
+Srikrishnapur
+</div>
+
+<p class="footer-text">
+আমাদের গ্রামের News, Notice, Events,
+Business, Services এবং অন্যান্য
+গুরুত্বপূর্ণ তথ্য এক জায়গায়।
+</p>
+
+<p class="footer-text">
+📍 Srikrishnapur, P.O. Kutumba,
+P.S. Ausgram, Purba Bardhaman,
+713126, West Bengal, India
+</p>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Important Links
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="village.html">About Village</a>
+<a href="news.html">News</a>
+<a href="notice.html">Notice</a>
+<a href="events.html">Events</a>
+<a href="gallery.html">Gallery</a>
+<a href="business.html">Businesses</a>
+<a href="services.html">Services</a>
+<a href="emergency.html">Emergency</a>
+<a href="contact.html">Contact</a>
+<a href="about.html">About</a>
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="terms-and-conditions.html">Terms & Conditions</a>
+<a href="disclaimer.html">Disclaimer</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Follow Srikrishnapur
+</div>
+
+
+<div class="social-links">
+
+<a href="https://www.facebook.com/srikrishnapurofficial"
+target="_blank">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a href="https://www.instagram.com/srikrishnapurofficial"
+target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://www.youtube.com/@Srikrishnapurofficial"
+target="_blank">
+<i class="fa-brands fa-youtube"></i>
+</a>
+
+<a href="https://whatsapp.com/channel/0029VbDkEuy6RGJPYLqIOP14"
+target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a href="https://t.me/srikrishnapur"
+target="_blank">
+<i class="fa-brands fa-telegram"></i>
+</a>
+
+<a href="https://x.com/srikrishna_pur"
+target="_blank">
+<i class="fa-brands fa-x-twitter"></i>
+</a>
+
+</div>
+
+
+<p class="footer-text">
+
+Email:
+
+<a
+href="mailto:srikrishnapur.in@gmail.com"
+style="color:white;">
+
+srikrishnapur.in@gmail.com
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© <span id="year"></span>
+Srikrishnapur. All Rights Reserved.
+
+<br><br>
+
+Designed & Developed with ❤️ by
+
+<a
+href="https://www.noor.com.in/about-noor/"
+target="_blank">
+
+Mr Noor
+
+</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/events.js"></script>
+
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+</script>
+
+</body>
+</html>
