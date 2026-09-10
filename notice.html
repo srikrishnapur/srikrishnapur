@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Important Notices | Srikrishnapur</title>
+
+<meta name="description"
+      content="Important notices and announcements for Srikrishnapur village.">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: Arial,sans-serif;
+}
+
+.site-header {
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+}
+
+.header-inner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.brand img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.header-links {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.header-links a {
+  text-decoration: none;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 9px;
+}
+
+.header-links a:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.page-hero {
+  padding: 60px 18px;
+  text-align: center;
+  color: white;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(239,68,68,.25),transparent 30%),
+    radial-gradient(circle at 80% 30%,rgba(245,158,11,.25),transparent 30%),
+    linear-gradient(135deg,#450a0a,#7f1d1d,#991b1b);
+}
+
+.hero-icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto auto 15px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.12);
+  font-size: 30px;
+}
+
+.page-hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(32px,6vw,52px);
+}
+
+.page-hero p {
+  max-width: 680px;
+  margin: auto;
+  color: rgba(255,255,255,.82);
+  line-height: 1.7;
+}
+
+.page-container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 32px 15px 70px;
+}
+
+.notification-box {
+  padding: 22px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  text-align: center;
+  background: linear-gradient(135deg,#fff7ed,#fef2f2);
+  border: 1px solid #fed7aa;
+}
+
+.notification-box h2 {
+  margin: 0 0 8px;
+}
+
+.notification-box p {
+  color: #64748b;
+  line-height: 1.65;
+}
+
+.wa-btn {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 11px 17px;
+  border-radius: 12px;
+  background: #16a34a;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 230px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+}
+
+.filter-box {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+}
+
+.filter-btn {
+  white-space: nowrap;
+  border: 1px solid #e2e8f0;
+  background: white;
+  padding: 10px 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.filter-btn.active {
+  background: #7f1d1d;
+  color: white;
+}
+
+.notice-list {
+  display: grid;
+  gap: 15px;
+}
+
+.notice-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #94a3b8;
+  border-radius: 16px;
+  padding: 19px;
+  box-shadow: 0 6px 20px rgba(15,23,42,.05);
+  transition: .25s;
+}
+
+.notice-card:hover {
+  transform: translateY(-3px);
+}
+
+.notice-card.important {
+  border-left-color: #f59e0b;
+}
+
+.notice-card.urgent {
+  border-left-color: #dc2626;
+}
+
+.notice-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.notice-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.notice-card.urgent .notice-badge {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.notice-card.important .notice-badge {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.notice-title {
+  margin: 11px 0 7px;
+  font-size: 19px;
+}
+
+.notice-description {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.notice-meta {
+  margin-top: 13px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.details-btn {
+  display: inline-flex;
+  margin-top: 14px;
+  gap: 7px;
+  align-items: center;
+  background: #0f172a;
+  color: white;
+  text-decoration: none;
+  padding: 9px 13px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.empty {
+  display: none;
+  text-align: center;
+  padding: 45px;
+  color: #64748b;
+}
+
+.share-area {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.share-btn {
+  border: 0;
+  background: #e2e8f0;
+  padding: 11px 17px;
+  border-radius: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 45px 16px 25px;
+}
+
+.footer-inner {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 35px;
+}
+
+.footer-brand,
+.footer-title {
+  color: white;
+  font-weight: 800;
+}
+
+.footer-brand {
+  font-size: 22px;
+}
+
+.footer-title {
+  margin-bottom: 13px;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer-links {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.social-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #1e293b;
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-bottom a {
+  color: white;
+}
+
+@media(max-width:800px) {
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media(max-width:580px) {
+
+  .header-links {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header class="site-header">
+
+<div class="header-inner">
+
+<a href="index.html" class="brand">
+
+<img src="images/logo.webp"
+     alt="Srikrishnapur Logo">
+
+<span>Srikrishnapur</span>
+
+</a>
+
+
+<nav class="header-links">
+
+<a href="index.html">Home</a>
+<a href="village.html">Village</a>
+<a href="news.html">News</a>
+<a href="notice.html">Notice</a>
+<a href="events.html">Events</a>
+<a href="gallery.html">Gallery</a>
+<a href="business.html">Business</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="page-hero">
+
+<div class="hero-icon">
+<i class="fa-solid fa-bullhorn"></i>
+</div>
+
+<h1>Important Notices</h1>
+
+<p>
+Srikrishnapur-এর গুরুত্বপূর্ণ ঘোষণা, Notice,
+Community updates এবং প্রয়োজনীয় তথ্য।
+</p>
+
+</section>
+
+
+<main class="page-container">
+
+
+<section class="notification-box">
+
+<h2>🔔 সব গুরুত্বপূর্ণ Notice-এর খবর পান</h2>
+
+<p>
+নতুন Notice, News এবং Events-এর notification
+পেতে আমাদের official WhatsApp group-এ যুক্ত থাকুন।
+</p>
+
+<a
+href="WHATSAPP_GROUP_LINK_HERE"
+target="_blank"
+class="wa-btn">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Join Official WhatsApp Group
+
+</a>
+
+</section>
+
+
+<div class="toolbar">
+
+<div class="search-box">
+
+<input
+type="search"
+id="noticeSearch"
+placeholder="Search notice...">
+
+</div>
+
+
+<div class="filter-box">
+
+<button
+class="filter-btn active"
+data-category="all">
+
+All
+
+</button>
+
+<button
+class="filter-btn"
+data-category="important">
+
+Important
+
+</button>
+
+<button
+class="filter-btn"
+data-category="urgent">
+
+Urgent
+
+</button>
+
+<button
+class="filter-btn"
+data-category="community">
+
+Community
+
+</button>
+
+<button
+class="filter-btn"
+data-category="education">
+
+Education
+
+</button>
+
+<button
+class="filter-btn"
+data-category="government">
+
+Government
+
+</button>
+
+</div>
+
+</div>
+
+
+<div id="noticeCount"
+style="color:#64748b;font-size:14px;margin-bottom:18px;">
+Loading...
+</div>
+
+
+<div class="notice-list"
+id="noticeList">
+</div>
+
+
+<div class="empty"
+id="noticeEmpty">
+
+<i class="fa-solid fa-bell-slash"
+style="font-size:40px;"></i>
+
+<h3>No notice found</h3>
+
+<p>এই category বা search-এ কোনো notice নেই।</p>
+
+</div>
+
+
+<div class="share-area">
+
+<button class="share-btn" id="shareNotice">
+
+<i class="fa-solid fa-share-nodes"></i>
+
+Share Notice Page
+
+</button>
+
+</div>
+
+</main>
+
+
+<footer class="site-footer">
+
+<div class="footer-inner">
+
+<div class="footer-grid">
+
+
+<div>
+
+<div class="footer-brand">
+Srikrishnapur
+</div>
+
+<p class="footer-text">
+Srikrishnapur গ্রামের মানুষের জন্য
+News, Notice, Events, Services এবং
+গুরুত্বপূর্ণ তথ্যের একটি digital platform।
+</p>
+
+<p class="footer-text">
+📍 Srikrishnapur, P.O. Kurumba,
+P.S. Ausgram, Purba Bardhaman,
+713126, West Bengal, India
+</p>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Important Links
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="village.html">Village</a>
+<a href="news.html">News</a>
+<a href="notice.html">Notice</a>
+<a href="events.html">Events</a>
+<a href="gallery.html">Gallery</a>
+<a href="business.html">Businesses</a>
+<a href="services.html">Services</a>
+<a href="emergency.html">Emergency</a>
+<a href="contact.html">Contact</a>
+<a href="about.html">About</a>
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="terms-and-conditions.html">Terms & Conditions</a>
+<a href="disclaimer.html">Disclaimer</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Follow Us
+</div>
+
+<div class="social-links">
+
+<a href="https://www.facebook.com/srikrishnapurofficial"
+target="_blank">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a href="https://www.instagram.com/srikrishnapurofficial"
+target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://www.youtube.com/@Srikrishnapurofficial"
+target="_blank">
+<i class="fa-brands fa-youtube"></i>
+</a>
+
+<a href="https://whatsapp.com/channel/0029VbDkEuy6RGJPYLqIOP14"
+target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a href="https://t.me/srikrishnapur"
+target="_blank">
+<i class="fa-brands fa-telegram"></i>
+</a>
+
+<a href="https://x.com/srikrishna_pur"
+target="_blank">
+<i class="fa-brands fa-x-twitter"></i>
+</a>
+
+</div>
+
+<p class="footer-text">
+Email:
+<a href="mailto:srikrishnapur.in@gmail.com"
+style="color:white;">
+srikrishnapur.in@gmail.com
+</a>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© <span id="year"></span> Srikrishnapur.
+All Rights Reserved.
+
+<br><br>
+
+Designed & Developed with ❤️ by
+
+<a href="https://www.noor.com.in/about-noor/"
+target="_blank">
+Mr Noor
+</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/notice.js"></script>
+
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+</script>
+
+</body>
+</html>
