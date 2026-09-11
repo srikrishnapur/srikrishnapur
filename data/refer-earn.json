@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Example App",
+    "category": "shopping",
+    "category_name": "Shopping",
+    "logo": "images/placeholder.webp",
+
+    "description": "এই অ্যাপের মাধ্যমে কেনাকাটা করার পাশাপাশি বিভিন্ন referral ও cashback offer পাওয়া যেতে পারে।",
+
+    "total_cashback": "Up to ₹1,000",
+    "cashback_note": "Cashback offer app অনুযায়ী পরিবর্তিত হতে পারে।",
+
+    "referral_reward": "₹100",
+    "new_user_bonus": "₹50",
+    "minimum_withdrawal": "₹100",
+
+    "status": "Active",
+
+    "how_to_earn": "বন্ধুকে referral link দিয়ে app-এ join করান এবং প্রয়োজনীয় শর্ত পূরণ হলে referral reward পেতে পারেন।",
+
+    "how_to_cashback": "Eligible shopping বা transaction করার সময় cashback offer সক্রিয় থাকলে cashback পাওয়া যেতে পারে।",
+
+    "steps": [
+      "Referral link-এ ক্লিক করে app-এ registration করুন।",
+      "প্রয়োজনীয় KYC বা account verification সম্পূর্ণ করুন।",
+      "Offer-এর শর্ত অনুযায়ী প্রয়োজনীয় transaction করুন।",
+      "যোগ্য হলে cashback বা referral reward account-এ যোগ হবে।"
+    ],
+
+    "referral_url": "https://example.com/ref/your-link",
+    "official_url": "https://example.com"
+  }
+]
