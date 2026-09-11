@@ -4,25 +4,1283 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Redirecting... | Srikrishnapur</title>
+  <title>Refer & Earn | Srikrishnapur</title>
 
-  <!-- Instant redirect fallback -->
-  <meta http-equiv="refresh"
-        content="0;url=https://srikrishnapur.github.io/srikrishnapur/comingsoon.html">
+  <meta name="description"
+        content="Discover refer and earn apps, cashback offers, referral rewards and money-making opportunities on Srikrishnapur.">
+  <meta name="keywords"
+        content="refer and earn, cashback, earn money, referral apps, Srikrishnapur, cashback offers">
+  <meta name="author" content="Srikrishnapur">
 
-  <script>
-    window.location.replace(
-      "https://srikrishnapur.github.io/srikrishnapur/comingsoon.html"
-    );
-  </script>
+  <meta property="og:title" content="Refer & Earn | Srikrishnapur">
+  <meta property="og:description"
+        content="Discover referral rewards, cashback offers and ways to earn money.">
+  <meta property="og:image"
+        content="https://srikrishnapur.in/images/og-image.webp">
+  <meta property="og:url"
+        content="https://srikrishnapur.in/refer-earn.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/logo.webp">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: #7b2d26;
+      --secondary: #b7791f;
+      --accent: #d69e2e;
+      --cream: #fffaf0;
+      --paper: #fffdf7;
+      --text: #2d241f;
+      --muted: #756b63;
+      --border: #eadfca;
+      --green: #218739;
+      --shadow: 0 12px 35px rgba(72, 47, 25, .10);
+    }
+
+    body {
+      font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      background:
+        linear-gradient(
+          180deg,
+          #fffaf0 0%,
+          #ffffff 45%,
+          #fffaf0 100%
+        );
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 253, 247, .96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: auto;
+      min-height: 70px;
+      padding: 10px 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+    }
+
+    .brand-text small {
+      display: block;
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #55483f;
+      transition: .2s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 65px 18px 55px;
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(214,158,46,.22),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at bottom left,
+          rgba(123,45,38,.12),
+          transparent 35%
+        );
+    }
+
+    .hero-inner {
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .heritage {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 15px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: #fffdf7;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 62px);
+      line-height: 1.08;
+      color: var(--primary);
+      margin-bottom: 16px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+      color: var(--secondary);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(123,45,38,.2);
+    }
+
+    .btn-light {
+      background: white;
+      border-color: var(--border);
+      color: var(--primary);
+    }
+
+    /* DECORATION */
+
+    .divider {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 18px;
+      text-align: center;
+      color: var(--secondary);
+      font-size: 20px;
+      letter-spacing: 10px;
+    }
+
+    /* CONTROLS */
+
+    .controls {
+      max-width: 1180px;
+      margin: 30px auto;
+      padding: 0 18px;
+    }
+
+    .search {
+      position: relative;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      outline: none;
+      background: white;
+      font-size: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.04);
+    }
+
+    .search input:focus {
+      border-color: var(--accent);
+    }
+
+    .filters {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter {
+      border: 1px solid var(--border);
+      background: white;
+      color: #63574e;
+      padding: 8px 14px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* GRID */
+
+    .apps {
+      max-width: 1180px;
+      margin: 35px auto 70px;
+      padding: 0 18px;
+
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fill, minmax(310px, 1fr));
+      gap: 22px;
+    }
+
+    /* CARD */
+
+    .card {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 45px rgba(72,47,25,.14);
+    }
+
+    .card-top {
+      padding: 20px;
+
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .app-logo {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: white;
+    }
+
+    .app-title {
+      min-width: 0;
+    }
+
+    .app-title h2 {
+      font-size: 20px;
+      line-height: 1.25;
+      color: var(--primary);
+    }
+
+    .category {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 4px 9px;
+      background: #f8ecd5;
+      color: #875c17;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .description {
+      padding: 0 20px 15px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* REWARD */
+
+    .reward-box {
+      margin: 0 20px 16px;
+      padding: 15px;
+      border-radius: 14px;
+      background:
+        linear-gradient(
+          135deg,
+          #fff4d9,
+          #fffaf0
+        );
+      border: 1px dashed #d6ae58;
+    }
+
+    .reward-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .reward-value {
+      margin-top: 2px;
+      font-size: 27px;
+      font-weight: 900;
+      color: var(--green);
+    }
+
+    .reward-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* INFO */
+
+    .info-grid {
+      padding: 0 20px 15px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .info {
+      padding: 11px;
+      background: #fff;
+      border: 1px solid #eee3d2;
+      border-radius: 11px;
+    }
+
+    .info small {
+      display: block;
+      font-size: 10px;
+      color: #8b8179;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .info strong {
+      display: block;
+      margin-top: 2px;
+      font-size: 13px;
+      color: #3f342d;
+    }
+
+    /* DETAILS */
+
+    .details {
+      padding: 0 20px 18px;
+    }
+
+    .details h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .details p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .steps {
+      margin: 0;
+      padding-left: 20px;
+      color: #62574f;
+      font-size: 13px;
+    }
+
+    .steps li {
+      margin-bottom: 5px;
+    }
+
+    /* BUTTONS */
+
+    .card-actions {
+      padding: 15px 20px 20px;
+      border-top: 1px solid var(--border);
+
+      display: flex;
+      gap: 8px;
+    }
+
+    .card-actions a,
+    .card-actions button {
+      flex: 1;
+    }
+
+    .join-btn {
+      background: var(--primary);
+      color: white;
+      border: 0;
+    }
+
+    .official-btn {
+      background: white;
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    /* EMPTY */
+
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+
+    .empty h3 {
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #30251f;
+      color: #eee4d8;
+      margin-top: 50px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 45px 18px 25px;
+
+      display: grid;
+      grid-template-columns:
+        1.5fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    .footer-brand h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      color: #c9bdb2;
+      font-size: 13px;
+      max-width: 360px;
+    }
+
+    .footer-col h3 {
+      color: white;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #c9bdb2;
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding: 18px;
+      text-align: center;
+      color: #aaa097;
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        display: none;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .apps {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .card-actions {
+        flex-direction: column;
+      }
+
+      .card-actions a,
+      .card-actions button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <p>
-    Redirecting...
-    <a href="https://srikrishnapur.github.io/srikrishnapur/comingsoon.html">
-      Click here if you are not redirected automatically.
+
+<header>
+  <div class="header-inner">
+
+    <a href="index.html" class="brand">
+      <img src="images/logo.webp" alt="Srikrishnapur Logo">
+
+      <div class="brand-text">
+        Srikrishnapur
+        <small>শ্রীকৃষ্ণপুর</small>
+      </div>
     </a>
-  </p>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="village.html">Village</a>
+      <a href="news.html">News</a>
+      <a href="notice.html">Notice</a>
+      <a href="events.html">Events</a>
+      <a href="business.html">Business</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="heritage">
+      ✦ Community Opportunities ✦
+    </div>
+
+    <h1>
+      Refer & <span>Earn</span>
+    </h1>
+
+    <p>
+      Discover useful apps and platforms where you can earn
+      referral rewards, receive cashback and get special offers.
+      সবসময় অফারের শর্তগুলি দেখে তারপর ব্যবহার করুন।
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="#apps" class="btn btn-primary">
+        Explore Offers
+      </a>
+
+      <button class="btn btn-light" onclick="sharePage()">
+        Share Page
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="divider">
+  • • •
+</div>
+
+
+<section class="controls">
+
+  <div class="search">
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="Search app, cashback, category..."
+      aria-label="Search apps"
+    >
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="filter active" data-category="all">
+      All
+    </button>
+  </div>
+
+</section>
+
+
+<main>
+
+  <section
+    class="apps"
+    id="apps"
+    aria-live="polite">
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+
+      <h2>Srikrishnapur</h2>
+
+      <p>
+        শ্রীকৃষ্ণপুরের মানুষ, তথ্য, খবর, ব্যবসা,
+        পরিষেবা এবং সুযোগগুলিকে এক জায়গায় তুলে ধরাই
+        আমাদের উদ্দেশ্য।
+      </p>
+
+      <br>
+
+      <p>
+        Srikrishnapur, P.O. - Kurumba,
+        P.S. - Ausgram, Purba Bardhaman,
+        713126, West Bengal, India
+      </p>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h3>Important Links</h3>
+
+      <a href="index.html">Home</a>
+      <a href="village.html">Village</a>
+      <a href="about.html">About</a>
+      <a href="news.html">News</a>
+      <a href="notice.html">Notice</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h3>Community</h3>
+
+      <a href="business.html">Business</a>
+      <a href="services.html">Services</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="teachers.html">Teachers</a>
+      <a href="gamers.html">Gamers</a>
+      <a href="refer-earn.html">Refer & Earn</a>
+      <a href="contact.html">Contact</a>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h3>Follow Us</h3>
+
+      <a
+        href="https://www.facebook.com/srikrishnapurofficial"
+        target="_blank"
+        rel="noopener">
+        Facebook
+      </a>
+
+      <a
+        href="https://www.instagram.com/srikrishnapurofficial"
+        target="_blank"
+        rel="noopener">
+        Instagram
+      </a>
+
+      <a
+        href="https://www.youtube.com/@Srikrishnapurofficial"
+        target="_blank"
+        rel="noopener">
+        YouTube
+      </a>
+
+      <a
+        href="https://whatsapp.com/channel/0029VbDkEuy6RGJPYLqIOP14"
+        target="_blank"
+        rel="noopener">
+        WhatsApp
+      </a>
+
+      <a
+        href="https://t.me/srikrishnapur"
+        target="_blank"
+        rel="noopener">
+        Telegram
+      </a>
+
+      <a
+        href="https://x.com/srikrishna_p"
+        target="_blank"
+        rel="noopener">
+        X / Twitter
+      </a>
+
+      <a href="mailto:srikrishnapur.in@gmail.com">
+        Email
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    © <span id="year"></span> Srikrishnapur.
+    All Rights Reserved.
+
+    <br><br>
+
+    Designed & Developed with ❤️ by
+    <a
+      href="https://www.noor.com.in/about-noor/"
+      target="_blank"
+      rel="noopener">
+      Mr Noor
+    </a>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  const DATA_URL = "data/refer-earn.json";
+
+  let apps = [];
+  let currentCategory = "all";
+
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+  async function loadApps() {
+
+    const container =
+      document.getElementById("apps");
+
+    container.innerHTML = `
+      <div class="empty">
+        <h3>Loading offers...</h3>
+        <p>Please wait.</p>
+      </div>
+    `;
+
+    try {
+
+      const response = await fetch(DATA_URL, {
+        cache: "no-cache"
+      });
+
+      if (!response.ok) {
+        throw new Error("Unable to load JSON");
+      }
+
+      apps = await response.json();
+
+      createFilters();
+      renderApps();
+
+    } catch (error) {
+
+      console.error(error);
+
+      container.innerHTML = `
+        <div class="empty">
+          <h3>Offers could not be loaded</h3>
+          <p>
+            Please try again later.
+          </p>
+        </div>
+      `;
+
+    }
+
+  }
+
+
+  function createFilters() {
+
+    const filterBox =
+      document.getElementById("filters");
+
+    const categories = [
+      ...new Map(
+        apps
+          .filter(app => app.category)
+          .map(app => [
+            app.category,
+            app.category_name || app.category
+          ])
+      )
+    ];
+
+    filterBox.innerHTML = `
+      <button
+        class="filter active"
+        data-category="all">
+        All
+      </button>
+    `;
+
+    categories.forEach(([slug, name]) => {
+
+      const button =
+        document.createElement("button");
+
+      button.className = "filter";
+      button.dataset.category = slug;
+      button.textContent = name;
+
+      filterBox.appendChild(button);
+
+    });
+
+
+    document
+      .querySelectorAll(".filter")
+      .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          document
+            .querySelectorAll(".filter")
+            .forEach(btn =>
+              btn.classList.remove("active")
+            );
+
+          button.classList.add("active");
+
+          currentCategory =
+            button.dataset.category;
+
+          renderApps();
+
+        });
+
+      });
+
+  }
+
+
+  function escapeHTML(value) {
+
+    if (value === null ||
+        value === undefined) {
+      return "";
+    }
+
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+
+  }
+
+
+  function renderApps() {
+
+    const container =
+      document.getElementById("apps");
+
+    const search =
+      document
+        .getElementById("searchInput")
+        .value
+        .trim()
+        .toLowerCase();
+
+
+    const filtered =
+      apps.filter(app => {
+
+        const matchesCategory =
+          currentCategory === "all" ||
+          app.category === currentCategory;
+
+        const searchable = `
+          ${app.name || ""}
+          ${app.category_name || ""}
+          ${app.description || ""}
+          ${app.how_to_earn || ""}
+          ${app.how_to_cashback || ""}
+        `.toLowerCase();
+
+        const matchesSearch =
+          !search ||
+          searchable.includes(search);
+
+        return matchesCategory &&
+               matchesSearch;
+
+      });
+
+
+    if (!filtered.length) {
+
+      container.innerHTML = `
+        <div class="empty">
+          <h3>No offers found</h3>
+          <p>
+            Try another search or category.
+          </p>
+        </div>
+      `;
+
+      return;
+
+    }
+
+
+    container.innerHTML =
+      filtered.map(app => {
+
+        const steps =
+          Array.isArray(app.steps)
+            ? app.steps
+            : [];
+
+
+        const stepHTML =
+          steps.length
+            ? `
+              <ol class="steps">
+                ${steps.map(step =>
+                  `<li>${escapeHTML(step)}</li>`
+                ).join("")}
+              </ol>
+            `
+            : "";
+
+
+        return `
+
+          <article class="card">
+
+            <div class="card-top">
+
+              <img
+                class="app-logo"
+                src="${escapeHTML(app.logo || "images/placeholder.webp")}"
+                alt="${escapeHTML(app.name)} logo"
+                loading="lazy"
+                onerror="this.src='images/placeholder.webp'"
+              >
+
+              <div class="app-title">
+
+                <h2>
+                  ${escapeHTML(app.name)}
+                </h2>
+
+                <span class="category">
+                  ${escapeHTML(
+                    app.category_name ||
+                    app.category ||
+                    "Offer"
+                  )}
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="description">
+              ${escapeHTML(app.description || "")}
+            </div>
+
+
+            <div class="reward-box">
+
+              <div class="reward-label">
+                Total / Maximum Cashback
+              </div>
+
+              <div class="reward-value">
+                ${escapeHTML(
+                  app.total_cashback || "Check Offer"
+                )}
+              </div>
+
+              <div class="reward-note">
+                ${escapeHTML(
+                  app.cashback_note || ""
+                )}
+              </div>
+
+            </div>
+
+
+            <div class="info-grid">
+
+              <div class="info">
+
+                <small>Referral Reward</small>
+
+                <strong>
+                  ${escapeHTML(
+                    app.referral_reward || "—"
+                  )}
+                </strong>
+
+              </div>
+
+
+              <div class="info">
+
+                <small>New User Bonus</small>
+
+                <strong>
+                  ${escapeHTML(
+                    app.new_user_bonus || "—"
+                  )}
+                </strong>
+
+              </div>
+
+
+              <div class="info">
+
+                <small>Minimum Withdrawal</small>
+
+                <strong>
+                  ${escapeHTML(
+                    app.minimum_withdrawal || "—"
+                  )}
+                </strong>
+
+              </div>
+
+
+              <div class="info">
+
+                <small>Offer Status</small>
+
+                <strong>
+                  ${escapeHTML(
+                    app.status || "Check current offer"
+                  )}
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <div class="details">
+
+              <h3>
+                How to Earn Money
+              </h3>
+
+              <p>
+                ${escapeHTML(
+                  app.how_to_earn || "Details coming soon."
+                )}
+              </p>
+
+
+              <h3>
+                How to Get Cashback
+              </h3>
+
+              <p>
+                ${escapeHTML(
+                  app.how_to_cashback || "Details coming soon."
+                )}
+              </p>
+
+
+              ${
+                steps.length
+                ? `
+                  <h3>
+                    How to Start
+                  </h3>
+
+                  ${stepHTML}
+                `
+                : ""
+              }
+
+            </div>
+
+
+            <div class="card-actions">
+
+              ${
+                app.referral_url
+                ? `
+                  <a
+                    class="btn join-btn"
+                    href="${escapeHTML(app.referral_url)}"
+                    target="_blank"
+                    rel="nofollow noopener sponsored">
+                    Join & Earn
+                  </a>
+                `
+                : ""
+              }
+
+
+              ${
+                app.official_url
+                ? `
+                  <a
+                    class="btn official-btn"
+                    href="${escapeHTML(app.official_url)}"
+                    target="_blank"
+                    rel="nofollow noopener">
+                    Official App
+                  </a>
+                `
+                : ""
+              }
+
+            </div>
+
+          </article>
+
+        `;
+
+      }).join("");
+
+  }
+
+
+  document
+    .getElementById("searchInput")
+    .addEventListener(
+      "input",
+      renderApps
+    );
+
+
+  async function sharePage() {
+
+    const shareData = {
+      title: "Refer & Earn | Srikrishnapur",
+      text:
+        "Discover Refer & Earn and cashback offers on Srikrishnapur.",
+      url: window.location.href
+    };
+
+
+    try {
+
+      if (navigator.share) {
+
+        await navigator.share(shareData);
+
+      } else {
+
+        await navigator.clipboard.writeText(
+          window.location.href
+        );
+
+        alert("Page link copied!");
+
+      }
+
+    } catch (error) {
+
+      console.log("Share cancelled.");
+
+    }
+
+  }
+
+
+  loadApps();
+
+</script>
+
 </body>
 </html>
